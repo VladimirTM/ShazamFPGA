@@ -1,0 +1,21 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst adc_core.modular_adc_0.adc_monitor_internal.reset_bridge -pg 1
+preplace inst adc_core -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst adc_core.modular_adc_0.adc_monitor_internal.clock_bridge -pg 1
+preplace inst adc_core.modular_adc_0.adc_monitor_internal -pg 1
+preplace inst adc_core.modular_adc_0.adc_monitor_internal.trace_endpoint -pg 1
+preplace inst adc_core.modular_adc_0 -pg 1 -lvl 1 -y 50
+preplace inst adc_core.modular_adc_0.control_internal -pg 1
+preplace inst adc_core.modular_adc_0.adc_monitor_internal.core -pg 1
+preplace inst adc_core.modular_adc_0.rst_inst -pg 1
+preplace inst adc_core.modular_adc_0.cb_inst -pg 1
+preplace inst adc_core.modular_adc_0.st_splitter_internal -pg 1
+preplace netloc EXPORT<net_container>adc_core</net_container>(SLAVE)adc_core.adc_pll_locked,(SLAVE)modular_adc_0.adc_pll_locked) 1 0 1 NJ
+preplace netloc EXPORT<net_container>adc_core</net_container>(SLAVE)adc_core.adc_pll_clock,(SLAVE)modular_adc_0.adc_pll_clock) 1 0 1 NJ
+preplace netloc EXPORT<net_container>adc_core</net_container>(SLAVE)modular_adc_0.clock,(SLAVE)adc_core.clock) 1 0 1 NJ
+preplace netloc EXPORT<net_container>adc_core</net_container>(SLAVE)modular_adc_0.reset_sink,(SLAVE)adc_core.reset_sink) 1 0 1 NJ
+preplace netloc EXPORT<net_container>adc_core</net_container>(SLAVE)modular_adc_0.command,(SLAVE)adc_core.command) 1 0 1 NJ
+preplace netloc EXPORT<net_container>adc_core</net_container>(MASTER)modular_adc_0.response,(MASTER)adc_core.response) 1 1 1 N
+levelinfo -pg 1 0 100 430
+levelinfo -hier adc_core 110 220 350

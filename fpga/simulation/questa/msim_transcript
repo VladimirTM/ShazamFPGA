@@ -1,0 +1,1099 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2021.2 win64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do Shazam_run_msim_rtl_verilog.do
+# if ![file isdirectory verilog_libs] {
+# 	file mkdir verilog_libs
+# }
+# 
+# vlib verilog_libs/altera_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_ver ./verilog_libs/altera_ver
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap altera_ver ./verilog_libs/altera_ver 
+# Copying C:/intelFPGA_lite/22.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:45 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
+# -- Compiling module global
+# -- Compiling module carry
+# -- Compiling module cascade
+# -- Compiling module carry_sum
+# -- Compiling module exp
+# -- Compiling module soft
+# -- Compiling module opndrn
+# -- Compiling module row_global
+# -- Compiling module TRI
+# -- Compiling module lut_input
+# -- Compiling module lut_output
+# -- Compiling module latch
+# -- Compiling module dlatch
+# -- Compiling module prim_gdff
+# -- Compiling module dff
+# -- Compiling module dffe
+# -- Compiling module dffea
+# -- Compiling module dffeas
+# -- Compiling module dffeas_pr
+# -- Compiling module prim_gtff
+# -- Compiling module tff
+# -- Compiling module tffe
+# -- Compiling module prim_gjkff
+# -- Compiling module jkff
+# -- Compiling module jkffe
+# -- Compiling module prim_gsrff
+# -- Compiling module srff
+# -- Compiling module srffe
+# -- Compiling module clklock
+# -- Compiling module alt_inbuf
+# -- Compiling module alt_outbuf
+# -- Compiling module alt_outbuf_tri
+# -- Compiling module alt_iobuf
+# -- Compiling module alt_inbuf_diff
+# -- Compiling module alt_outbuf_diff
+# -- Compiling module alt_outbuf_tri_diff
+# -- Compiling module alt_iobuf_diff
+# -- Compiling module alt_bidir_diff
+# -- Compiling module alt_bidir_buf
+# -- Compiling UDP PRIM_GDFF_LOW
+# -- Compiling UDP PRIM_GDFF_LOW_SCLR_PRIORITY
+# -- Compiling UDP PRIM_GDFF_HIGH
+# -- Compiling UDP PRIM_GDFF_HIGH_SCLR_PRIORITY
+# 
+# Top level modules:
+# 	global
+# 	carry
+# 	cascade
+# 	carry_sum
+# 	exp
+# 	soft
+# 	opndrn
+# 	row_global
+# 	TRI
+# 	lut_input
+# 	lut_output
+# 	latch
+# 	dlatch
+# 	dff
+# 	dffe
+# 	dffea
+# 	dffeas
+# 	dffeas_pr
+# 	tff
+# 	tffe
+# 	jkff
+# 	jkffe
+# 	srff
+# 	srffe
+# 	clklock
+# 	alt_inbuf
+# 	alt_outbuf
+# 	alt_outbuf_tri
+# 	alt_iobuf
+# 	alt_inbuf_diff
+# 	alt_outbuf_diff
+# 	alt_outbuf_tri_diff
+# 	alt_iobuf_diff
+# 	alt_bidir_diff
+# 	alt_bidir_buf
+# End time: 20:47:45 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/lpm_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/lpm_ver".
+# Errors: 0, Warnings: 1
+# vmap lpm_ver ./verilog_libs/lpm_ver
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap lpm_ver ./verilog_libs/lpm_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:48 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
+# -- Compiling module LPM_MEMORY_INITIALIZATION
+# -- Compiling module LPM_HINT_EVALUATION
+# -- Compiling module LPM_DEVICE_FAMILIES
+# -- Compiling module lpm_constant
+# -- Compiling module lpm_inv
+# -- Compiling module lpm_and
+# -- Compiling module lpm_or
+# -- Compiling module lpm_xor
+# -- Compiling module lpm_bustri
+# -- Compiling module lpm_mux
+# -- Compiling module lpm_decode
+# -- Compiling module lpm_clshift
+# -- Compiling module lpm_add_sub
+# -- Compiling module lpm_compare
+# -- Compiling module lpm_mult
+# -- Compiling module lpm_divide
+# -- Compiling module lpm_abs
+# -- Compiling module lpm_counter
+# -- Compiling module lpm_latch
+# -- Compiling module lpm_ff
+# -- Compiling module lpm_shiftreg
+# -- Compiling module lpm_ram_dq
+# -- Compiling module lpm_ram_dp
+# -- Compiling module lpm_ram_io
+# -- Compiling module lpm_rom
+# -- Compiling module lpm_fifo
+# -- Compiling module lpm_fifo_dc_dffpipe
+# -- Compiling module lpm_fifo_dc_fefifo
+# -- Compiling module lpm_fifo_dc_async
+# -- Compiling module lpm_fifo_dc
+# -- Compiling module lpm_inpad
+# -- Compiling module lpm_outpad
+# -- Compiling module lpm_bipad
+# 
+# Top level modules:
+# 	lpm_constant
+# 	lpm_inv
+# 	lpm_and
+# 	lpm_or
+# 	lpm_xor
+# 	lpm_bustri
+# 	lpm_mux
+# 	lpm_decode
+# 	lpm_clshift
+# 	lpm_add_sub
+# 	lpm_compare
+# 	lpm_mult
+# 	lpm_divide
+# 	lpm_abs
+# 	lpm_counter
+# 	lpm_latch
+# 	lpm_ff
+# 	lpm_shiftreg
+# 	lpm_ram_dq
+# 	lpm_ram_dp
+# 	lpm_ram_io
+# 	lpm_rom
+# 	lpm_fifo
+# 	lpm_fifo_dc
+# 	lpm_inpad
+# 	lpm_outpad
+# 	lpm_bipad
+# End time: 20:47:48 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/sgate_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/sgate_ver".
+# Errors: 0, Warnings: 1
+# vmap sgate_ver ./verilog_libs/sgate_ver
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap sgate_ver ./verilog_libs/sgate_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:49 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
+# -- Compiling module oper_add
+# -- Compiling module oper_addsub
+# -- Compiling module mux21
+# -- Compiling module io_buf_tri
+# -- Compiling module io_buf_opdrn
+# -- Compiling module oper_mult
+# -- Compiling module tri_bus
+# -- Compiling module oper_div
+# -- Compiling module oper_mod
+# -- Compiling module oper_left_shift
+# -- Compiling module oper_right_shift
+# -- Compiling module oper_rotate_left
+# -- Compiling module oper_rotate_right
+# -- Compiling module oper_less_than
+# -- Compiling module oper_mux
+# -- Compiling module oper_selector
+# -- Compiling module oper_decoder
+# -- Compiling module oper_bus_mux
+# -- Compiling module oper_latch
+# 
+# Top level modules:
+# 	oper_add
+# 	oper_addsub
+# 	mux21
+# 	io_buf_tri
+# 	io_buf_opdrn
+# 	oper_mult
+# 	tri_bus
+# 	oper_div
+# 	oper_mod
+# 	oper_left_shift
+# 	oper_right_shift
+# 	oper_rotate_left
+# 	oper_rotate_right
+# 	oper_less_than
+# 	oper_mux
+# 	oper_selector
+# 	oper_decoder
+# 	oper_bus_mux
+# 	oper_latch
+# End time: 20:47:49 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/altera_mf_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_mf_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap altera_mf_ver ./verilog_libs/altera_mf_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:50 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
+# -- Compiling module lcell
+# -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
+# -- Compiling module ALTERA_MF_HINT_EVALUATION
+# -- Compiling module ALTERA_DEVICE_FAMILIES
+# -- Compiling module dffp
+# -- Compiling module pll_iobuf
+# -- Compiling module stx_m_cntr
+# -- Compiling module stx_n_cntr
+# -- Compiling module stx_scale_cntr
+# -- Compiling module MF_pll_reg
+# -- Compiling module MF_stratix_pll
+# -- Compiling module arm_m_cntr
+# -- Compiling module arm_n_cntr
+# -- Compiling module arm_scale_cntr
+# -- Compiling module MF_stratixii_pll
+# -- Compiling module ttn_m_cntr
+# -- Compiling module ttn_n_cntr
+# -- Compiling module ttn_scale_cntr
+# -- Compiling module MF_stratixiii_pll
+# -- Compiling module cda_m_cntr
+# -- Compiling module cda_n_cntr
+# -- Compiling module cda_scale_cntr
+# -- Compiling module MF_cycloneiii_pll
+# -- Compiling module MF_cycloneiiigl_m_cntr
+# -- Compiling module MF_cycloneiiigl_n_cntr
+# -- Compiling module MF_cycloneiiigl_scale_cntr
+# -- Compiling module cycloneiiigl_post_divider
+# -- Compiling module MF_cycloneiiigl_pll
+# -- Compiling module altpll
+# -- Compiling module altlvds_rx
+# -- Compiling module stratix_lvds_rx
+# -- Compiling module stratixgx_dpa_lvds_rx
+# -- Compiling module stratixii_lvds_rx
+# -- Compiling module flexible_lvds_rx
+# -- Compiling module stratixiii_lvds_rx
+# -- Compiling module stratixiii_lvds_rx_channel
+# -- Compiling module stratixiii_lvds_rx_dpa
+# -- Compiling module altlvds_tx
+# -- Compiling module stratixv_local_clk_divider
+# -- Compiling module stratix_tx_outclk
+# -- Compiling module stratixii_tx_outclk
+# -- Compiling module flexible_lvds_tx
+# -- Compiling module dcfifo_dffpipe
+# -- Compiling module dcfifo_fefifo
+# -- Compiling module dcfifo_async
+# -- Compiling module dcfifo_sync
+# -- Compiling module dcfifo_low_latency
+# -- Compiling module dcfifo_mixed_widths
+# -- Compiling module dcfifo
+# -- Compiling module altera_syncram_derived
+# -- Compiling module altera_syncram_derived_forwarding_logic
+# -- Compiling module altaccumulate
+# -- Compiling module altmult_accum
+# -- Compiling module altmult_add
+# -- Compiling module altfp_mult
+# -- Compiling module altsqrt
+# -- Compiling module altclklock
+# -- Compiling module altddio_in
+# -- Compiling module altddio_out
+# -- Compiling module altddio_bidir
+# -- Compiling module altdpram
+# -- Compiling module altsyncram
+# -- Compiling module altsyncram_body
+# -- Compiling module alt3pram
+# -- Compiling module parallel_add
+# -- Compiling module scfifo
+# -- Compiling module altshift_taps
+# -- Compiling module a_graycounter
+# -- Compiling module altsquare
+# -- Compiling module altera_std_synchronizer
+# -- Compiling module altera_std_synchronizer_bundle
+# -- Compiling module alt_cal
+# -- Compiling module alt_cal_mm
+# -- Compiling module alt_cal_c3gxb
+# -- Compiling module alt_cal_sv
+# -- Compiling module alt_cal_av
+# -- Compiling module alt_aeq_s4
+# -- Compiling module alt_eyemon
+# -- Compiling module alt_dfe
+# -- Compiling module signal_gen
+# -- Compiling module jtag_tap_controller
+# -- Compiling module dummy_hub
+# -- Compiling module sld_virtual_jtag
+# -- Compiling module sld_signaltap
+# -- Compiling module altstratixii_oct
+# -- Compiling module altparallel_flash_loader
+# -- Compiling module altserial_flash_loader
+# -- Compiling module alt_fault_injection
+# -- Compiling module sld_virtual_jtag_basic
+# -- Compiling module altsource_probe
+# 
+# Top level modules:
+# 	lcell
+# 	altpll
+# 	altlvds_rx
+# 	altlvds_tx
+# 	dcfifo
+# 	altaccumulate
+# 	altmult_accum
+# 	altmult_add
+# 	altfp_mult
+# 	altsqrt
+# 	altclklock
+# 	altddio_bidir
+# 	altdpram
+# 	alt3pram
+# 	parallel_add
+# 	scfifo
+# 	altshift_taps
+# 	a_graycounter
+# 	altsquare
+# 	altera_std_synchronizer_bundle
+# 	alt_cal
+# 	alt_cal_mm
+# 	alt_cal_c3gxb
+# 	alt_cal_sv
+# 	alt_cal_av
+# 	alt_aeq_s4
+# 	alt_eyemon
+# 	alt_dfe
+# 	sld_virtual_jtag
+# 	sld_signaltap
+# 	altstratixii_oct
+# 	altparallel_flash_loader
+# 	altserial_flash_loader
+# 	alt_fault_injection
+# 	sld_virtual_jtag_basic
+# 	altsource_probe
+# End time: 20:47:51 on May 10,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/altera_lnsim_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/altera_lnsim_ver".
+# Errors: 0, Warnings: 1
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap altera_lnsim_ver ./verilog_libs/altera_lnsim_ver 
+# Modifying modelsim.ini
+# vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:51 on May 10,2024
+# vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
+# -- Compiling package altera_lnsim_functions
+# -- Compiling package altera_generic_pll_functions
+# -- Compiling module generic_pll
+# -- Importing package altera_lnsim_functions
+# -- Importing package altera_generic_pll_functions
+# -- Compiling module generic_cdr
+# -- Compiling module common_28nm_ram_pulse_generator
+# -- Compiling module common_28nm_ram_register
+# -- Compiling module common_28nm_ram_block
+# -- Compiling module generic_m20k
+# -- Compiling module generic_m10k
+# -- Compiling module common_28nm_mlab_cell_pulse_generator
+# -- Compiling module common_28nm_mlab_latch
+# -- Compiling module common_28nm_mlab_cell_core
+# -- Compiling module common_porta_latches
+# -- Compiling module generic_28nm_hp_mlab_cell_impl
+# -- Compiling module common_porta_registers
+# -- Compiling module generic_28nm_lc_mlab_cell_impl
+# -- Compiling module common_28nm_lutram_register
+# -- Compiling module generic_14nm_mlab_cell_impl
+# -- Compiling module common_14nm_lutram_register
+# -- Compiling module generic_mux
+# -- Compiling module generic_device_pll
+# -- Compiling module altera_mult_add
+# -- Compiling module altera_mult_add_rtl
+# -- Compiling module ama_signed_extension_function
+# -- Compiling module ama_dynamic_signed_function
+# -- Compiling module ama_register_function
+# -- Compiling module ama_register_with_ext_function
+# -- Compiling module ama_data_split_reg_ext_function
+# -- Compiling module ama_coef_reg_ext_function
+# -- Compiling module ama_adder_function
+# -- Compiling module ama_multiplier_function
+# -- Compiling module ama_preadder_function
+# -- Compiling module ama_chainout_adder_accumulator_function
+# -- Compiling module ama_systolic_adder_function
+# -- Compiling module ama_scanchain
+# -- Compiling module ama_latency_function
+# -- Compiling module altera_pll_reconfig_tasks
+# -- Compiling module altera_syncram
+# -- Compiling module altera_syncram_forwarding_logic
+# -- Compiling module ALTERA_LNSIM_MEMORY_INITIALIZATION
+# -- Compiling module altera_stratixv_pll
+# -- Compiling module altera_arriav_pll
+# -- Compiling module altera_arriavgz_pll
+# -- Compiling module altera_cyclonev_pll
+# -- Compiling module altera_pll
+# -- Compiling module dps_extra_kick
+# -- Compiling module dprio_init
+# -- Compiling module dps_pulse_gen
+# -- Compiling module altera_iopll
+# -- Compiling module dps_pulse_gen_iopll
+# -- Compiling module twentynm_iopll_arlol
+# -- Compiling module fourteennm_altera_iopll
+# -- Compiling module dps_pulse_gen_fourteennm_iopll
+# -- Compiling package fourteennm_iopll_functions
+# -- Compiling module fourteennm_simple_iopll
+# -- Importing package fourteennm_iopll_functions
+# -- Compiling module fourteennm_sub_iopll
+# -- Compiling module twentynm_iopll_ip
+# -- Compiling module altera_iopll_rotation_lcells
+# -- Compiling module altera_pll_dps_lcell_comb
+# -- Compiling module iopll_bootstrap
+# 
+# Top level modules:
+# 	generic_cdr
+# 	generic_m20k
+# 	generic_m10k
+# 	common_porta_latches
+# 	generic_28nm_hp_mlab_cell_impl
+# 	generic_28nm_lc_mlab_cell_impl
+# 	generic_14nm_mlab_cell_impl
+# 	generic_mux
+# 	generic_device_pll
+# 	altera_mult_add
+# 	altera_pll_reconfig_tasks
+# 	altera_syncram
+# 	altera_pll
+# 	altera_iopll
+# 	fourteennm_altera_iopll
+# 	fourteennm_simple_iopll
+# End time: 20:47:52 on May 10,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlib verilog_libs/fiftyfivenm_ver
+# ** Warning: (vlib-34) Library already exists at "verilog_libs/fiftyfivenm_ver".
+# Errors: 0, Warnings: 1
+# vmap fiftyfivenm_ver ./verilog_libs/fiftyfivenm_ver
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap fiftyfivenm_ver ./verilog_libs/fiftyfivenm_ver 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work fiftyfivenm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/fiftyfivenm_atoms.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:52 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work fiftyfivenm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/fiftyfivenm_atoms.v 
+# -- Compiling UDP FIFTYFIVENM_PRIM_DFFE
+# -- Compiling UDP FIFTYFIVENM_PRIM_DFFEAS
+# -- Compiling UDP FIFTYFIVENM_PRIM_DFFEAS_HIGH
+# -- Compiling module fiftyfivenm_dffe
+# -- Compiling module fiftyfivenm_mux21
+# -- Compiling module fiftyfivenm_mux41
+# -- Compiling module fiftyfivenm_and1
+# -- Compiling module fiftyfivenm_and16
+# -- Compiling module fiftyfivenm_bmux21
+# -- Compiling module fiftyfivenm_b17mux21
+# -- Compiling module fiftyfivenm_nmux21
+# -- Compiling module fiftyfivenm_b5mux21
+# -- Compiling module fiftyfivenm_latch
+# -- Compiling module fiftyfivenm_routing_wire
+# -- Compiling module fiftyfivenm_lcell_comb
+# -- Compiling module fiftyfivenm_ff
+# -- Compiling module fiftyfivenm_ram_pulse_generator
+# -- Compiling module fiftyfivenm_ram_register
+# -- Compiling module fiftyfivenm_ram_block
+# -- Compiling module fiftyfivenm_mac_data_reg
+# -- Compiling module fiftyfivenm_mac_sign_reg
+# -- Compiling module fiftyfivenm_mac_mult_internal
+# -- Compiling module fiftyfivenm_mac_mult
+# -- Compiling module fiftyfivenm_mac_out
+# -- Compiling module fiftyfivenm_pseudo_diff_out
+# -- Compiling module fiftyfivenm_io_pad
+# -- Compiling module fiftyfivenm_m_cntr
+# -- Compiling module fiftyfivenm_n_cntr
+# -- Compiling module fiftyfivenm_scale_cntr
+# -- Compiling module fiftyfivenm_pll_reg
+# -- Compiling module fiftyfivenm_pll
+# -- Compiling module fiftyfivenm_ena_reg
+# -- Compiling module fiftyfivenm_clkctrl
+# -- Compiling module fiftyfivenm_io_latch
+# -- Compiling module fiftyfivenm_phy_clkbuf
+# -- Compiling module fiftyfivenm_io_clock_divider
+# -- Compiling module fiftyfivenm_io_ibuf
+# -- Compiling module fiftyfivenm_io_obuf
+# -- Compiling module fiftyfivenm_ddio_out
+# -- Compiling module fiftyfivenm_ddio_oe
+# -- Compiling module fiftyfivenm_ddio_in
+# -- Compiling module fiftyfivenm_unvm
+# -- Compiling module fiftyfivenm_asmiblock
+# -- Compiling module fiftyfivenm_chipidblock
+# -- Compiling module fiftyfivenm_oscillator
+# -- Compiling module fiftyfivenm_controller
+# -- Compiling module fiftyfivenm_crcblock
+# -- Compiling module fiftyfivenm_rublock
+# -- Compiling module fiftyfivenm_jtag
+# -- Compiling module fiftyfivenm_adcblock
+# -- Compiling module fiftyfivenm_phase_detector
+# 
+# Top level modules:
+# 	fiftyfivenm_dffe
+# 	fiftyfivenm_mux21
+# 	fiftyfivenm_and1
+# 	fiftyfivenm_and16
+# 	fiftyfivenm_bmux21
+# 	fiftyfivenm_b17mux21
+# 	fiftyfivenm_nmux21
+# 	fiftyfivenm_b5mux21
+# 	fiftyfivenm_latch
+# 	fiftyfivenm_routing_wire
+# 	fiftyfivenm_lcell_comb
+# 	fiftyfivenm_ff
+# 	fiftyfivenm_ram_block
+# 	fiftyfivenm_mac_mult
+# 	fiftyfivenm_mac_out
+# 	fiftyfivenm_pseudo_diff_out
+# 	fiftyfivenm_io_pad
+# 	fiftyfivenm_pll_reg
+# 	fiftyfivenm_pll
+# 	fiftyfivenm_clkctrl
+# 	fiftyfivenm_io_latch
+# 	fiftyfivenm_phy_clkbuf
+# 	fiftyfivenm_io_clock_divider
+# 	fiftyfivenm_io_ibuf
+# 	fiftyfivenm_io_obuf
+# 	fiftyfivenm_ddio_out
+# 	fiftyfivenm_ddio_oe
+# 	fiftyfivenm_ddio_in
+# 	fiftyfivenm_unvm
+# 	fiftyfivenm_asmiblock
+# 	fiftyfivenm_chipidblock
+# 	fiftyfivenm_oscillator
+# 	fiftyfivenm_controller
+# 	fiftyfivenm_crcblock
+# 	fiftyfivenm_rublock
+# 	fiftyfivenm_jtag
+# 	fiftyfivenm_adcblock
+# 	fiftyfivenm_phase_detector
+# End time: 20:47:53 on May 10,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work fiftyfivenm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:53 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work fiftyfivenm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v 
+# 
+# Top level modules:
+# End time: 20:47:56 on May 10,2024, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is makar@MAKAMOBILU.
+# vlib rtl_work
+# ** Warning: (vlib-34) Library already exists at "rtl_work".
+# Errors: 0, Warnings: 1
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# vlib adc_core
+# ** Warning: (vlib-34) Library already exists at "adc_core".
+# Errors: 0, Warnings: 1
+# vmap adc_core adc_core
+# Questa Intel Starter FPGA Edition-64 vmap 2021.2 Lib Mapping Utility 2021.04 Apr 14 2021
+# vmap adc_core adc_core 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/adc_core.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:57 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/adc_core.v 
+# -- Compiling module adc_core
+# 
+# Top level modules:
+# 	adc_core
+# End time: 20:47:57 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:57 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0.v 
+# -- Compiling module adc_core_modular_adc_0
+# 
+# Top level modules:
+# 	adc_core_modular_adc_0
+# End time: 20:47:57 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_001.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:57 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_001.v 
+# -- Compiling module adc_core_modular_adc_0_avalon_st_adapter_001
+# 
+# Top level modules:
+# 	adc_core_modular_adc_0_avalon_st_adapter_001
+# End time: 20:47:57 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:58 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter.v 
+# -- Compiling module adc_core_modular_adc_0_avalon_st_adapter
+# 
+# Top level modules:
+# 	adc_core_modular_adc_0_avalon_st_adapter
+# End time: 20:47:58 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_adc_monitor_internal.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:58 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_adc_monitor_internal.v 
+# -- Compiling module adc_core_modular_adc_0_adc_monitor_internal
+# 
+# Top level modules:
+# 	adc_core_modular_adc_0_adc_monitor_internal
+# End time: 20:47:58 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_reset_controller.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:58 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_reset_controller.v 
+# -- Compiling module altera_reset_controller
+# 
+# Top level modules:
+# 	altera_reset_controller
+# End time: 20:47:58 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_reset_synchronizer.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:59 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_reset_synchronizer.v 
+# -- Compiling module altera_reset_synchronizer
+# 
+# Top level modules:
+# 	altera_reset_synchronizer
+# End time: 20:47:59 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_wa_inst.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:59 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_wa_inst.v 
+# -- Compiling module altera_trace_adc_monitor_wa_inst
+# 
+# Top level modules:
+# 	altera_trace_adc_monitor_wa_inst
+# End time: 20:47:59 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_modular_adc_control.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:47:59 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_modular_adc_control.v 
+# -- Compiling module altera_modular_adc_control
+# 
+# Top level modules:
+# 	altera_modular_adc_control
+# End time: 20:47:59 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:00 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v 
+# -- Compiling module altera_modular_adc_control_avrg_fifo
+# 
+# Top level modules:
+# 	altera_modular_adc_control_avrg_fifo
+# End time: 20:48:00 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_modular_adc_control_fsm.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:00 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_modular_adc_control_fsm.v 
+# -- Compiling module altera_modular_adc_control_fsm
+# 
+# Top level modules:
+# 	altera_modular_adc_control_fsm
+# End time: 20:48:00 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/chsel_code_converter_sw_to_hw.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:00 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/chsel_code_converter_sw_to_hw.v 
+# -- Compiling module chsel_code_converter_sw_to_hw
+# 
+# Top level modules:
+# 	chsel_code_converter_sw_to_hw
+# End time: 20:48:00 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:01 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v 
+# -- Compiling module fiftyfivenm_adcblock_primitive_wrapper
+# 
+# Top level modules:
+# 	fiftyfivenm_adcblock_primitive_wrapper
+# End time: 20:48:01 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:01 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v 
+# ** Warning: (vlog-2083) C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v(24): Carriage return (0x0D) is not followed by a newline (0x0A).
+# -- Compiling module fiftyfivenm_adcblock_top_wrapper
+# 
+# Top level modules:
+# 	fiftyfivenm_adcblock_top_wrapper
+# End time: 20:48:01 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/ram {C:/Users/sergi/apps/shazam-vladimir/fpga/ram/ram.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:01 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/ram" C:/Users/sergi/apps/shazam-vladimir/fpga/ram/ram.v 
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# End time: 20:48:01 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/clk_pll {C:/Users/sergi/apps/shazam-vladimir/fpga/clk_pll/clk_pll.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:02 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/clk_pll" C:/Users/sergi/apps/shazam-vladimir/fpga/clk_pll/clk_pll.v 
+# -- Compiling module clk_pll
+# 
+# Top level modules:
+# 	clk_pll
+# End time: 20:48:02 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/db {C:/Users/sergi/apps/shazam-vladimir/fpga/db/clk_pll_altpll.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:02 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/db" C:/Users/sergi/apps/shazam-vladimir/fpga/db/clk_pll_altpll.v 
+# -- Compiling module clk_pll_altpll
+# 
+# Top level modules:
+# 	clk_pll_altpll
+# End time: 20:48:02 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga {C:/Users/sergi/apps/shazam-vladimir/fpga/main.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:02 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga" C:/Users/sergi/apps/shazam-vladimir/fpga/main.v 
+# -- Compiling module adc_measurements_into_ram
+# -- Compiling module Shazam
+# 
+# Top level modules:
+# 	Shazam
+# End time: 20:48:02 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_001_timing_adapter_1.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:02 on May 10,2024
+# vlog -reportprogress 300 -sv -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_001_timing_adapter_1.sv 
+# -- Compiling module adc_core_modular_adc_0_avalon_st_adapter_001_timing_adapter_1
+# 
+# Top level modules:
+# 	adc_core_modular_adc_0_avalon_st_adapter_001_timing_adapter_1
+# End time: 20:48:03 on May 10,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_001_timing_adapter_0.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:03 on May 10,2024
+# vlog -reportprogress 300 -sv -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_001_timing_adapter_0.sv 
+# -- Compiling module adc_core_modular_adc_0_avalon_st_adapter_001_timing_adapter_0
+# 
+# Top level modules:
+# 	adc_core_modular_adc_0_avalon_st_adapter_001_timing_adapter_0
+# End time: 20:48:03 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_001_data_format_adapter_0.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:03 on May 10,2024
+# vlog -reportprogress 300 -sv -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_001_data_format_adapter_0.sv 
+# -- Compiling module adc_core_modular_adc_0_avalon_st_adapter_001_data_format_adapter_0
+# 
+# Top level modules:
+# 	adc_core_modular_adc_0_avalon_st_adapter_001_data_format_adapter_0
+# End time: 20:48:03 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_timing_adapter_1.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:03 on May 10,2024
+# vlog -reportprogress 300 -sv -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_timing_adapter_1.sv 
+# -- Compiling module adc_core_modular_adc_0_avalon_st_adapter_timing_adapter_1
+# 
+# Top level modules:
+# 	adc_core_modular_adc_0_avalon_st_adapter_timing_adapter_1
+# End time: 20:48:04 on May 10,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_timing_adapter_0.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:04 on May 10,2024
+# vlog -reportprogress 300 -sv -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_timing_adapter_0.sv 
+# -- Compiling module adc_core_modular_adc_0_avalon_st_adapter_timing_adapter_0
+# 
+# Top level modules:
+# 	adc_core_modular_adc_0_avalon_st_adapter_timing_adapter_0
+# End time: 20:48:04 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_data_format_adapter_0.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:04 on May 10,2024
+# vlog -reportprogress 300 -sv -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_avalon_st_adapter_data_format_adapter_0.sv 
+# -- Compiling module adc_core_modular_adc_0_avalon_st_adapter_data_format_adapter_0
+# 
+# Top level modules:
+# 	adc_core_modular_adc_0_avalon_st_adapter_data_format_adapter_0
+# End time: 20:48:04 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_avalon_st_splitter.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:04 on May 10,2024
+# vlog -reportprogress 300 -sv -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_avalon_st_splitter.sv 
+# -- Compiling module altera_avalon_st_splitter
+# 
+# Top level modules:
+# 	altera_avalon_st_splitter
+# End time: 20:48:05 on May 10,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_monitor_endpoint_wrapper.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:05 on May 10,2024
+# vlog -reportprogress 300 -sv -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_monitor_endpoint_wrapper.sv 
+# -- Compiling package altera_trace_monitor_endpoint_wpackage
+# -- Compiling module altera_trace_monitor_endpoint_wrapper
+# -- Importing package altera_trace_monitor_endpoint_wpackage
+# -- Compiling module altera_trace_monitor_endpoint
+# 
+# Top level modules:
+# 	altera_trace_monitor_endpoint_wrapper
+# End time: 20:48:05 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:05 on May 10,2024
+# vlog -reportprogress 300 -sv -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv 
+# -- Compiling module altera_trace_adc_monitor_timestamp_manager
+# -- Compiling module altera_trace_adc_monitor_issp
+# -- Compiling module altera_trace_adc_monitor_capture_interface
+# -- Compiling module altera_trace_adc_monitor_core
+# 
+# Top level modules:
+# 	altera_trace_adc_monitor_core
+# End time: 20:48:05 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work adc_core +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_wa.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:06 on May 10,2024
+# vlog -reportprogress 300 -sv -work adc_core "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules" C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_wa.sv 
+# -- Compiling module altera_trace_adc_monitor_wa
+# 
+# Top level modules:
+# 	altera_trace_adc_monitor_wa
+# End time: 20:48:06 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/simulation/questa {C:/Users/sergi/apps/shazam-vladimir/fpga/simulation/questa/shazam.testbench.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 20:48:06 on May 10,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/simulation/questa" C:/Users/sergi/apps/shazam-vladimir/fpga/simulation/questa/shazam.testbench.v 
+# -- Compiling module shazam_testbench
+# 
+# Top level modules:
+# 	shazam_testbench
+# End time: 20:48:06 on May 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -L adc_core -voptargs="+acc"  shazam_testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -L adc_core -voptargs=""+acc"" shazam_testbench 
+# Start time: 20:48:06 on May 10,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38): (vopt-2241) Connection width does not match width of port '<protected>'.<protected>
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v(79): (vopt-2685) [TFMPC] - Too few port connections for 'scfifo_component'.  Expected 13, found 12.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v(79): (vopt-2718) [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/main.v(18): (vopt-2685) [TFMPC] - Too few port connections for 'ADC_CORE_1'.  Expected 15, found 13.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/main.v(18): (vopt-2718) [TFMPC] - Missing connection for port 'response_channel'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/main.v(18): (vopt-2718) [TFMPC] - Missing connection for port 'response_empty'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "altera_trace_adc_monitor_capture_interface(fast)".
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2685) [TFMPC] - Too few port connections for 'issp_0'.  Expected 19, found 4.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'ena'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'usr1'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'raw_tck'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'tdo'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'jtag_state_uir'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'tdi'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'jtag_state_tlr'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'jtag_state_cdr'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'ir_out'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'clr'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'jtag_state_e1dr'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'jtag_state_udr'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'jtag_state_cir'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'ir_in'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_adc_monitor_core.sv(172): (vopt-2718) [TFMPC] - Missing connection for port 'jtag_state_sdr'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=28.
+# Loading work.shazam_testbench(fast)
+# Loading work.Shazam(fast)
+# Loading work.clk_pll(fast)
+# Loading altera_mf_ver.altpll(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.MF_cycloneiii_pll(fast)
+# Loading altera_mf_ver.cda_m_cntr(fast)
+# Loading altera_mf_ver.cda_n_cntr(fast)
+# Loading altera_mf_ver.cda_scale_cntr(fast)
+# Loading altera_mf_ver.pll_iobuf(fast)
+# Loading adc_core.adc_core(fast)
+# Loading adc_core.adc_core_modular_adc_0(fast)
+# Loading adc_core.altera_modular_adc_control(fast)
+# Loading adc_core.altera_modular_adc_control_fsm(fast)
+# Loading altera_mf_ver.altera_std_synchronizer(fast)
+# Loading adc_core.altera_modular_adc_control_avrg_fifo(fast)
+# Loading altera_mf_ver.scfifo(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast__1)
+# Loading adc_core.fiftyfivenm_adcblock_top_wrapper(fast)
+# Loading adc_core.chsel_code_converter_sw_to_hw(fast)
+# Loading adc_core.fiftyfivenm_adcblock_primitive_wrapper(fast)
+# Loading fiftyfivenm_ver.fiftyfivenm_adcblock(fast)
+# Loading adc_core.adc_core_modular_adc_0_adc_monitor_internal(fast)
+# Loading sv_std.std
+# Loading adc_core.altera_trace_adc_monitor_core(fast)
+# Loading adc_core.altera_trace_adc_monitor_capture_interface(fast)
+# Loading adc_core.altera_trace_adc_monitor_issp(fast)
+# Loading altera_mf_ver.altsource_probe(fast)
+# Loading adc_core.altera_trace_adc_monitor_timestamp_manager(fast)
+# Loading adc_core.altera_trace_adc_monitor_wa_inst(fast)
+# Loading adc_core.altera_trace_adc_monitor_wa(fast)
+# Loading adc_core.altera_trace_monitor_endpoint_wpackage(fast)
+# Loading adc_core.altera_trace_monitor_endpoint_wrapper(fast)
+# Loading adc_core.altera_trace_monitor_endpoint(fast)
+# Loading adc_core.altera_reset_controller(fast)
+# Loading adc_core.altera_reset_synchronizer(fast)
+# Loading adc_core.altera_reset_synchronizer(fast__1)
+# Loading adc_core.altera_avalon_st_splitter(fast)
+# Loading adc_core.adc_core_modular_adc_0_avalon_st_adapter(fast)
+# Loading adc_core.adc_core_modular_adc_0_avalon_st_adapter_data_format_adapter_0(fast)
+# Loading adc_core.adc_core_modular_adc_0_avalon_st_adapter_timing_adapter_0(fast)
+# Loading adc_core.adc_core_modular_adc_0_avalon_st_adapter_timing_adapter_1(fast)
+# Loading adc_core.adc_core_modular_adc_0_avalon_st_adapter_001(fast)
+# Loading adc_core.adc_core_modular_adc_0_avalon_st_adapter_001_data_format_adapter_0(fast)
+# Loading adc_core.adc_core_modular_adc_0_avalon_st_adapter_001_timing_adapter_0(fast)
+# Loading adc_core.adc_core_modular_adc_0_avalon_st_adapter_001_timing_adapter_1(fast)
+# Loading work.adc_measurements_into_ram(fast)
+# Loading work.ram(fast)
+# Loading altera_mf_ver.altsyncram(fast)
+# Loading altera_mf_ver.altsyncram_body(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast__2)
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '<protected>'.
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected> File: c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v Line: 38
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'command_valid'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/adc_core.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1 File: C:/Users/sergi/apps/shazam-vladimir/fpga/main.v Line: 18
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'command_startofpacket'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/adc_core.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1 File: C:/Users/sergi/apps/shazam-vladimir/fpga/main.v Line: 18
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'command_endofpacket'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/adc_core.v(13).
+#    Time: 0 ps  Iteration: 0  Instance: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1 File: C:/Users/sergi/apps/shazam-vladimir/fpga/main.v Line: 18
+# ** Warning: (vsim-3015) [PCDPC] - Port size (2) does not match connection size (1) for port 'capture_empty'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/altera_trace_monitor_endpoint_wrapper.sv(46).
+#    Time: 0 ps  Iteration: 0  Instance: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/adc_monitor_internal/trace_endpoint File: C:/Users/sergi/apps/shazam-vladimir/fpga/adc_core/synthesis/submodules/adc_core_modular_adc_0_adc_monitor_internal.v Line: 137
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/ram/ram.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_INTO_RAM/RAM_CONTROLLER File: C:/Users/sergi/apps/shazam-vladimir/fpga/controllers/adc_measurements_into_ram_controller.v Line: 6
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (1) for port 'q'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/ram/ram.v(45).
+#    Time: 0 ps  Iteration: 0  Instance: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_INTO_RAM/RAM_CONTROLLER File: C:/Users/sergi/apps/shazam-vladimir/fpga/controllers/adc_measurements_into_ram_controller.v Line: 6
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: makar  Hostname: MAKAMOBILU  ProcessID: 12816
+#           Attempting to use alternate WLF file "./wlftgtg3sc".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftgtg3sc
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 10 us
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "C:/Users/sergi/apps/shazam-vladimir/shazam/adc-simulation-measurements.txt" for reading.
+# No such file or directory. (errno = ENOENT)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "" for reading.
+# Invalid argument. (errno = EINVAL)    : c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v(38)
+#    Time: 0 ps  Iteration: 0  Protected: /shazam_testbench/SHAZAM_UNDER_TEST/ADC_CORE_1/modular_adc_0/control_internal/adc_inst/adcblock_instance/primitive_instance/inst/<protected>/<protected>/<protected>
+#  Note : MAX 10 PLL was reset
+# Time: 0  Instance: shazam_testbench.SHAZAM_UNDER_TEST.PLL.altpll_component.cycloneiii_pll.pll3
+#  Note : MAX 10 PLL locked to incoming clock
+# Time: 90000  Instance: shazam_testbench.SHAZAM_UNDER_TEST.PLL.altpll_component.cycloneiii_pll.pll3
+# End time: 20:53:24 on May 10,2024, Elapsed time: 0:05:18
+# Errors: 0, Warnings: 62
