@@ -1,0 +1,505 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/sergi/apps/FFT/quartus/simulation/questa
+T_opt
+!s110 1716334552
+Vhkba<Q29SRdCSnIma<ElE3
+Z2 04 9 4 work testbench fast 0
+=1-c8d3ff6a0a84-664d2fd7-2c2-35bc
+Z3 !s124 OEM10U26 
+Z4 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work +acc
+Z5 tCvgOpt 0
+n@_opt
+Z6 OL;O;2021.2;73
+R1
+T_opt1
+!s110 1716359843
+V29_`=Jb:l2R^WUC6Qi5dk1
+R2
+=1-c8d3ff6a0a84-664d92a2-368-1244
+R3
+R4
+R5
+n@_opt1
+R6
+vbfp_bitWidthAcc
+Z7 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z8 !s110 1716359841
+!i10b 1
+!s100 a`kDH0clSPGVFOH6@;Ojz1
+IKRb03OM^1C9CEok07_SL;1
+S1
+R1
+Z9 w1716226122
+8C:/Users/sergi/apps/FFT/hdl/bfp_bitWidthAcc.sv
+FC:/Users/sergi/apps/FFT/hdl/bfp_bitWidthAcc.sv
+!i122 16
+L0 2 65
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+Z11 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z12 !s108 1716359841.000000
+!s107 C:/Users/sergi/apps/FFT/hdl/bfp_bitWidthAcc.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/bfp_bitWidthAcc.sv|
+!i113 0
+Z13 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 !s92 -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+nbfp_bit@width@acc
+vbfp_bitWidthDetector
+R7
+R8
+!i10b 1
+!s100 [I]c^_aO2Q=k0Wd[13Ch80
+IW@NhNgC4K6b<=U]3ck:L61
+S1
+R1
+R9
+8C:/Users/sergi/apps/FFT/hdl/bfp_bitWidthDetector.sv
+FC:/Users/sergi/apps/FFT/hdl/bfp_bitWidthDetector.sv
+!i122 15
+L0 2 43
+R10
+R11
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/sergi/apps/FFT/hdl/bfp_bitWidthDetector.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/bfp_bitWidthDetector.sv|
+!i113 0
+R13
+R14
+R5
+nbfp_bit@width@detector
+vbfp_maxBitWidth
+R7
+R8
+!i10b 1
+!s100 <8gNU>S[cRkdVoYk<GZ@00
+Ioh1fHh6n2]Mho2;8ehD=S0
+S1
+R1
+R9
+8C:/Users/sergi/apps/FFT/hdl/bfp_maxBitWidth.sv
+FC:/Users/sergi/apps/FFT/hdl/bfp_maxBitWidth.sv
+!i122 14
+L0 2 34
+R10
+R11
+r1
+!s85 0
+31
+Z15 !s108 1716359840.000000
+!s107 C:/Users/sergi/apps/FFT/hdl/bfp_maxBitWidth.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/bfp_maxBitWidth.sv|
+!i113 0
+R13
+R14
+R5
+nbfp_max@bit@width
+vbfp_Shifter
+R7
+Z16 !s110 1716359840
+!i10b 1
+!s100 9cA3hLPimhRiQXkL3dfJD2
+IE7M]HJZ<c2_4lMJP5L`Q`1
+S1
+R1
+R9
+8C:/Users/sergi/apps/FFT/hdl/bfp_Shifter.sv
+FC:/Users/sergi/apps/FFT/hdl/bfp_Shifter.sv
+!i122 13
+L0 2 25
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/sergi/apps/FFT/hdl/bfp_Shifter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/bfp_Shifter.sv|
+!i113 0
+R13
+R14
+R5
+nbfp_@shifter
+vbitReverseCounter
+R7
+R16
+!i10b 1
+!s100 <MOZUIHb<aIz@JFB^];cb2
+IL5:gMjFzP;hWV1aC5mONN2
+S1
+R1
+R9
+8C:/Users/sergi/apps/FFT/hdl/bitReverseCounter.sv
+FC:/Users/sergi/apps/FFT/hdl/bitReverseCounter.sv
+!i122 12
+L0 2 39
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/sergi/apps/FFT/hdl/bitReverseCounter.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/bitReverseCounter.sv|
+!i113 0
+R13
+R14
+R5
+nbit@reverse@counter
+vbutterflyCore
+R7
+R16
+!i10b 1
+!s100 :1WGXETCcV2=L^kmSl]_l1
+ILJ5?MI`Sdh0z`DBSkml1`2
+S1
+R1
+R9
+8C:/Users/sergi/apps/FFT/hdl/butterflyCore.sv
+FC:/Users/sergi/apps/FFT/hdl/butterflyCore.sv
+!i122 11
+L0 2 211
+R10
+R11
+r1
+!s85 0
+31
+R15
+!s107 C:/Users/sergi/apps/FFT/hdl/butterflyCore.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/butterflyCore.sv|
+!i113 0
+R13
+R14
+R5
+nbutterfly@core
+vbutterflyUnit
+R7
+R16
+!i10b 1
+!s100 B8`[P@1GR2Rm`RAEIVdd42
+I6YNfljWI[>`8RoSz`Ul^I2
+S1
+R1
+Z17 w1716238952
+8C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv
+FC:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv
+!i122 10
+L0 2 219
+R10
+R11
+r1
+!s85 0
+31
+Z18 !s108 1716359839.000000
+!s107 C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv|
+!i113 0
+R13
+R14
+R5
+nbutterfly@unit
+vdpram
+R7
+R8
+!i10b 1
+!s100 ?dCSdNWjP8a10[V_3elS]0
+I>mEIH9OV]Z^kMzR56K4LZ2
+S1
+R1
+R9
+8C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/../include/dpram.sv
+FC:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/../include/dpram.sv
+!i122 17
+L0 5 38
+R10
+R11
+r1
+!s85 0
+31
+R12
+Z19 !s107 C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/../include/simtask.sv|C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/../include/header.sv|C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/../include/twrom.sv|C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/../include/dpram.sv|C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/testbench.sv|
+Z20 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit|C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/testbench.sv|
+!i113 0
+R13
+Z21 !s92 -sv -work work +incdir+C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+vfftAddressGenerator
+R7
+Z22 !s110 1716359839
+!i10b 1
+!s100 Gn^>_HQ<0nDI^3^1gmWk=3
+IZOnL1aM<T]f;l[iEm]:D90
+S1
+R1
+R17
+8C:/Users/sergi/apps/FFT/hdl/fftAddressGenerator.sv
+FC:/Users/sergi/apps/FFT/hdl/fftAddressGenerator.sv
+!i122 9
+L0 3 116
+R10
+R11
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/sergi/apps/FFT/hdl/fftAddressGenerator.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/fftAddressGenerator.sv|
+!i113 0
+R13
+R14
+R5
+nfft@address@generator
+vR2FFT
+R7
+R22
+!i10b 1
+!s100 YFV[WcCGkef3Y6ZNVD_FN1
+IB@T_5eTCA0838804z5L4?0
+S1
+R1
+w1716300147
+8C:/Users/sergi/apps/FFT/hdl/R2FFT.sv
+FC:/Users/sergi/apps/FFT/hdl/R2FFT.sv
+!i122 8
+L0 7 542
+R10
+R11
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/sergi/apps/FFT/hdl/R2FFT.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/R2FFT.sv|
+!i113 0
+R13
+R14
+R5
+n@r2@f@f@t
+vr2fft_impl
+R7
+Z23 !s110 1716359838
+!i10b 1
+!s100 oWC]VHz84KoEl<d[2bK]51
+I>?Ul?GnzU4fVz;i80L66l1
+S1
+R1
+w1716227877
+8C:/Users/sergi/apps/FFT/quartus/r2fft_impl.sv
+FC:/Users/sergi/apps/FFT/quartus/r2fft_impl.sv
+!i122 2
+L0 2 188
+R10
+R11
+r1
+!s85 0
+31
+Z24 !s108 1716359838.000000
+!s107 C:/Users/sergi/apps/FFT/quartus/r2fft_impl.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/quartus|C:/Users/sergi/apps/FFT/quartus/r2fft_impl.sv|
+!i113 0
+R13
+!s92 -sv -work work +incdir+C:/Users/sergi/apps/FFT/quartus -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R5
+vradix2Butterfly
+R7
+R22
+!i10b 1
+!s100 zeP[79M4bX]?YaVb6a2kG1
+IO>a8D7o]V3YOd;?9^b_>E1
+S1
+R1
+R17
+8C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv
+FC:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv
+!i122 7
+L0 2 243
+R10
+R11
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv|
+!i113 0
+R13
+R14
+R5
+nradix2@butterfly
+vramPipelineBridge
+R7
+R22
+!i10b 1
+!s100 dXPY9aYkO@im9Jf@k@91F1
+IdjE[b4_cUSAB6Aa;oW>1Z0
+S1
+R1
+R9
+8C:/Users/sergi/apps/FFT/hdl/ramPipelineBridge.sv
+FC:/Users/sergi/apps/FFT/hdl/ramPipelineBridge.sv
+!i122 6
+L0 2 86
+R10
+R11
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/sergi/apps/FFT/hdl/ramPipelineBridge.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/ramPipelineBridge.sv|
+!i113 0
+R13
+R14
+R5
+nram@pipeline@bridge
+vreadBusMux
+R7
+R22
+!i10b 1
+!s100 H5K7CKG^4CZW@gSZ=@[1n0
+Ic9;c@0A?c[BG6^iY[E31>3
+S1
+R1
+R9
+8C:/Users/sergi/apps/FFT/hdl/readBusMux.sv
+FC:/Users/sergi/apps/FFT/hdl/readBusMux.sv
+!i122 5
+L0 2 56
+R10
+R11
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/sergi/apps/FFT/hdl/readBusMux.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/readBusMux.sv|
+!i113 0
+R13
+R14
+R5
+nread@bus@mux
+vtestbench
+R7
+R8
+!i10b 1
+!s100 d034W8RX3V@58jKLNXjMD2
+I@3BGXJF;>lKLDXz0h^Hk^1
+S1
+R1
+w1716359758
+8C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/testbench.sv
+FC:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/testbench.sv
+FC:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/../include/header.sv
+FC:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/../include/simtask.sv
+!i122 17
+L0 7 349
+R10
+R11
+r1
+!s85 0
+31
+R12
+R19
+R20
+!i113 0
+R13
+R21
+R5
+vtwiddleFactorRomBridge
+R7
+R22
+!i10b 1
+!s100 gJT3fchoZ0P8TVRA8YCTS0
+ITfEAX1AcgzXkNdTF<]FFi1
+S1
+R1
+R17
+8C:/Users/sergi/apps/FFT/hdl/twiddleFactorRomBridge.sv
+FC:/Users/sergi/apps/FFT/hdl/twiddleFactorRomBridge.sv
+!i122 4
+L0 1 104
+R10
+R11
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/sergi/apps/FFT/hdl/twiddleFactorRomBridge.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/twiddleFactorRomBridge.sv|
+!i113 0
+R13
+R14
+R5
+ntwiddle@factor@rom@bridge
+vtwrom
+R7
+R8
+!i10b 1
+!s100 UBTP6bJ<JdKbaKH>YUJjl1
+I_eczIEmzIINj]j[U4If<A0
+S1
+R1
+R9
+8C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/../include/twrom.sv
+FC:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/../include/twrom.sv
+!i122 17
+L0 2 32
+R10
+R11
+r1
+!s85 0
+31
+R12
+R19
+R20
+!i113 0
+R13
+R21
+R5
+vwriteBusMux
+R7
+R23
+!i10b 1
+!s100 7b25L?dTScXHEoVZlc3fc2
+IFBH_Z9ICz8Q:DGXzZYFJf3
+S1
+R1
+w1716228142
+8C:/Users/sergi/apps/FFT/hdl/writeBusMux.sv
+FC:/Users/sergi/apps/FFT/hdl/writeBusMux.sv
+!i122 3
+L0 2 59
+R10
+R11
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/sergi/apps/FFT/hdl/writeBusMux.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/FFT/hdl|C:/Users/sergi/apps/FFT/hdl/writeBusMux.sv|
+!i113 0
+R13
+R14
+R5
+nwrite@bus@mux
