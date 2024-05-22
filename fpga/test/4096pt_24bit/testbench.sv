@@ -33,17 +33,17 @@ module testbench;
       $display(",real part, imag part,");
 
       for ( i = 0; i < FFT_LENGTH; i++ ) begin
-	 sact_istream_reg <= 1'b1;
+	 input_stream_active_reg <= 1'b1;
 	 inputReal = ToSignedInt(
 				 $sin ( 2.0 * M_PI * 8 *  i / FFT_LENGTH )
 				 );
 	 inputImag = 0;
 	 $display(",%d,%d,", inputReal, inputImag );
-	 sdw_istream_real_reg <= inputReal;
-	 sdw_istream_imag_reg <= inputImag;
+	 input_real_reg <= inputReal;
+	 output_real_reg <= inputImag;
 	 wait_clk( 1 );
       end // for ( i = 0; i < FFT_LENGTH; i++ )
-      sact_istream_reg <= 1'b0;
+      input_stream_active_reg <= 1'b0;
 
       while ( !done ) begin
 	 wait_clk( 1 );

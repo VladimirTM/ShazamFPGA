@@ -43,7 +43,7 @@ module ADC_modular_adc_0 #(
 	endgenerate
 
 	altera_modular_adc_control #(
-		.clkdiv                          (4),
+		.clkdiv                          (5),
 		.tsclkdiv                        (0),
 		.tsclksel                        (1),
 		.hard_pwd                        (0),

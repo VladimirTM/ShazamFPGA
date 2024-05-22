@@ -55,18 +55,16 @@
       input real inputReal;
       input real inputImag;
       begin
-	 sact_istream_reg <= 1'b1;
-	 sdw_istream_real_reg <= ToSignedInt( inputReal );
-	 sdw_istream_imag_reg <= ToSignedInt( inputImag );
+	 input_stream_active_reg <= 1'b1;
+	 input_real_reg <= ToSignedInt( inputReal );
+	 output_real_reg <= ToSignedInt( inputImag );
 	 wait_clk(1);
-	 sact_istream_reg <= 1'b0;
+	 input_stream_active_reg <= 1'b0;
       end
    endtask //
 
    event strobeOutputData;
-   task automatic dumpFromDmaBus (
-				  input integer waitCount = 0
-				  );
+   task automatic dumpFromDmaBus (input integer waitCount = 0);
       integer i;
       begin
 	 for ( i = 0; i < FFT_LENGTH; i++ ) begin

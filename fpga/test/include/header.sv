@@ -27,14 +27,14 @@
    reg signed [7:0] bfpexp_reg = 8'hZZ;
    wire signed [7:0] bfpexp = bfpexp_reg;
 
-   reg 		     sact_istream_reg = 1'b0;
-   wire 	     sact_istream = sact_istream_reg;
+   reg 		     input_stream_active_reg = 1'b0;
+   wire 	     input_stream_active = input_stream_active_reg;
 
-   reg signed [FFT_DW-1:0] sdw_istream_real_reg;
-   wire signed [FFT_DW-1:0] sdw_istream_real = sdw_istream_real_reg;
+   reg signed [FFT_DW-1:0] input_real_reg;
+   wire signed [FFT_DW-1:0] input_real = input_real_reg;
    
-   reg signed [FFT_DW-1:0]  sdw_istream_imag_reg;
-   wire signed [FFT_DW-1:0] sdw_istream_imag = sdw_istream_imag_reg;
+   reg signed [FFT_DW-1:0]  output_real_reg;
+   wire signed [FFT_DW-1:0] output_real = output_real_reg;
 
    reg 			    dmaact_reg = 1'b0;
    wire 		    dmaact = dmaact_reg;
@@ -91,9 +91,9 @@
       .status( status ),
       .bfpexp( bfpexp ),
 
-      .sact_istream( sact_istream ),
-      .sdw_istream_real( sdw_istream_real ),
-      .sdw_istream_imag( sdw_istream_imag ),
+      .input_stream_active( input_stream_active ),
+      .input_real( input_real ),
+      .output_real( output_real ),
 
       .dmaact( dmaact ),
       .dmaa( dmaa ),

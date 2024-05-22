@@ -28,7 +28,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:09 on May 22,2024
+# Start time: 11:34:01 on May 22,2024
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -110,7 +110,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 09:37:09 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:01 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -122,7 +122,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:10 on May 22,2024
+# Start time: 11:34:02 on May 22,2024
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -186,7 +186,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 09:37:11 on May 22,2024, Elapsed time: 0:00:01
+# End time: 11:34:02 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -198,7 +198,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:11 on May 22,2024
+# Start time: 11:34:03 on May 22,2024
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -240,7 +240,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 09:37:11 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:03 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -252,7 +252,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:12 on May 22,2024
+# Start time: 11:34:04 on May 22,2024
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -382,7 +382,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 09:37:13 on May 22,2024, Elapsed time: 0:00:01
+# End time: 11:34:05 on May 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -394,7 +394,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:13 on May 22,2024
+# Start time: 11:34:05 on May 22,2024
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -477,7 +477,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 09:37:14 on May 22,2024, Elapsed time: 0:00:01
+# End time: 11:34:06 on May 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/fiftyfivenm_ver
@@ -489,7 +489,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work fiftyfivenm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/fiftyfivenm_atoms.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:14 on May 22,2024
+# Start time: 11:34:06 on May 22,2024
 # vlog -reportprogress 300 -vlog01compat -work fiftyfivenm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/fiftyfivenm_atoms.v 
 # -- Compiling UDP FIFTYFIVENM_PRIM_DFFE
 # -- Compiling UDP FIFTYFIVENM_PRIM_DFFEAS
@@ -582,15 +582,15 @@
 # 	fiftyfivenm_jtag
 # 	fiftyfivenm_adcblock
 # 	fiftyfivenm_phase_detector
-# End time: 09:37:14 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:07 on May 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work fiftyfivenm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:14 on May 22,2024
+# Start time: 11:34:07 on May 22,2024
 # vlog -reportprogress 300 -vlog01compat -work fiftyfivenm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/fiftyfivenm_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 09:37:18 on May 22,2024, Elapsed time: 0:00:04
+# End time: 11:34:10 on May 22,2024, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -605,221 +605,221 @@
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/FFT/quartus {C:/Users/sergi/apps/FFT/quartus/twrom.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/twrom.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:18 on May 22,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/FFT/quartus" C:/Users/sergi/apps/FFT/quartus/twrom.v 
+# Start time: 11:34:11 on May 22,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus" C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/twrom.v 
 # -- Compiling module twrom
 # 
 # Top level modules:
 # 	twrom
-# End time: 09:37:18 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:11 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/FFT/quartus {C:/Users/sergi/apps/FFT/quartus/dpram.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/dpram.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:18 on May 22,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/FFT/quartus" C:/Users/sergi/apps/FFT/quartus/dpram.v 
+# Start time: 11:34:11 on May 22,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus" C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/dpram.v 
 # -- Compiling module dpram
 # 
 # Top level modules:
 # 	dpram
-# End time: 09:37:18 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:11 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/quartus {C:/Users/sergi/apps/FFT/quartus/r2fft_impl.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:18 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/quartus" C:/Users/sergi/apps/FFT/quartus/r2fft_impl.sv 
+# Start time: 11:34:11 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus" C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv 
 # -- Compiling module r2fft_impl
 # 
 # Top level modules:
 # 	r2fft_impl
-# End time: 09:37:18 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:11 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/writeBusMux.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/writeBusMux.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:18 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/writeBusMux.sv 
+# Start time: 11:34:11 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/writeBusMux.sv 
 # -- Compiling module writeBusMux
 # 
 # Top level modules:
 # 	writeBusMux
-# End time: 09:37:18 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:12 on May 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/twiddleFactorRomBridge.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/twiddleFactorRomBridge.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:18 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/twiddleFactorRomBridge.sv 
+# Start time: 11:34:12 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/twiddleFactorRomBridge.sv 
 # -- Compiling module twiddleFactorRomBridge
 # 
 # Top level modules:
 # 	twiddleFactorRomBridge
-# End time: 09:37:19 on May 22,2024, Elapsed time: 0:00:01
+# End time: 11:34:12 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/readBusMux.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/readBusMux.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:19 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/readBusMux.sv 
+# Start time: 11:34:12 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/readBusMux.sv 
 # -- Compiling module readBusMux
 # 
 # Top level modules:
 # 	readBusMux
-# End time: 09:37:19 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:12 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/ramPipelineBridge.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/ramPipelineBridge.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:19 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/ramPipelineBridge.sv 
+# Start time: 11:34:12 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/ramPipelineBridge.sv 
 # -- Compiling module ramPipelineBridge
 # 
 # Top level modules:
 # 	ramPipelineBridge
-# End time: 09:37:19 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:12 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:19 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv 
+# Start time: 11:34:12 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv 
 # -- Compiling module radix2Butterfly
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(125): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(126): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(127): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(128): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(129): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(130): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(156): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(157): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(158): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(203): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(204): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(208): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(209): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(210): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(232): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(233): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(237): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(238): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/radix2Butterfly.sv(239): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(125): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(126): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(127): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(128): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(129): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(130): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(156): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(157): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(158): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(203): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(204): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(208): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(209): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(210): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(232): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(233): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(237): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(238): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(239): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
 # 
 # Top level modules:
 # 	radix2Butterfly
-# End time: 09:37:19 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:13 on May 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 19
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/R2FFT.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:19 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/R2FFT.sv 
+# Start time: 11:34:13 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv 
 # -- Compiling module R2FFT
 # 
 # Top level modules:
 # 	R2FFT
-# End time: 09:37:19 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:13 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/fftAddressGenerator.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/fftAddressGenerator.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:19 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/fftAddressGenerator.sv 
+# Start time: 11:34:13 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/fftAddressGenerator.sv 
 # -- Compiling module fftAddressGenerator
 # 
 # Top level modules:
 # 	fftAddressGenerator
-# End time: 09:37:19 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:13 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:19 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv 
+# Start time: 11:34:13 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv 
 # -- Compiling module butterflyUnit
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv(188): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv(189): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv(190): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv(191): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv(192): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv(194): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv(195): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv(196): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
-# ** Warning: C:/Users/sergi/apps/FFT/hdl/butterflyUnit.sv(198): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv(188): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv(189): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv(190): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv(191): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv(192): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv(194): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv(195): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv(196): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv(198): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
 # 
 # Top level modules:
 # 	butterflyUnit
-# End time: 09:37:20 on May 22,2024, Elapsed time: 0:00:01
+# End time: 11:34:14 on May 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 9
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/butterflyCore.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyCore.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:20 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/butterflyCore.sv 
+# Start time: 11:34:14 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyCore.sv 
 # -- Compiling module butterflyCore
 # 
 # Top level modules:
 # 	butterflyCore
-# End time: 09:37:20 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:14 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/bitReverseCounter.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bitReverseCounter.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:20 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/bitReverseCounter.sv 
+# Start time: 11:34:14 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bitReverseCounter.sv 
 # -- Compiling module bitReverseCounter
 # 
 # Top level modules:
 # 	bitReverseCounter
-# End time: 09:37:20 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:14 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/bfp_Shifter.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_Shifter.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:20 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/bfp_Shifter.sv 
+# Start time: 11:34:14 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_Shifter.sv 
 # -- Compiling module bfp_Shifter
 # 
 # Top level modules:
 # 	bfp_Shifter
-# End time: 09:37:20 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:14 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/bfp_maxBitWidth.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_maxBitWidth.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:20 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/bfp_maxBitWidth.sv 
+# Start time: 11:34:14 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_maxBitWidth.sv 
 # -- Compiling module bfp_maxBitWidth
 # 
 # Top level modules:
 # 	bfp_maxBitWidth
-# End time: 09:37:21 on May 22,2024, Elapsed time: 0:00:01
+# End time: 11:34:16 on May 22,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/bfp_bitWidthDetector.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthDetector.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:21 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/bfp_bitWidthDetector.sv 
+# Start time: 11:34:16 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthDetector.sv 
 # -- Compiling module bfp_bitWidthDetector
 # 
 # Top level modules:
 # 	bfp_bitWidthDetector
-# End time: 09:37:21 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:16 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/hdl {C:/Users/sergi/apps/FFT/hdl/bfp_bitWidthAcc.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthAcc.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:21 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/hdl" C:/Users/sergi/apps/FFT/hdl/bfp_bitWidthAcc.sv 
+# Start time: 11:34:17 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthAcc.sv 
 # -- Compiling module bfp_bitWidthAcc
 # 
 # Top level modules:
 # 	bfp_bitWidthAcc
-# End time: 09:37:21 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:17 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit {C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/testbench.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/testbench.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 09:37:21 on May 22,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit" C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/testbench.sv 
+# Start time: 11:34:17 on May 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit" C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/testbench.sv 
 # -- Compiling module dpram
 # -- Compiling module twrom
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 09:37:21 on May 22,2024, Elapsed time: 0:00:00
+# End time: 11:34:17 on May 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 09:37:21 on May 22,2024
+# Start time: 11:34:18 on May 22,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 2 FSMs in module "R2FFT(fast)".
 # Loading sv_std.std
@@ -840,20 +840,22 @@
 # Loading work.writeBusMux(fast)
 # Loading work.twrom(fast)
 # Loading work.dpram(fast)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/testbench.sv Line: 47
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: sergi  Hostname: DESKTOP-PLNR7AI  ProcessID: 13756
-#           Attempting to use alternate WLF file "./wlftfz59qn".
+#           Attempting to use alternate WLF file "./wlft69r0nz".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftfz59qn
+#           Using alternate file: ./wlft69r0nz
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $stop    : C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/testbench.sv(73)
+# ** Note: $stop    : C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/testbench.sv(87)
 #    Time: 72811 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/sergi/apps/FFT/quartus/../test/1024pt_16bit/testbench.sv line 73
-# End time: 09:52:02 on May 22,2024, Elapsed time: 0:14:41
-# Errors: 0, Warnings: 2
+# Break in Module testbench at C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/testbench.sv line 87
+# End time: 11:37:57 on May 22,2024, Elapsed time: 0:03:39
+# Errors: 0, Warnings: 3

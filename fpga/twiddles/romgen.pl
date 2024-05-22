@@ -16,8 +16,8 @@ my $fft_n = log( $fft_length ) / log(2);
 my $fullScale = 0x1 << ($fft_dw-1);
 my $mPi = atan2( 1,1 ) * 4;
 
-my $max_frequency = 40960;
-my $frequency_hop = 40;
+my $max_frequency = 50000;
+my $frequency_hop = 48.828125;
 
 my @romContents = ();
 for ( my $i = 0; $i < $fft_length/4; $i++ )

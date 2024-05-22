@@ -35,17 +35,17 @@ module testbench;
       $fwrite(output_file, "INPUT DATA:\n");
 
       for ( i = 0; i < FFT_LENGTH; i++ ) begin
-	      sact_istream_reg <= 1'b1;
+	      input_stream_active_reg <= 1'b1;
          // sampling rate of 40960Hz with peaks at 150, 20, 2000Hz
 	      inputReal = ToSignedInt($cos ( 2.0 * M_PI * 18000 *  i / (40 * FFT_LENGTH) ));
 	      inputImag = 0;
          $fwrite(output_file, "REAL DATA: %d, IMAGINARY DATA: %d\n", inputReal, inputImag);
-	      sdw_istream_real_reg <= inputReal;
-	      sdw_istream_imag_reg <= inputImag;
+	      input_real_reg <= inputReal;
+	      output_real_reg <= inputImag;
 	      wait_clk( 1 );
       end
       
-      sact_istream_reg <= 1'b0;
+      input_stream_active_reg <= 1'b0;
 
       while ( !done ) begin
 	      wait_clk( 1 );

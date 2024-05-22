@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="ADC" kind="ADC" version="1.0" fabric="QSYS">
  <!-- Format version 22.1 922 (Future versions may contain additional information.) -->
- <!-- 2024.05.22.10:05:44 -->
+ <!-- 2024.05.22.10:48:35 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1716361544</value>
+  <value>1716364115</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -386,7 +386,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="sample_rate">
    <type>int</type>
-   <value>6</value>
+   <value>7</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -402,7 +402,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="derived_clkdiv">
    <type>int</type>
-   <value>4</value>
+   <value>5</value>
    <derived>true</derived>
    <enabled>true</enabled>
    <visible>false</visible>

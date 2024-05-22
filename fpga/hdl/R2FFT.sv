@@ -23,17 +23,17 @@ module R2FFT
     input wire 			    ifft,
     
     // status
-    output wire 		    done,
-    output wire [2:0] 		    status,
-    output wire signed [7:0] 	    bfpexp,
+    output wire 		               done,
+    output wire [2:0] 		         status,
+    output wire signed [7:0] 	      bfpexp,
 
     // input stream
-    input wire 			    sact_istream,
-    input wire signed [FFT_DW-1:0]  sdw_istream_real,
-    input wire signed [FFT_DW-1:0]  sdw_istream_imag,
+    input wire 			            input_stream_active,
+    input wire signed [FFT_DW-1:0]  input_real,
+    input wire signed [FFT_DW-1:0]  output_real,
 
     // output / DMA bus
-    input wire 			    dmaact,
+    input wire		               dmaact,
     input wire [FFT_N-1:0] 	    dmaa,
     output wire signed [FFT_DW-1:0] dmadr_real,
     output wire signed [FFT_DW-1:0] dmadr_imag,
@@ -96,7 +96,7 @@ module R2FFT
         
         ST_INPUT_STREAM:
           begin
-             if ( streamBufferFull && sact_istream ) begin
+             if ( streamBufferFull && input_stream_active ) begin
                 if ( autorun ) begin
                    status_n = ST_RUN_FFT;
                 end else begin
@@ -177,7 +177,7 @@ module R2FFT
       .rst( rst ),
       .clk( clk ),
       .clr( status_f != ST_INPUT_STREAM ),
-      .inc( sact_istream ),
+      .inc( input_stream_active ),
       .iter( istreamAddr ),
       .count(),
       .countFull( streamBufferFull )
@@ -191,8 +191,8 @@ module R2FFT
        )
      uistreamBitWidthDetector
      (
-      .operand0(sdw_istream_real),
-      .operand1(sdw_istream_imag),
+      .operand0(input_real),
+      .operand1(output_real),
       .operand2({FFT_DW{1'b0}}),
       .operand3({FFT_DW{1'b0}}),
       .bw(istreamBw)
@@ -210,7 +210,7 @@ module R2FFT
 
       .clr( (status_f == ST_IDLE) ||
 	    (status_f == ST_DONE) ),
-      .bw_act( sact_istream && (status_f == ST_INPUT_STREAM) ),
+      .bw_act( input_stream_active && (status_f == ST_INPUT_STREAM) ),
       .bw( istreamBw ),
       .max_bw( istreamMaxBw )
       
@@ -509,9 +509,9 @@ module R2FFT
       .wa_fft( wa_fft0 ),
       .wdw_fft( wdw_fft0 ),
 
-      .wact_istream( sact_istream && (istreamAddr[0] == 1'b0) ),
+      .wact_istream( input_stream_active && (istreamAddr[0] == 1'b0) ),
       .wa_istream( istreamAddr[FFT_N-1:1] ),
-      .wdw_istream( { sdw_istream_imag, sdw_istream_real } ),
+      .wdw_istream( { output_real, input_real } ),
 
       .wact_ram( wact_ram0 ),
       .wa_ram( wa_ram0 ),
@@ -535,9 +535,9 @@ module R2FFT
       .wa_fft( wa_fft1 ),
       .wdw_fft( wdw_fft1 ),
 
-      .wact_istream( sact_istream && (istreamAddr[0] == 1'b1) ),
+      .wact_istream( input_stream_active && (istreamAddr[0] == 1'b1) ),
       .wa_istream( istreamAddr[FFT_N-1:1] ),
-      .wdw_istream( { sdw_istream_imag, sdw_istream_real } ),
+      .wdw_istream( { output_real, input_real } ),
 
       .wact_ram( wact_ram1 ),
       .wa_ram( wa_ram1 ),

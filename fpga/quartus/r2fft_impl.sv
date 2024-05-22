@@ -24,15 +24,15 @@ module r2fft_impl
    output reg signed [7:0] 	  bfpexp_o,
 
     // input stream
-   input wire 			  sact_istream_i,
-   input wire signed [FFT_DW-1:0] sdw_istream_real_i,
-   input wire signed [FFT_DW-1:0] sdw_istream_imag_i,
+   input wire 			             input_stream_active_i,
+   input wire signed [FFT_DW-1:0] input_real_i,
+   input wire signed [FFT_DW-1:0] output_real_i,
 
     // output / DMA bus
-   input wire 			  dmaact_i,
-   input wire [FFT_N-1:0] 	  dmaa_i,
-   output reg signed [FFT_DW-1:0] dmadr_real_o,
-   output reg signed [FFT_DW-1:0] dmadr_imag_o
+   input wire 			               dmaact_i,
+   input wire [FFT_N-1:0] 	         dmaa_i,
+   output reg signed [FFT_DW-1:0]   dmadr_real_o,
+   output reg signed [FFT_DW-1:0]   dmadr_imag_o
    
    );
 
@@ -63,9 +63,9 @@ module r2fft_impl
    end
 
    // input stream
-   reg 			   sact_istream;
-   reg signed [FFT_DW-1:0] sdw_istream_real;
-   reg signed [FFT_DW-1:0] sdw_istream_imag;
+   reg 			   input_stream_active;
+   reg signed [FFT_DW-1:0] input_real;
+   reg signed [FFT_DW-1:0] output_real;
 
     // output / DMA bus
    reg 			   dmaact;
@@ -74,9 +74,9 @@ module r2fft_impl
    wire signed [FFT_DW-1:0] dmadr_imag;
 
    always @ ( posedge clk ) begin
-      sact_istream <= sact_istream_i;
-      sdw_istream_real <= sdw_istream_real_i;
-      sdw_istream_imag <= sdw_istream_imag_i;
+      input_stream_active <= input_stream_active_i;
+      input_real <= input_real_i;
+      output_real <= output_real_i;
       dmaact <= dmaact_i;
       dmaa <= dmaa_i;
    end
@@ -130,9 +130,9 @@ module r2fft_impl
       .status( status ),
       .bfpexp( bfpexp ),
 
-      .sact_istream( sact_istream ),
-      .sdw_istream_real( sdw_istream_real ),
-      .sdw_istream_imag( sdw_istream_imag ),
+      .input_stream_active( input_stream_active ),
+      .input_real( input_real ),
+      .output_real( output_real ),
 
       .dmaact( dmaact ),
       .dmaa( dmaa ),

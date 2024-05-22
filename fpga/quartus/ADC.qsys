@@ -6,7 +6,7 @@
    version="1.0"
    description=""
    tags="INTERNAL_COMPONENT=true"
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element modular_adc_0
@@ -31,7 +31,7 @@
  <parameter name="hideFromIPCatalog" value="true" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="r2fft_impl.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -144,7 +144,7 @@
   <parameter name="prescaler_ch16" value="false" />
   <parameter name="prescaler_ch8" value="false" />
   <parameter name="refsel" value="0" />
-  <parameter name="sample_rate" value="6" />
+  <parameter name="sample_rate" value="7" />
   <parameter name="seq_order_length" value="1" />
   <parameter name="seq_order_slot_1" value="30" />
   <parameter name="seq_order_slot_10" value="30" />
