@@ -1,0 +1,29 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\sergi\apps\shazam-vladimir\fpga\quartus\ADC.qsys --block-symbol-file --output-directory=C:\Users\sergi\apps\shazam-vladimir\fpga\quartus\ADC --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading quartus/ADC.qsys
+Progress: Reading input file
+Progress: Adding modular_adc_0 [altera_modular_adc 22.1]
+Progress: Parameterizing module modular_adc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\sergi\apps\shazam-vladimir\fpga\quartus\ADC.qsys --synthesis=VERILOG --output-directory=C:\Users\sergi\apps\shazam-vladimir\fpga\quartus\ADC\synthesis --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading quartus/ADC.qsys
+Progress: Reading input file
+Progress: Adding modular_adc_0 [altera_modular_adc 22.1]
+Progress: Parameterizing module modular_adc_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ADC: Generating ADC "ADC" for QUARTUS_SYNTH
+Info: modular_adc_0: "ADC" instantiated altera_modular_adc "modular_adc_0"
+Info: control_internal: "modular_adc_0" instantiated altera_modular_adc_control "control_internal"
+Info: ADC: Done "ADC" with 3 modules, 9 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,18 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst unsaved.modular_adc_0 -pg 1 -lvl 1 -y 50
+preplace inst unsaved.modular_adc_0.control_internal -pg 1
+preplace inst unsaved.modular_adc_0.rst_inst -pg 1
+preplace inst unsaved.modular_adc_0.cb_inst -pg 1
+preplace inst unsaved.modular_adc_0.sample_store_internal -pg 1
+preplace inst unsaved -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst unsaved.modular_adc_0.sequencer_internal -pg 1
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)modular_adc_0.sample_store_irq,(SLAVE)unsaved.sample_store_irq) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.sequencer_csr,(SLAVE)modular_adc_0.sequencer_csr) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)modular_adc_0.sample_store_csr,(SLAVE)unsaved.sample_store_csr) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.clock,(SLAVE)modular_adc_0.clock) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.adc_pll_clock,(SLAVE)modular_adc_0.adc_pll_clock) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)modular_adc_0.reset_sink,(SLAVE)unsaved.reset_sink) 1 0 1 NJ
+preplace netloc EXPORT<net_container>unsaved</net_container>(SLAVE)unsaved.adc_pll_locked,(SLAVE)modular_adc_0.adc_pll_locked) 1 0 1 NJ
+levelinfo -pg 1 0 110 350
+levelinfo -hier unsaved 120 240 340
