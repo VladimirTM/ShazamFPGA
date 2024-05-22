@@ -1,7 +1,9 @@
 module adc_measurements_into_ram (
-    input [11: 0] adc_measurements,  // voltage measurements from the ADC describing the sound
-    input RESET,
-    input CLOCK);
+    input enable,
+    input [11:0] adc_measurements,
+    input reset,
+    input clk
+);
 
 ram RAM_CONTROLLER (
     .address(0),

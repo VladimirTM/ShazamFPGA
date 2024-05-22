@@ -2,7 +2,6 @@ module FFT
   #(
     parameter FFT_LENGTH = 1024,     // FFT Frame Length, 2^N
     parameter DATA_WIDTH = 16,       // Data width in bits
-    parameter PL_DEPTH = 3,          // Pipeline Stage Depth Configuration (0 - 3)
     parameter FFT_N = 10
   )
    (
@@ -10,45 +9,20 @@ module FFT
     input wire 			    clk,
     input wire 			    rst,
 
-    // status
-    output wire 		             done,
-    output wire [2:0] 		         status,
-    output wire signed [7:0] 	     bfpexp,
-
     // input stream
     input wire 			                input_stream_active, // input data bus active.
     input wire signed [DATA_WIDTH-1:0]  real_input,
     input wire signed [DATA_WIDTH-1:0]  imaginary_input,
 
-    // output / DMA bus
-    input wire 			                dmaact,
-    input wire [FFT_N-1:0] 	            dmaa,
-    output wire signed [DATA_WIDTH-1:0] dmadr_real,
-    output wire signed [DATA_WIDTH-1:0] dmadr_imag,
+    // output
+    output wire                         output_active,
+    output wire signed [DATA_WIDTH-1:0] output_real,
+    output wire signed [DATA_WIDTH-1:0] output_imag,
     
     // twiddle factor rom
-    output wire 		                twact,
-    output wire [FFT_N-1-2:0] 	        twa,
-    input wire [DATA_WIDTH-1:0] 	    twdr_cos, // can be used in testbench instead of initializing memory with .mif file 
-    
-    // block ram0
-    output wire 		                ram0_read_active, // dual port ram0 read bus active.
-    output wire [FFT_N-1-1:0] 	        ram0_read_address, // dual port ram0 read address. 
-    input wire [DATA_WIDTH*2-1:0] 	    ram0_read_data, // dual port ram0 read data (used in testbench to show what data is in the memory that "ram0_read_address" point to)
-   
-    output wire 		                ram0_write_active, // dual port ram0 write bus active.
-    output wire [FFT_N-1-1:0] 	        ram0_write_address, // dual port ram0 write address
-    output wire [DATA_WIDTH*2-1:0] 	    ram0_write_data, // dual port ram0 write data.
-   
-    // block ram1
-    output wire 		                ram1_read_active,
-    output wire [FFT_N-1-1:0] 	        ram1_read_address,
-    input wire [DATA_WIDTH*2-1:0] 	    ram1_read_data,
-
-    output wire 		                ram1_write_active,
-    output wire [FFT_N-1-1:0] 	        ram1_write_address,
-    output wire [DATA_WIDTH*2-1:0] 	    ram1_write_data
-   
+    output wire                           twiddle_active,
+    output wire [8:0] 	                  twiddle_address, // to interogate 512 addresses we need 9 bits
+    input wire [2 * DATA_WIDTH-1:0]       twiddle
     );
    
    // fft status
