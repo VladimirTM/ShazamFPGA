@@ -22,6 +22,7 @@ R0
 R0
 R0
 R0
+R0
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -33,446 +34,125 @@ Z1 dC:/Users/sergi/apps/FFT/quartus/simulation/questa
 T_opt
 !s110 1716334552
 Vhkba<Q29SRdCSnIma<ElE3
-Z2 04 9 4 work testbench fast 0
+04 9 4 work testbench fast 0
 =1-c8d3ff6a0a84-664d2fd7-2c2-35bc
 !s124 OEM10U26 
 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work +acc
-Z3 tCvgOpt 0
+Z2 tCvgOpt 0
 n@_opt
-Z4 OL;O;2021.2;73
+OL;O;2021.2;73
 R1
-T_opt1
-!s110 1716413937
-VP7?403ZoHc7kIEZ8lh4l11
-R2
-=1-c8d3ff6a0a84-664e65f0-3e7-29b4
-!s124 OEM10U29 
-o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -L ADC +acc
-R3
-n@_opt1
-R4
-vbfp_bitWidthAcc
-Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z6 !s110 1716413935
-!i10b 1
-!s100 a`kDH0clSPGVFOH6@;Ojz1
-I=klaO[7YNVD>n`PXKiNg`3
-S1
-Z7 dC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/simulation/questa
-Z8 w1716226122
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthAcc.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthAcc.sv
-!i122 18
-L0 2 65
-Z9 VDg1SIo80bB@j0V0VzS_@n1
-Z10 OL;L;2021.2;73
-r1
-!s85 0
-31
-Z11 !s108 1716413935.000000
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthAcc.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthAcc.sv|
-!i113 0
-Z12 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z13 !s92 -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
-nbfp_bit@width@acc
-vbfp_bitWidthDetector
-R5
-R6
-!i10b 1
-!s100 [I]c^_aO2Q=k0Wd[13Ch80
-I^`Mo9LT5]g@nEFQaol_7P0
-S1
-R7
-R8
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthDetector.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthDetector.sv
-!i122 17
-L0 2 43
-R9
-R10
-r1
-!s85 0
-31
-R11
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthDetector.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthDetector.sv|
-!i113 0
-R12
-R13
-R3
-nbfp_bit@width@detector
-vbfp_maxBitWidth
-R5
-R6
-!i10b 1
-!s100 <8gNU>S[cRkdVoYk<GZ@00
-IR6UnL]I_fZUQJMUdgfKA51
-S1
-R7
-R8
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_maxBitWidth.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_maxBitWidth.sv
-!i122 16
-L0 2 34
-R9
-R10
-r1
-!s85 0
-31
-R11
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_maxBitWidth.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_maxBitWidth.sv|
-!i113 0
-R12
-R13
-R3
-nbfp_max@bit@width
-vbfp_Shifter
-R5
-R6
-!i10b 1
-!s100 9cA3hLPimhRiQXkL3dfJD2
-I4f[WY<nNGgR6bKWdG@KIF0
-S1
-R7
-R8
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_Shifter.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_Shifter.sv
-!i122 15
-L0 2 25
-R9
-R10
-r1
-!s85 0
-31
-R11
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_Shifter.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_Shifter.sv|
-!i113 0
-R12
-R13
-R3
-nbfp_@shifter
-vbitReverseCounter
-R5
-R6
-!i10b 1
-!s100 <MOZUIHb<aIz@JFB^];cb2
-I_HkKMgjdkFh:EB^5<MGTk1
-S1
-R7
-R8
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bitReverseCounter.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bitReverseCounter.sv
-!i122 14
-L0 2 39
-R9
-R10
-r1
-!s85 0
-31
-Z14 !s108 1716413934.000000
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bitReverseCounter.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bitReverseCounter.sv|
-!i113 0
-R12
-R13
-R3
-nbit@reverse@counter
-vbutterflyCore
-R5
-Z15 !s110 1716413934
-!i10b 1
-!s100 :1WGXETCcV2=L^kmSl]_l1
-I0>=1]0o0@8E748YA@[ho40
-S1
-R7
-R8
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyCore.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyCore.sv
-!i122 13
-L0 2 211
-R9
-R10
-r1
-!s85 0
-31
-R14
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyCore.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyCore.sv|
-!i113 0
-R12
-R13
-R3
-nbutterfly@core
-vbutterflyUnit
-R5
-R15
-!i10b 1
-!s100 B8`[P@1GR2Rm`RAEIVdd42
-I^Yg>nSn_FYOo<W?WjljPY2
-S1
-R7
-Z16 w1716238952
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv
-!i122 12
-L0 2 219
-R9
-R10
-r1
-!s85 0
-31
-Z17 !s108 1716413933.000000
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv|
-!i113 0
-R12
-R13
-R3
-nbutterfly@unit
 vclk_2MHz
-Z18 !s110 1716413930
+Z3 !s110 1716429657
 !i10b 1
 !s100 GCo0]JB8An06c8_?Je4mU3
 I0nZzFC4E:Zk4fh2gDLmWC0
-R7
+Z4 dC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/simulation/questa
 w1716396740
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/clk_2MHz.v
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/clk_2MHz.v
-!i122 2
+!i122 1
 L0 40 115
-R9
-R10
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2021.2;73
 r1
 !s85 0
 31
-Z19 !s108 1716413930.000000
+Z7 !s108 1716429657.000000
 !s107 C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/clk_2MHz.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus|C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/clk_2MHz.v|
 !i113 0
-Z20 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z21 !s92 -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
+Z8 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
 nclk_2@m@hz
 vclk_2MHz_altpll
-R18
+!s110 1716429658
 !i10b 1
 !s100 :F4=UJzj0j<j3SMZmdbY:0
 ID64?4aG9P87L;J9:g9]gG1
-R7
+R4
 w1716396920
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/clk_2mhz_altpll.v
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/clk_2mhz_altpll.v
-!i122 3
+!i122 2
 L0 30 68
-R9
-R10
+R5
+R6
 r1
 !s85 0
 31
-R19
+!s108 1716429658.000000
 !s107 C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/clk_2mhz_altpll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db|C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/clk_2mhz_altpll.v|
 !i113 0
-R20
+R8
 !s92 -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
+R2
 nclk_2@m@hz_altpll
-vdpram
-R18
-!i10b 1
-!s100 1CN=giWPS;CJ6BOna=RI22
-Il41cZVNNnQQS27m]A<oLd3
-R7
-Z22 w1716226296
-8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/dpram.v
-FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/dpram.v
-!i122 1
-L0 40 73
-R9
-R10
-r1
-!s85 0
-31
-R19
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/dpram.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus|C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/dpram.v|
-!i113 0
-R20
-R21
-R3
 vFFT_IMPLEMENTATION
-R5
-Z23 !s110 1716413932
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z10 !s110 1716429659
 !i10b 1
-!s100 4j`Dbh;:TK0<[@l[dV?UJ1
-I6gYGAYL7h0nm^Mah70zYh2
+!s100 z<9Ejimd[1]Qj;AI3=U^N2
+Iob8^^N7c`HK>HCOAQDlIZ1
 S1
-R7
-w1716411351
+R4
+w1716427347
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv
-!i122 4
-L0 2 216
-R9
-R10
+!i122 3
+L0 2 304
+R5
+R6
 r1
 !s85 0
 31
-Z24 !s108 1716413932.000000
+Z11 !s108 1716429659.000000
 !s107 C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus|C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv|
 !i113 0
-R12
+o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 !s92 -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
+R2
 n@f@f@t_@i@m@p@l@e@m@e@n@t@a@t@i@o@n
-vfftAddressGenerator
-R5
-Z25 !s110 1716413933
-!i10b 1
-!s100 Gn^>_HQ<0nDI^3^1gmWk=3
-ICKd]TbEXjCVh<;2aV;ZRN3
-S1
-R7
-R16
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/fftAddressGenerator.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/fftAddressGenerator.sv
-!i122 11
-L0 3 116
-R9
-R10
-r1
-!s85 0
-31
-R17
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/fftAddressGenerator.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/fftAddressGenerator.sv|
-!i113 0
-R12
-R13
+vSEG7_LUT
 R3
-nfft@address@generator
-vR2FFT
-R5
-R25
 !i10b 1
-!s100 3Q4n[Wi<KLDo>ek:IYN503
-IzBZ4loLL?FJYW5Y7JQelh0
-S1
-R7
-w1716361921
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv
-!i122 10
-L0 7 542
-R9
-R10
-r1
-!s85 0
-31
-R17
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv|
-!i113 0
-R12
-R13
-R3
-n@r2@f@f@t
-vradix2Butterfly
+!s100 ac@9nPd5;Cc9VHg^m826e0
+IfjU;<JBIM>fbNH8<MfnDU1
+R4
+w1716421918
+8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/SEG7_LUT.v
+FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/SEG7_LUT.v
+!i122 0
+L0 1 28
 R5
-R25
-!i10b 1
-!s100 zeP[79M4bX]?YaVb6a2kG1
-IGBOg0MAM:S;lUQimH4Jj:3
-S1
-R7
-R16
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv
-!i122 9
-L0 2 243
-R9
-R10
-r1
-!s85 0
-31
-R17
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv|
-!i113 0
-R12
-R13
-R3
-nradix2@butterfly
-vramPipelineBridge
-R5
-R25
-!i10b 1
-!s100 dXPY9aYkO@im9Jf@k@91F1
-I4Ck9PF>9SAb`a]IMc7mkK0
-S1
-R7
-R8
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/ramPipelineBridge.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/ramPipelineBridge.sv
-!i122 8
-L0 2 86
-R9
-R10
-r1
-!s85 0
-31
-R17
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/ramPipelineBridge.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/ramPipelineBridge.sv|
-!i113 0
-R12
-R13
-R3
-nram@pipeline@bridge
-vreadBusMux
-R5
-R25
-!i10b 1
-!s100 H5K7CKG^4CZW@gSZ=@[1n0
-Ii[e1kPjK_0mXoSh;EYadJ2
-S1
-R7
-R8
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/readBusMux.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/readBusMux.sv
-!i122 7
-L0 2 56
-R9
-R10
-r1
-!s85 0
-31
-R24
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/readBusMux.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/readBusMux.sv|
-!i113 0
-R12
-R13
-R3
-nread@bus@mux
-vtestbench
 R6
-!i10b 1
-!s100 `M:=A``E2mg7ZJ9anY?O51
-I7<:3mHkAXd>CeOEjEi1L>1
+r1
+!s85 0
+31
 R7
-w1716413851
+!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/SEG7_LUT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus|C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/SEG7_LUT.v|
+!i113 0
+R8
+R9
+R2
+n@s@e@g7_@l@u@t
+vtestbench
+R10
+!i10b 1
+!s100 XABYMd^6hh^W0n1;`1_8e3
+I]JG5YbjO9j6>e1HMon?dS2
+R4
+w1716429209
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/adc_working/testbench.v
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/adc_working/testbench.v
-!i122 19
-L0 2 47
-R9
-R10
+!i122 4
+L0 2 42
+R5
+R6
 r1
 !s85 0
 31
@@ -480,81 +160,6 @@ R11
 !s107 C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/adc_working/testbench.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/adc_working|C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/adc_working/testbench.v|
 !i113 0
-R20
+R8
 !s92 -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/adc_working -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R3
-vtwiddleFactorRomBridge
-R5
-R23
-!i10b 1
-!s100 gJT3fchoZ0P8TVRA8YCTS0
-IoMVWg[Lfc7M?40Ncd8LVW1
-S1
-R7
-R16
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/twiddleFactorRomBridge.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/twiddleFactorRomBridge.sv
-!i122 6
-L0 1 104
-R9
-R10
-r1
-!s85 0
-31
-R24
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/twiddleFactorRomBridge.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/twiddleFactorRomBridge.sv|
-!i113 0
-R12
-R13
-R3
-ntwiddle@factor@rom@bridge
-vtwrom
-R18
-!i10b 1
-!s100 JPfn;NekD7jaEH7LSGo782
-I2D2RfZ5hU:<Ll2XJQ25k41
-R7
-R22
-8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/twrom.v
-FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/twrom.v
-!i122 0
-L0 40 61
-R9
-R10
-r1
-!s85 0
-31
-R19
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/twrom.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus|C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/twrom.v|
-!i113 0
-R20
-R21
-R3
-vwriteBusMux
-R5
-R23
-!i10b 1
-!s100 7b25L?dTScXHEoVZlc3fc2
-IB;zWE6:fZnaf:2WD@j?k;2
-S1
-R7
-w1716228142
-8C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/writeBusMux.sv
-FC:/Users/sergi/apps/shazam-vladimir/fpga/hdl/writeBusMux.sv
-!i122 5
-L0 2 59
-R9
-R10
-r1
-!s85 0
-31
-R24
-!s107 C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/writeBusMux.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl|C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/writeBusMux.sv|
-!i113 0
-R12
-R13
-R3
-nwrite@bus@mux
+R2

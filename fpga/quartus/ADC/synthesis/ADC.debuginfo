@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="ADC" kind="system" version="22.1" fabric="QSYS">
  <!-- Format version 22.1 922 (Future versions may contain additional information.) -->
- <!-- 2024.05.23.04:22:01 -->
+ <!-- 2024.05.23.04:41:45 -->
  <!-- A collection of modules and connections -->
  <parameter name="clockCrossingAdapter">
   <type>com.altera.sopcmodel.ensemble.EClockAdapter</type>
@@ -53,7 +53,7 @@
  </parameter>
  <parameter name="generationId">
   <type>int</type>
-  <value>1716427317</value>
+  <value>1716428501</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>true</visible>
@@ -504,7 +504,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="enable_usr_sim">
    <type>int</type>
-   <value>0</value>
+   <value>1</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -640,7 +640,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="simfilename_ch1">
    <type>java.lang.String</type>
-   <value></value>
+   <value>C:/Users/sergi/apps/shazam-vladimir/fpga/adc_simulation_measurements/adc_simulation_measurements.txt</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -2471,5 +2471,5 @@ parameters are a RESULT of the module parameters. -->
   <version>22.1</version>
  </plugin>
  <reportVersion>22.1 922</reportVersion>
- <uniqueIdentifier>B88A60A995300000018FA30A68F4</uniqueIdentifier>
+ <uniqueIdentifier>B88A60A995300000018FA31C7AC1</uniqueIdentifier>
 </EnsembleReport>

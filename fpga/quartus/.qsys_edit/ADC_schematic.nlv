@@ -5,9 +5,9 @@ preplace inst ADC.modular_adc_0.cb_inst -pg 1
 preplace inst ADC.modular_adc_0 -pg 1 -lvl 1 -y 50
 preplace inst ADC -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst ADC.modular_adc_0.rst_inst -pg 1
-preplace netloc EXPORT<net_container>ADC</net_container>(SLAVE)ADC.reset_sink,(SLAVE)modular_adc_0.reset_sink) 1 0 1 NJ
-preplace netloc EXPORT<net_container>ADC</net_container>(SLAVE)modular_adc_0.adc_pll_locked,(SLAVE)ADC.adc_pll_locked) 1 0 1 NJ
 preplace netloc EXPORT<net_container>ADC</net_container>(SLAVE)modular_adc_0.command,(SLAVE)ADC.command) 1 0 1 NJ
+preplace netloc EXPORT<net_container>ADC</net_container>(SLAVE)ADC.adc_pll_locked,(SLAVE)modular_adc_0.adc_pll_locked) 1 0 1 NJ
+preplace netloc EXPORT<net_container>ADC</net_container>(SLAVE)modular_adc_0.reset_sink,(SLAVE)ADC.reset_sink) 1 0 1 NJ
 preplace netloc EXPORT<net_container>ADC</net_container>(SLAVE)modular_adc_0.adc_pll_clock,(SLAVE)ADC.adc_pll_clock) 1 0 1 NJ
 preplace netloc EXPORT<net_container>ADC</net_container>(MASTER)ADC.response,(MASTER)modular_adc_0.response) 1 1 1 N
 preplace netloc EXPORT<net_container>ADC</net_container>(SLAVE)ADC.clock,(SLAVE)modular_adc_0.clock) 1 0 1 NJ

@@ -137,7 +137,7 @@
   <parameter name="en_thmin_ch9" value="false" />
   <parameter name="en_tsd_max" value="false" />
   <parameter name="en_tsd_min" value="false" />
-  <parameter name="enable_usr_sim" value="0" />
+  <parameter name="enable_usr_sim" value="1" />
   <parameter name="external_vref" value="2.5" />
   <parameter name="int_vref_vr" value="3.0" />
   <parameter name="ip_is_for_which_adc" value="1" />
@@ -211,7 +211,7 @@
   <parameter name="seq_order_slot_8" value="30" />
   <parameter name="seq_order_slot_9" value="30" />
   <parameter name="simfilename_ch0">C:/Users/sergi/apps/shazam-vladimir/fpga/adc_simulation_measurements/adc_simulation_measurements.txt</parameter>
-  <parameter name="simfilename_ch1" value="" />
+  <parameter name="simfilename_ch1">C:/Users/sergi/apps/shazam-vladimir/fpga/adc_simulation_measurements/adc_simulation_measurements.txt</parameter>
   <parameter name="simfilename_ch10" value="" />
   <parameter name="simfilename_ch11" value="" />
   <parameter name="simfilename_ch12" value="" />

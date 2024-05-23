@@ -3,19 +3,19 @@ module testbench;
 
     reg clk = 0, rst_i = 0;
     wire [11:0] adc_data;
-    always #10 clk = ~clk;
+    always #1 clk = ~clk;
     
 
-   wire clk_2MHz_wire, clk_2MHz_locked;
-   clk_2MHz CLK_2MHZ_INSTANCE (
+   wire clk_10MHz_wire, clk_10MHz_locked;
+   clk_10MHz CLK_10MHZ_INSTANCE (
 	   .inclk0(clk),
-	   .c0(clk_2MHz_wire),
-	   .locked(clk_2MHz_locked)
+	   .c0(clk_10MHz_wire),
+	   .locked(clk_10MHz_locked)
    );
 
    ADC ADC_INSTANCE (
-      .adc_pll_clock_clk(clk_2MHz_wire),
-      .adc_pll_locked_export(clk_2MHz_locked),
+      .adc_pll_clock_clk(clk_10MHz_wire),
+      .adc_pll_locked_export(clk_10MHz_locked),
       .clock_clk(clk),
       .command_valid(1),
       .command_channel(0),
@@ -38,10 +38,6 @@ module testbench;
     rst_i = 0;
 
     #15;
-
-    #15;#15;#15;#15;#15;#15;#15;#15;#15;#15;#15;#15;#15;
-
-    command_startofpacket = 0;
    end
 
 endmodule 

@@ -34,8 +34,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/twrom.v}
-vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/dpram.v}
+vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/SEG7_LUT.v}
 vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/clk_2MHz.v}
 vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/clk_2mhz_altpll.v}
 vlib ADC
@@ -49,20 +48,6 @@ vlog -vlog01compat -work ADC +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/qu
 vlog -vlog01compat -work ADC +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v}
 vlog -vlog01compat -work ADC +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v}
 vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/writeBusMux.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/twiddleFactorRomBridge.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/readBusMux.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/ramPipelineBridge.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/fftAddressGenerator.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyCore.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bitReverseCounter.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_Shifter.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_maxBitWidth.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthDetector.sv}
-vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthAcc.sv}
 
 vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/adc_working {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/adc_working/testbench.v}
 
