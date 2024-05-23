@@ -137,7 +137,7 @@
   <parameter name="en_thmin_ch9" value="false" />
   <parameter name="en_tsd_max" value="false" />
   <parameter name="en_tsd_min" value="false" />
-  <parameter name="enable_usr_sim" value="1" />
+  <parameter name="enable_usr_sim" value="0" />
   <parameter name="external_vref" value="2.5" />
   <parameter name="int_vref_vr" value="3.0" />
   <parameter name="ip_is_for_which_adc" value="1" />
@@ -264,8 +264,8 @@
   <parameter name="tsclksel" value="1" />
   <parameter name="tsd_max" value="125" />
   <parameter name="tsd_min" value="0" />
-  <parameter name="use_ch0" value="true" />
-  <parameter name="use_ch1" value="false" />
+  <parameter name="use_ch0" value="false" />
+  <parameter name="use_ch1" value="true" />
   <parameter name="use_ch10" value="false" />
   <parameter name="use_ch11" value="false" />
   <parameter name="use_ch12" value="false" />
@@ -273,11 +273,11 @@
   <parameter name="use_ch14" value="false" />
   <parameter name="use_ch15" value="false" />
   <parameter name="use_ch16" value="false" />
-  <parameter name="use_ch2" value="false" />
-  <parameter name="use_ch3" value="false" />
-  <parameter name="use_ch4" value="false" />
-  <parameter name="use_ch5" value="false" />
-  <parameter name="use_ch6" value="false" />
+  <parameter name="use_ch2" value="true" />
+  <parameter name="use_ch3" value="true" />
+  <parameter name="use_ch4" value="true" />
+  <parameter name="use_ch5" value="true" />
+  <parameter name="use_ch6" value="true" />
   <parameter name="use_ch7" value="false" />
   <parameter name="use_ch8" value="false" />
   <parameter name="use_ch9" value="false" />
