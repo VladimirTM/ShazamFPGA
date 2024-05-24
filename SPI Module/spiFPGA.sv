@@ -10,8 +10,6 @@ module spiFPGA (
     assign cs = cs_reg;
     reg enable = 1;
     reg [7:0] data_in = 8'b10010011;
-
-    reg [2:0] parity = 3'b000;
         
     typedef enum logic [1:0] {
         IDLE,
@@ -32,18 +30,15 @@ module spiFPGA (
     always @(negedge sclk or negedge rst) begin
         if (!rst) begin
             state <= IDLE;
-            parity <= 0;
         end else begin
             state <= next_state;
-            parity <= parity + 1;
         end
     end
 
     always @(*) begin
         case (state)
             IDLE: begin
-                if(enable && parity != 3'd7) next_state = IDLE;
-                else next_state = TRANSFER;
+                next_state = TRANSFER;
             end
             TRANSFER: begin
                 if (bit_count == 3'd7) begin
@@ -70,9 +65,7 @@ module spiFPGA (
         end else begin
             case (state)
                 IDLE: begin
-                    if(parity == 3'd7) cs_reg <= 0;
-                    else cs_reg <= 1;
-
+                    cs_reg <= 1;
                     done_reg <= 0;
                     bit_count <= 0;
                     shift_reg <= data_in;
