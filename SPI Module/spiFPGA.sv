@@ -9,15 +9,14 @@ module spiFPGA (
     assign mosi = mosi_reg;
     assign cs = cs_reg;
     reg enable = 1;
-    reg [7:0] data_in = 8'b10010010;
+    reg [7:0] data_in = 8'b10010011;
 
     reg [2:0] parity = 3'b000;
         
     typedef enum logic [1:0] {
         IDLE,
         TRANSFER,
-        DONE,
-        WAIT
+        DONE
     } state_t;
 
     state_t state, next_state;
@@ -30,7 +29,7 @@ module spiFPGA (
         .c0(sclk)
     );
 
-    always @(posedge sclk or negedge rst) begin
+    always @(negedge sclk or negedge rst) begin
         if (!rst) begin
             state <= IDLE;
             parity <= 0;
@@ -56,15 +55,11 @@ module spiFPGA (
             DONE: begin
                 next_state = IDLE;
             end
-            WAIT: begin
-                if(parity == 3'd7) next_state = TRANSFER;
-                else next_state = WAIT;
-            end 
             default: next_state = IDLE;
         endcase
     end
 
-    always @(posedge sclk or negedge rst) begin
+    always @(negedge sclk or negedge rst) begin
         if (!rst) begin
             cs_reg <= 1;
             mosi_reg <= 0;
@@ -77,6 +72,7 @@ module spiFPGA (
                 IDLE: begin
                     if(parity == 3'd7) cs_reg <= 0;
                     else cs_reg <= 1;
+
                     done_reg <= 0;
                     bit_count <= 0;
                     shift_reg <= data_in;
@@ -91,11 +87,6 @@ module spiFPGA (
                     cs_reg <= 1;
                     done_reg <= 1;
                 end
-                WAIT: begin
-
-                    done_reg <= 0;
-                    shift_reg <= data_in;
-                end 
             endcase
         end
     end
