@@ -36,8 +36,8 @@ module testbench;
       rst_reg = 0;
       wait_clk( 10 );
 
-      output_file = $fopen("output_testbench.txt", "w");
-      magnitudes_raw = $fopen("magnitudes_raw.txt", "w");
+      output_file = $fopen("output_testbench_after_hardcoded_5_bfpexp.txt", "w");
+      magnitudes_raw = $fopen("magnitudes_raw_after_hardcoded_5_bfpexp.txt", "w");
       input_file = $fopen("arduino_input.txt", "r");
 
       $fwrite(output_file, "INPUT DATA:\n");
@@ -48,7 +48,7 @@ module testbench;
 	      inputImag = 0;
          $fwrite(output_file, "REAL DATA: %d, IMAGINARY DATA: %d\n", inputReal, inputImag);
 	      input_real_reg <= inputReal;
-	      output_real_reg <= inputImag;
+	      input_imaginary_reg <= inputImag;
 	      wait_clk( 1 );
       end
       

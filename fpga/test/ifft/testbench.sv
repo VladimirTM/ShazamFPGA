@@ -45,7 +45,7 @@ module testbench;
 				 );
 	 $display(",%d,%d,", inputReal, inputImag );
 	 input_real_reg <= inputReal;
-	 output_real_reg <= inputImag;
+	 input_imaginary_reg <= inputImag;
 	 wait_clk( 1 );
       end
       input_stream_active_reg <= 1'b0;
@@ -79,7 +79,7 @@ module testbench;
       for ( i = 0; i < FFT_LENGTH; i++ ) begin
 	 input_stream_active_reg <= 1'b1;
 	 input_real_reg <= resultReal[i];
-	 output_real_reg <= resultImag[i];
+	 input_imaginary_reg <= resultImag[i];
 	 wait_clk( 1 );
       end
       input_stream_active_reg <= 1'b0;

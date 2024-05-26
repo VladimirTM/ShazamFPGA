@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 module testbench;
 
-    reg clk = 0, rst_i = 0;
+    reg clk = 0, reset = 0;
     wire [11:0] adc_data;
     always #1 clk = ~clk;
     
@@ -22,7 +22,7 @@ module testbench;
       .command_startofpacket(1),
       .command_endofpacket(1),
       .command_ready(),
-      .reset_sink_reset_n(~rst_i),
+      .reset_sink_reset_n(~reset),
       .response_valid(),
       .response_channel(),
       .response_data(adc_data),
@@ -31,11 +31,11 @@ module testbench;
    );
 
    initial begin
-    rst_i = 1;
+    reset = 1;
 
     #15;
 
-    rst_i = 0;
+    reset = 0;
 
     #15;
    end

@@ -43,7 +43,7 @@ module testbench;
 	 inputImag = 0;
 	 
 	 input_real_reg <= inputReal;
-	 output_real_reg <= inputImag;
+	 input_imaginary_reg <= inputImag;
 	 wait_clk( 1 );
       end // for ( i = 0; i < FFT_LENGTH; i++ )
       input_stream_active_reg <= 1'b0;
@@ -80,7 +80,7 @@ module testbench;
 	 inputImag = 0;
 	 
 	 input_real_reg <= inputReal;
-	 output_real_reg <= inputImag;
+	 input_imaginary_reg <= inputImag;
 	 wait_clk( 1 );
       end // for ( i = 0; i < FFT_LENGTH; i++ )
       input_stream_active_reg <= 1'b0;

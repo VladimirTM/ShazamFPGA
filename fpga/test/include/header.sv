@@ -4,7 +4,7 @@
    wire clk = clk_reg;
 
    reg 	rst_reg = 1'b1;
-   wire rst = rst_reg;
+   wire reset = rst_reg;
 
    reg 	autorun_reg = 1'b0;
    wire autorun = autorun_reg;
@@ -24,7 +24,7 @@
    reg [2:0] status_reg = 3'bZZZ;
    wire [2:0] status = status_reg;
 
-   reg signed [7:0] bfpexp_reg = 8'hZZ;
+   reg signed [7:0] bfpexp_reg;
    wire signed [7:0] bfpexp = bfpexp_reg;
 
    reg 		     input_stream_active_reg = 1'b0;
@@ -33,8 +33,8 @@
    reg signed [FFT_DW-1:0] input_real_reg;
    wire signed [FFT_DW-1:0] input_real = input_real_reg;
    
-   reg signed [FFT_DW-1:0]  output_real_reg;
-   wire signed [FFT_DW-1:0] output_real = output_real_reg;
+   reg signed [FFT_DW-1:0]  input_imaginary_reg;
+   wire signed [FFT_DW-1:0] input_imaginary = input_imaginary_reg;
 
    reg 			    dmaact_reg = 1'b0;
    wire 		    dmaact = dmaact_reg;
@@ -42,16 +42,13 @@
    reg [FFT_N-1:0] 	    dmaa_reg = {FFT_N{1'b0}};
    wire [FFT_N-1:0] 	    dmaa = dmaa_reg;
 
-   reg signed [FFT_DW-1:0]  dmadr_real_reg = {FFT_DW{1'bZ}};
-   wire signed [FFT_DW-1:0] dmadr_real = dmadr_real_reg;
-
-   reg signed [FFT_DW-1:0]  dmadr_imag_reg = {FFT_DW{1'bZ}};
-   wire signed [FFT_DW-1:0] dmadr_imag = dmadr_imag_reg;
+   wire signed [FFT_DW-1:0] dmadr_real;
+   wire signed [FFT_DW-1:0] dmadr_imag;
 
    // twiddle factor rom
    wire 		    twact;
    wire [FFT_N-1-2:0] 	    twa;
-   wire [FFT_DW-1:0] 	    twdr_cos;
+   wire [FFT_DW-2:0] 	    twdr_cos;
    
    // block ram0
    wire 		    ract_ram0;
@@ -80,20 +77,20 @@
    uR2FFT
      (
       .clk( clk ),
-      .rst( rst ),
+      .reset( reset ),
 
-      .autorun( autorun ),
-      .run( run ),
-      .fin( fin ),
-      .ifft( ifft ),
+      .autorun(1),
+      .run(1),
+      .fin(0),
+      .ifft(0),
 
       .done( done ),
       .status( status ),
-      .bfpexp( bfpexp ),
+      .bfpexp( bfpexp_reg ),
 
       .input_stream_active( input_stream_active ),
       .input_real( input_real ),
-      .output_real( output_real ),
+      .input_imaginary( input_imaginary ),
 
       .dmaact( dmaact ),
       .dmaa( dmaa ),
@@ -122,13 +119,7 @@
       
       );
 
-   twrom
-     #(
-       .FFT_LENGTH(FFT_LENGTH),
-       .FFT_DW(FFT_DW)
-       )
-     utwrom
-       (
+   twrom utwrom (
 	.clk( clk ),
 	.twact( twact ),
 	.twa( twa ),

@@ -1,33 +1,34 @@
 
+// given the maximum number of bits that a variable "A" (from an input stream) can be represented on "N" bits (example: 10 can be represented on 4 bits, 16 on 5, 927 on 10)
+// find the maximum number "MAX" out of all of those "N"
 module bfp_maxBitWidth
   #
   (
-   parameter FFT_BFPDW = 5
+   parameter FFT_MAX_BIT_WIDTH = 5
    )
   (
-   input wire        rst,
+   input wire        reset,
    input wire        clk,
 
    input wire        clr,
    
-   input wire        bw_act,
-   input wire [FFT_BFPDW-1:0]  bw,
+   input wire        max_bit_width_activate,
+   input wire [FFT_MAX_BIT_WIDTH-1:0]  current_variable_bit_width, // this is "N"
 
-   output wire [FFT_BFPDW-1:0] max_bw
+   output wire [FFT_MAX_BIT_WIDTH-1:0] max_bit_width_all_stream // this is "MAX"
    );
 
-   reg [FFT_BFPDW-1:0]         max_bw_f;
-   assign max_bw = max_bw_f;
+   reg [FFT_MAX_BIT_WIDTH-1:0]         max_bit_width;
+   
+   assign max_bit_width_all_stream = max_bit_width;
 
    
    always @ ( posedge clk ) begin
-      if ( rst ) begin
-         max_bw_f <= 'h0;
-      end else if ( clr ) begin
-         max_bw_f <= 'h0;
-      end else if ( bw_act ) begin
-         if ( max_bw_f < bw ) begin
-            max_bw_f <= bw;
+      if ( reset ) max_bit_width <= 'h0;
+      else if ( clr ) max_bit_width <= 'h0;
+      else if ( max_bit_width_activate ) begin
+         if ( max_bit_width < current_variable_bit_width ) begin
+            max_bit_width <= current_variable_bit_width;
          end
       end
    end // always @ ( posedge clk )

@@ -1,14 +1,13 @@
 module adc_measurements_to_FFT (
     input clk,
-    input rst,
+    input reset,
+    input adc_input_valid,
     output write_active_FFT_0,
     output write_active_FFT_1,
     output write_active_FFT_2,
     output write_active_FFT_3
 );
 
-    reg[15:0]   adc_input_real;
-    reg         input_active;
     reg [14:0]  sample_count;
     reg         completed_first_iteration = 0;
 
@@ -26,7 +25,7 @@ module adc_measurements_to_FFT (
     // this leaves less than 512 samples unused in each second 
     
     always @ (posedge clk) begin
-        if(input_active) begin
+        if(adc_input_valid) begin
             if(sample_count == 2047) begin 
                 sample_count <= 0;
                 completed_first_iteration <= 1;
@@ -60,6 +59,7 @@ module adc_measurements_to_FFT (
                     write_active_FFT_2_reg <= 1;
                     write_active_FFT_3_reg <= 1;
                 end
+            end
             else if (sample_count > 1535 && sample_count < 2048) begin
                     if(!completed_first_iteration) begin
                         write_active_FFT_2_reg <= 1;
@@ -71,7 +71,6 @@ module adc_measurements_to_FFT (
                     end 
                 end 
             end 
-        end
         else begin 
             write_active_FFT_0_reg <= 0;
             write_active_FFT_1_reg <= 0;

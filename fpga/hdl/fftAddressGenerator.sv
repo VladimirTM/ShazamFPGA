@@ -7,7 +7,7 @@ module fftAddressGenerator
     )
   (
    input wire        clk,
-   input wire        rst,
+   input wire        reset,
 
    input wire [STAGE_COUNT_BW-1:0]  stageCount,
    input wire        run,
@@ -27,7 +27,7 @@ module fftAddressGenerator
    assign evenOdd  = runCount[0];
    
    always @ ( posedge clk ) begin
-      if ( rst ) begin
+      if ( reset ) begin
          runCount <= 0;
       end else if ( run ) begin
          if ( runCount_full ) begin
@@ -42,7 +42,7 @@ module fftAddressGenerator
 
    reg runCount_full_f;
    always @ ( posedge clk ) begin
-      if ( rst ) begin
+      if ( reset ) begin
          runCount_full_f <= 1'b0;
       end else begin
          runCount_full_f <= runCount_full;

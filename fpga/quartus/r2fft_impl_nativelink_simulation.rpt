@@ -6,7 +6,7 @@ Sim Mode              :  RTL
 Family                :  max10
 Quartus root          :  c:/intelfpga_lite/22.1std/quartus/bin64/
 Quartus sim root      :  c:/intelfpga_lite/22.1std/quartus/eda/sim_lib
-Simulation Tool       :  questasim
+Simulation Tool       :  questa intel fpga
 Simulation Language   :  verilog
 Simulation Mode       :  GUI
 Sim Output File       :  
@@ -15,8 +15,8 @@ Sim dir               :  simulation\questa
 
 =======================================================
 
-Info: Starting NativeLink simulation with Questasim software
+Info: Starting NativeLink simulation with Questa Intel FPGA software
 Sourced NativeLink script c:/intelfpga_lite/22.1std/quartus/common/tcl/internal/nativelink/modelsim.tcl
 Warning: File r2fft_impl_run_msim_rtl_verilog.do already exists - backing up current file as r2fft_impl_run_msim_rtl_verilog.do.bak11
-Info: Spawning QuestaSim Simulation software 
+Info: Spawning Questa Intel FPGA Simulation software 
 Info: NativeLink simulation flow was successful

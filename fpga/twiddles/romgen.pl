@@ -8,7 +8,7 @@ use Getopt::Long;
 use Data::Dumper;
 
 my $fft_length = 1024;
-my $fft_dw = 16;
+my $fft_dw = 15;
 my $basename = "twrom";
 
 my $fft_n = log( $fft_length ) / log(2);

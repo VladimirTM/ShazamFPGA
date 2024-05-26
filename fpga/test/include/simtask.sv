@@ -57,7 +57,7 @@
       begin
 	 input_stream_active_reg <= 1'b1;
 	 input_real_reg <= ToSignedInt( inputReal );
-	 output_real_reg <= ToSignedInt( inputImag );
+	 input_imaginary_reg <= ToSignedInt( inputImag );
 	 wait_clk(1);
 	 input_stream_active_reg <= 1'b0;
       end

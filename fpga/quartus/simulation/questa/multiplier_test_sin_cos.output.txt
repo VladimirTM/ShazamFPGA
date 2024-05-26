@@ -1,0 +1,10 @@
+RESULT 1: 0.353546 * -3.000000 = -1.062500 (expecting small value) - decimal:    -34
+RESULT 2: 0.930664 * 510.000000 = 474.625000 (expecting NOT overflow)
+RESULT 3: 0.287781 * 257.500000 = 474.625000 (expecting NOT overflow)
+RESULT 4: 0.970703 * 4.000000 = 3.875000 (expecting NOT overflow)
+RESULT 5: 0.524445 * -971.000000 = -509.250000 (expecting NOT overflow)
+RESULT 6: 0.500000 * 16.000000 = 8.000000 (should NOT overflow)
+RESULT 7: 0.970215 * 4.250000 = 4.093750 (expecting NOT overflow)
+RESULT 7: 0.000000 * 0.000000 = 0.000000 (expecting NOT overflow) decimal:      0
+RESULT 7: 0.875000 * 0.000000 = 0.000000 (expecting NOT overflow) decimal:      0
+RESULT 7: -0.707428 * 0.000000 = -1024.000000 (expecting NOT overflow) decimal: -32768

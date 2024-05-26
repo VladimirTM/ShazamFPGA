@@ -41,7 +41,7 @@ module testbench;
 	      inputImag = 0;
          $fwrite(output_file, "REAL DATA: %d, IMAGINARY DATA: %d\n", inputReal, inputImag);
 	      input_real_reg <= inputReal;
-	      output_real_reg <= inputImag;
+	      input_imaginary_reg <= inputImag;
 	      wait_clk( 1 );
       end
       

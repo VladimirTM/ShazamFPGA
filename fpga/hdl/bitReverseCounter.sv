@@ -4,7 +4,7 @@ module bitReverseCounter
     parameter BIT_WIDTH = 10
     )
   (
-   input wire                  rst,
+   input wire                  reset,
    input wire                  clk,
    input wire                  clr,
 
@@ -19,7 +19,7 @@ module bitReverseCounter
    assign count = ptr_f;
 
    always @ ( posedge clk ) begin
-      if ( rst ) begin
+      if ( reset ) begin
          ptr_f <= {BIT_WIDTH{1'b0}};
       end else if ( clr ) begin
          ptr_f <= {BIT_WIDTH{1'b0}};
