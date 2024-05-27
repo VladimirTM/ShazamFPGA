@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/simulation/questa
 vADC
-Z1 !s110 1716674439
+Z1 !s110 1716847400
 !i10b 1
 !s100 QaPkYQC4b]9g8>c]@4@On3
 I]?6B=9oJW=n5X0Q9N1[]]0
@@ -18,14 +18,14 @@ R0
 Z2 w1716533308
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/ADC.v
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/ADC.v
-!i122 560
+!i122 1536
 L0 6 37
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 OL;L;2021.2;73
 r1
 !s85 0
 31
-Z5 !s108 1716674439.000000
+Z5 !s108 1716847400.000000
 !s107 C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/ADC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis|C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/ADC.v|
 !i113 0
@@ -42,7 +42,7 @@ R0
 R2
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/ADC_modular_adc_0.v
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/ADC_modular_adc_0.v
-!i122 561
+!i122 1537
 L0 9 86
 R3
 R4
@@ -66,7 +66,7 @@ R0
 R2
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/altera_modular_adc_control.v
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/altera_modular_adc_control.v
-!i122 562
+!i122 1538
 L0 18 137
 R3
 R4
@@ -89,7 +89,7 @@ R0
 R2
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/altera_modular_adc_control_avrg_fifo.v
-!i122 563
+!i122 1539
 L0 53 54
 R3
 R4
@@ -112,7 +112,7 @@ R0
 R2
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/altera_modular_adc_control_fsm.v
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/altera_modular_adc_control_fsm.v
-!i122 564
+!i122 1540
 L0 18 989
 R3
 R4
@@ -127,7 +127,7 @@ R6
 R8
 R7
 vchsel_code_converter_sw_to_hw
-Z9 !s110 1716674440
+Z9 !s110 1716847401
 !i10b 1
 !s100 L5H2n0B16f^@6l4ZT8P`T0
 IeM43i?:V6<Y`>_hA5[EWo1
@@ -135,14 +135,14 @@ R0
 R2
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v
-!i122 565
+!i122 1541
 L0 32 178
 R3
 R4
 r1
 !s85 0
 31
-Z10 !s108 1716674440.000000
+Z10 !s108 1716847401.000000
 !s107 C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v|
 !s90 -reportprogress|300|-vlog01compat|-work|ADC|+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules|C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/chsel_code_converter_sw_to_hw.v|
 !i113 0
@@ -158,7 +158,7 @@ R0
 R2
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/fiftyfivenm_adcblock_primitive_wrapper.v
-!i122 566
+!i122 1542
 L0 37 207
 R3
 R4
@@ -181,7 +181,7 @@ R0
 R2
 8C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v
 FC:/Users/sergi/apps/shazam-vladimir/fpga/quartus/ADC/synthesis/submodules/fiftyfivenm_adcblock_top_wrapper.v
-!i122 567
+!i122 1543
 L0 31 218
 R3
 R4

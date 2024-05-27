@@ -1,5 +1,8 @@
 {
   "cSpell.words": ["blazingly"],
+  "editor.wrappingColumn": 0,
   "explorer.compactFolders": false,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "off",
+  "prettier.bracketSameLine": true
 }

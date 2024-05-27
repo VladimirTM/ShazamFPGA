@@ -28,9 +28,9 @@ module butterflyUnit
    input wire                  ifft,
 
    // twiddle rom
-   output wire                 twact,
-   output wire [FFT_N-1-2:0]   twa,
-   input wire [FFT_DW-2:0]   twdr_cos,
+   output wire                   twact,
+   output wire [FFT_N-1-2:0]     twa,
+   input wire [FFT_DW-1:0]       twdr_cos,
    
    // block ram0 32-bit x 512 words
    output wire                 ract_ram0,
@@ -68,7 +68,6 @@ module butterflyUnit
 
       .tact_rom( iact ),
       .evenOdd( evenOdd ),
-      .ifft( ifft ),
       
       .ta_rom( twiddleFactorAddr ),
       .tdr_rom_real( tdr_rom_real ),
@@ -178,8 +177,6 @@ module butterflyUnit
          wact_ram1 <= oactCore;
          wa_ram1 <= output_memory_address;
          wdw_ram1 <= output_B;
-         
-         max_bit_width_after_butterfly_reg <= max_bit_width_after_butterfly;
       end
 
    end else begin
@@ -195,28 +192,28 @@ module butterflyUnit
          wa_ram1 = output_memory_address;
          wdw_ram1 = output_B;
          
-         max_bit_width_after_butterfly_reg = max_bit_width_after_butterfly;
+         // max_bit_width_after_butterfly_reg = max_bit_width_after_butterfly;
       end // always @ ( posedge clk )
       
    end endgenerate // else: !if( PL_DEPTH >= 3 )
    
 
-   bfp_maxBitWidth 
-     #(
-       .FFT_MAX_BIT_WIDTH(FFT_MAX_BIT_WIDTH)
-       )
-     ubfp_maxBitWidth
-     (
-      .clk( clk ),
-      .reset( reset ),
-      .clr( clr_bfp ),
+   // bfp_maxBitWidth 
+   //   #(
+   //     .FFT_MAX_BIT_WIDTH(FFT_MAX_BIT_WIDTH)
+   //     )
+   //   ubfp_maxBitWidth
+   //   (
+   //    .clk( clk ),
+   //    .reset( reset ),
+   //    .clr( clr_bfp ),
       
-      // oact will be HIGH only after the butterfly has been computed and stored to ram
-      // so this can find the max bit width of all this FFT stage
-      .max_bit_width_activate( oact ),
-      .current_variable_bit_width( max_bit_width_after_butterfly_reg ),
-      .max_bit_width_all_stream( max_bit_width_current_FFT_stage )
-      );
+   //    // oact will be HIGH only after the butterfly has been computed and stored to ram
+   //    // so this can find the max bit width of all this FFT stage
+   //    .max_bit_width_activate( oact ),
+   //    .current_variable_bit_width( max_bit_width_after_butterfly_reg ),
+   //    .max_bit_width_all_stream( max_bit_width_current_FFT_stage )
+   //    );
    
    
 endmodule // butterflyUnit

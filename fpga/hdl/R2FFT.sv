@@ -41,7 +41,7 @@ module R2FFT
     // twiddle factor rom
     output wire 		    twact,
     output wire [FFT_N-1-2:0] 	    twa,
-    input wire [FFT_DW-2:0] 	    twdr_cos,
+    input wire [FFT_DW-1:0] 	    twdr_cos,
     
     // block ram0
     output wire 		    ract_ram0,

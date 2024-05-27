@@ -10,13 +10,12 @@ module testbench;
     reg clk = 0;
     always #10 clk = ~clk;
 
-    parameter EXP_WIDTH_B = 5;
-    parameter EXP_WIDTH_A = 15;
+    localparam EXP = 5;
+    localparam EXP_SMALLER = 0;
+    reg [7:0] EXP_MULT = 8'b0000_0101; // 5
+    reg [7:0] EXP_MULT_SMALLER = 8'b0000_0000; // 0
     
-    parameter EXP_A = 0.000030517578125; // 2^-15
-    parameter EXP_B = 0.03125; // 2^-5
-
-    fixed_point_multiplier #(.EXP_WIDTH_A(EXP_WIDTH_B), .EXP_WIDTH_B(EXP_WIDTH_B), .EXP_WIDTH_PRODUCT(EXP_WIDTH_B)) MULTIPLIER_INSTANCE (
+    fixed_point_multiplier #(.EXP_WIDTH_A(EXP), .EXP_WIDTH_B(EXP), .EXP_WIDTH_PRODUCT(EXP_SMALLER)) MULTIPLIER_INSTANCE (
         .clk(clk),
         .enable(enable),
         .done(done),
@@ -28,7 +27,7 @@ module testbench;
     integer output_file;
 
     initial begin
-        output_file = $fopen("multiplier_test.output.txt", "w");
+        output_file = $fopen("../../../data/multiplier_test.output.txt", "w");
 
         A = 16'b0111_1111_1111_1111; // this is approx 1024,9875
         B = 16'b0111_1111_1111_1111; // this is approx 1024,96875
@@ -39,11 +38,11 @@ module testbench;
         #20;
 
         // A * B = 1024,96875
-        $fwrite(output_file, "RESULT 1: %f * %f = %f (expecting 1024,96875-ish)\n", A * EXP_B, B * EXP_B, result * EXP_B);
+        $fwrite(output_file, "RESULT 1: %f * %f = %f (expecting 1024,96875-ish)\n", A *0.03125, B *0.03125, result);
 
         #20;
         
-        A = 16'b0100_0000_001_00000; // this is approx 513
+        A = 16'b0000_0010_100_00000; // this is approx 20
         B = 16'b0111_1111_110_00000; // this is approx 1022
         enable = 1;
         
@@ -52,7 +51,7 @@ module testbench;
         #20;
 
         // A * B will overflow so result should be: 1023.9999
-        $fwrite(output_file, "RESULT 2: %f * %f = %f (expecting positive overflow = 1023.9999)\n", A * EXP_B, B * EXP_B, result * EXP_B);
+        $fwrite(output_file, "RESULT 2: %f * %f = %f (expecting positive overflow = 1023.9999)\n", A *0.03125, B *0.03125, result);
     
         #20;
 
@@ -65,21 +64,22 @@ module testbench;
         enable = 0;
         #20;
         
-        $fwrite(output_file, "RESULT 3: %f * %f = %f (expecting 643.75)\n", A * EXP_B, B * EXP_B, result * EXP_B);
+        $fwrite(output_file, "RESULT 3: %f * %f = %f (expecting 643.75)\n", A *0.03125, B *0.03125, result);
 
         #20;
 
         // A = -30 (30 = 0001_1110 => -30 = 1110 0010) in 2's complement
         A = 16'b111_1110_0010__00000;
-        B = 16'b000_0000_0100__00000;
+        // B = -30
+        B = 16'b111_1110_0010__00000;
         enable = 1;
 
         #20;
         enable = 0;
         #20;
 
-        // A * B = -120
-        $fwrite(output_file, "RESULT 4: %f * %f = %f (expecting -120)\n", A * EXP_B, B * EXP_B, result * EXP_B);
+        // A * B = 90
+        $fwrite(output_file, "RESULT 4: %f * %f = %f (expecting 90)\n", A *0.03125, B *0.03125, result);
 
         #20;
 
@@ -93,7 +93,7 @@ module testbench;
         #20;
 
         // A * B expecting negative overflow
-        $fwrite(output_file, "RESULT 5: %f * %f = %f (should overflow negative: -1023.9999)\n", A * EXP_B, B * EXP_B, result * EXP_B);
+        $fwrite(output_file, "RESULT 5: %f * %f = %f (should overflow negative: -1023.9999)\n", A *0.03125, B *0.03125, result);
 
         #20;
 
@@ -107,7 +107,7 @@ module testbench;
         #20;
 
         // A * B should overflow negative
-        $fwrite(output_file, "RESULT 6: %f * %f = %f (should overflow negative: -1023.9999)\n", A * EXP_B, B * EXP_B, result * EXP_B);
+        $fwrite(output_file, "RESULT 6: %f * %f = %f (should overflow negative: -1023.9999)\n", A *0.03125, B *0.03125, result);
         #20;
 
 
@@ -121,7 +121,7 @@ module testbench;
         #20;
 
         // A * B = -129.625
-        $fwrite(output_file, "RESULT 7: %f * %f = %f (expecting -129.625)\n", A * EXP_B, B * EXP_B, result * EXP_B);
+        $fwrite(output_file, "RESULT 7: %f * %f = %f (expecting -129.625)\n", A *0.03125, B *0.03125, result);
         #20;
 
         enable = 1;
@@ -130,6 +130,6 @@ module testbench;
 
         #20;
         #20;
-        $fwrite(output_file, "RESULT 7: %f * %f = %f (expecting 129.625)\n", A * EXP_B, B * EXP_B, result * EXP_B);
+        $fwrite(output_file, "RESULT 7: %f * %f = %f (expecting 129.625)\n", A *0.03125, B *0.03125, result);
     end
 endmodule

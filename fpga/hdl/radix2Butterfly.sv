@@ -7,10 +7,7 @@
 module radix2Butterfly
   #(
     parameter FFT_DW = 16,
-    parameter FFT_N = 10,
-    parameter EXP_WIDTH_INPUT = 6,
-    parameter EXP_WIDTH_TWIDDLE = 15,
-    parameter EXP_WIDTH_OUTPUT = 5
+    parameter FFT_N = 10
    )
   (
    input wire                     clk,
@@ -41,6 +38,10 @@ module radix2Butterfly
    output reg signed [FFT_DW-1:0] out_B_real,
    output reg signed [FFT_DW-1:0] out_B_imag 
    );
+   
+      localparam EXP_WIDTH_INPUT = 5;
+      localparam EXP_WIDTH_TWIDDLE = 15;
+      localparam EXP_WIDTH_OUTPUT = 5;
    
    reg stage_1_half = 0, stage_1_full = 0, stage_2_half = 0, stage_2_full = 0, stage_3_half = 0;
    reg [1:0] stage_1_half_ctrl = 0, stage_1_full_ctrl = 0, stage_2_half_ctrl = 0, stage_2_full_ctrl = 0, stage_3_half_ctrl = 0;
@@ -94,6 +95,7 @@ module radix2Butterfly
    fixed_point_adder SUM_REAL (
       .clk(clk),
       .enable(iact),
+      .reset(reset),
       .A(A_real),
       .B(B_real),
       .sum(sum_real)
@@ -102,6 +104,7 @@ module radix2Butterfly
    fixed_point_adder SUM_IMAG (
       .clk(clk),
       .enable(iact),
+      .reset(reset),
       .A(A_imag),
       .B(B_imag),
       .sum(sum_imag)
@@ -110,6 +113,7 @@ module radix2Butterfly
    fixed_point_adder DIFF_REAL (
       .clk(clk),
       .enable(iact),
+      .reset(reset),
       .A(A_real),
       .B(~B_real + 1'b1),
       .sum(diff_real)   
@@ -118,6 +122,7 @@ module radix2Butterfly
    fixed_point_adder DIFF_IMAG (
       .clk(clk),
       .enable(iact),
+      .reset(reset),
       .A(A_imag),
       .B(~B_imag + 1'b1),
       .sum(diff_imag)
@@ -158,6 +163,7 @@ module radix2Butterfly
    fixed_point_multiplier #(.EXP_WIDTH_A(EXP_WIDTH_TWIDDLE), .EXP_WIDTH_B(EXP_WIDTH_INPUT), .EXP_WIDTH_PRODUCT(EXP_WIDTH_OUTPUT)) MULTIPLY_REAL_2 (
       .clk(clk),
       .enable(stage_1_full),
+      .reset(reset),
       .A(twiddle_imag_reg_2),
       .B(diff_imag),
       .product(real_2)
@@ -166,6 +172,7 @@ module radix2Butterfly
    fixed_point_multiplier #(.EXP_WIDTH_A(EXP_WIDTH_TWIDDLE), .EXP_WIDTH_B(EXP_WIDTH_INPUT), .EXP_WIDTH_PRODUCT(EXP_WIDTH_OUTPUT)) MULTIPLY_IMAG_1 (
       .clk(clk),
       .enable(stage_1_full),
+      .reset(reset),
       .A(twiddle_real_reg_2),
       .B(diff_imag), 
       .product(imag_1)
@@ -174,6 +181,7 @@ module radix2Butterfly
    fixed_point_multiplier #(.EXP_WIDTH_A(EXP_WIDTH_TWIDDLE), .EXP_WIDTH_B(EXP_WIDTH_INPUT), .EXP_WIDTH_PRODUCT(EXP_WIDTH_OUTPUT)) MULTIPLY_IMAG_2 (
       .clk(clk),
       .enable(stage_1_full),
+      .reset(reset),
       .A(twiddle_imag_reg_2),
       .B(diff_real),
       .product(imag_2)   
@@ -193,19 +201,20 @@ module radix2Butterfly
    fixed_point_adder OUT_B_REAL (
       .clk(clk),
       .enable(stage_2_full),
+      .reset(reset),
       .A(real_1),
-      .B(~real_2 + 1),
+      .B(~real_2 + 1'b1),
       .sum(out_B_real)
    );
 
    fixed_point_adder OUT_B_IMAG (
       .clk(clk),
       .enable(stage_2_full),
+      .reset(reset),
       .A(imag_1),
       .B(imag_2),
       .sum(out_B_imag)
    );
 
 endmodule
-
 

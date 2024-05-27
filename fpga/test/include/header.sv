@@ -48,7 +48,7 @@
    // twiddle factor rom
    wire 		    twact;
    wire [FFT_N-1-2:0] 	    twa;
-   wire [FFT_DW-2:0] 	    twdr_cos;
+   wire [FFT_DW-1:0] 	    twdr_cos;
    
    // block ram0
    wire 		    ract_ram0;

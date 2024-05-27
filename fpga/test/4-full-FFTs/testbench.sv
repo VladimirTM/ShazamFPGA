@@ -12,7 +12,7 @@ module testbench;
     wire magnitude_ready;
     wire [10:0] index;
     
-    reg signed [7:0] EXP = 8'b1111_1010; // -6
+    reg [7:0] EXP = 8'b0000_0111; // 5 
     localparam FREQUENCY_HOP = 9.76; 
 
     integer inputReal;
@@ -22,6 +22,7 @@ module testbench;
     integer output_file;
     integer magnitudes_raw;
 
+    wire [15:0] P1, P2, real_part, imag_part;
     shazam_core SHAZAM_CORE (
         .clk(clk),
         .adc_data_valid(adc_data_valid),
@@ -41,11 +42,11 @@ module testbench;
 
         start = 1;
         
-        output_file = $fopen("output_testbench_after_hardcoded_5_bfpexp.txt", "w");
-        magnitudes_raw = $fopen("magnitudes_raw_after_hardcoded_5_bfpexp.txt", "w");
-        input_file = $fopen("arduino_input.txt", "r");
+        output_file = $fopen("../../../data/outputs/output_testbench_4_FFTs.txt", "w");
+        magnitudes_raw = $fopen("../../../data/magnitudes/magnitudes_raw_testbench_4_FFTs.txt", "w");
+        input_file = $fopen("../../../data/inputs/arduino_input.txt", "r");
 
-        for ( i = 0; i < 21 * FFT_LENGTH; i = i + 1 ) begin
+        for ( i = 0; i < 1 * FFT_LENGTH; i = i + 1 ) begin
                 $fscanf(input_file, "%d,", inputReal);
                 
                 adc_data <= inputReal;
@@ -59,12 +60,11 @@ module testbench;
         end
 
 
-        $fwrite(output_file, "FFT RESULT FROM FFT: $d:\n", j);
     end
 
     always @ (posedge magnitude_ready) begin
-        $fwrite(magnitudes_raw, "%f, ", $sqrt(magnitude * (2.0**EXP)));
-        $fwrite(output_file, "%d. MAGNITUDE: %f\n", FREQUENCY_HOP * index, $sqrt(magnitude * (2.0**EXP)));
+        if(i == 1) $fwrite(magnitudes_raw, "\n\n");
+        $fwrite(magnitudes_raw, "%f, ", magnitude * 0.0078125);
     end
 
 endmodule

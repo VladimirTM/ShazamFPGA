@@ -15,13 +15,22 @@ module FFT_IMPLEMENTATION
    output wire                   done_all_processing,
    output reg [2:0] 		         status_o,
    output reg signed [7:0] 	   bfpexp_o,
+   output                        done_FFT,
 
     // input stream
-   input wire 			             input_stream_active_i,
+   input wire 			               input_stream_active_i,
    input wire signed [FFT_DW-1:0]    input_real_i,
    input wire signed [FFT_DW-1:0]    input_imaginary_i,
 
-   input wire  [10:0]                index,                
+   output wire [15:0]               dmadr_real_output,
+   output wire [15:0]               dmadr_imag_output,
+   output wire                      dmadr_ready,
+   
+   output wire [15:0]               P1_out,
+   output wire [15:0]               P2_out,
+   output wire [15:0]               P_active,
+
+   input wire  [10:0]               index,                
    output reg   [15:0]              magnitude,
    output reg                       magnitude_ready
    );
@@ -39,6 +48,7 @@ module FFT_IMPLEMENTATION
    
    // status
    wire   done_FFT_wire;
+   assign done_FFT = done_FFT_wire;
 
    wire [2:0] 			         status;
    wire signed [7:0] 		   bfpexp;
@@ -55,10 +65,13 @@ module FFT_IMPLEMENTATION
    reg signed [FFT_DW-1:0] input_imaginary;
 
     // output / DMA bus
-   reg 			   dmaact;
-   reg [FFT_N-1:0] 	   dmaa;
-   wire signed [FFT_DW-1:0] dmadr_real;
-   wire signed [FFT_DW-1:0] dmadr_imag;
+   reg 			               dmaact;
+   reg [FFT_N-1:0] 	         dmaa;
+   wire signed [FFT_DW-1:0]   dmadr_real;
+   wire signed [FFT_DW-1:0]   dmadr_imag;
+
+   assign dmadr_real_output = dmadr_real;
+   assign dmadr_imag_output = dmadr_imag;
 
    always @ ( posedge clk ) begin
       input_stream_active <= input_stream_active_i;
@@ -103,19 +116,26 @@ module FFT_IMPLEMENTATION
    
 
    wire product_done, absolute_value_done;
-   wire [15: 0] P1, P2, absolute_value;
+   wire signed [15: 0] P1, P2, absolute_value;
 
-   fixed_point_multiplier #(.EXP_WIDTH_A(6), .EXP_WIDTH_B(6), .EXP_WIDTH_PRODUCT(5)) MULTIPLY_REAL (
+   assign dmadr_ready = current_state == MAGNITUDES_PROCESS_DATA;
+   assign P1_out = P1;
+   assign P2_out = P2;
+   assign P_active = product_done;
+
+   fixed_point_multiplier #(.EXP_WIDTH_A(5), .EXP_WIDTH_B(5), .EXP_WIDTH_PRODUCT(0)) MULTIPLY_REAL (
       .clk(clk),
       .enable(current_state == MAGNITUDES_PROCESS_DATA),
+      .reset(reset),
       .A(dmadr_real),
       .B(dmadr_real),
       .done(product_done),
       .product(P1)
    );
 
-   fixed_point_multiplier #(.EXP_WIDTH_A(6), .EXP_WIDTH_B(6), .EXP_WIDTH_PRODUCT(5)) MULTIPLY_IMAG (
+   fixed_point_multiplier #(.EXP_WIDTH_A(5), .EXP_WIDTH_B(5), .EXP_WIDTH_PRODUCT(0)) MULTIPLY_IMAG (
       .clk(clk),
+      .reset(reset),
       .enable(current_state == MAGNITUDES_PROCESS_DATA),
       .A(dmadr_imag),
       .B(dmadr_imag),
@@ -168,7 +188,7 @@ module FFT_IMPLEMENTATION
             magnitude_ready <= 1;
             magnitude <= absolute_value;
 
-            if(index == 1023) current_state <= MAGNITUDES_FINISH;
+            if(index == 511) current_state <= MAGNITUDES_FINISH;
             else current_state <= MAGNITUDES_ASK_RAM;
          end
          MAGNITUDES_FINISH: begin

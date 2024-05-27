@@ -107,6 +107,7 @@ module butterflyCore
    wire [FFT_DW-1:0]                   B_real;
    wire [FFT_DW-1:0]                   B_imag;
    
+   // pipelines the input to account for the delay in the twiddle pipeline
    ramPipelineBridge 
      #(
        .FFT_N(FFT_N),
@@ -129,8 +130,8 @@ module butterflyCore
       .input_B( input_B ),
 
       .output_memory_address( iMemAddrCalc ),
-      .output_A( { A_imag, A_real } ),
-      .output_B(  { B_imag, B_real } )
+      .output_A( {A_imag, A_real} ),
+      .output_B(  {B_imag, B_real} )
       
       );
 
@@ -198,19 +199,19 @@ module butterflyCore
       
       );
 
-   bfp_bitWidthDetector 
-     #(
-       .FFT_MAX_BIT_WIDTH(FFT_MAX_BIT_WIDTH),
-       .FFT_DW(FFT_DW)
-       )
-     ubfp_bitWidth
-     (
-      .operand0( output_A[FFT_DW*2-1:FFT_DW*2/2] ),
-      .operand1( output_A[FFT_DW*2/2-1:0] ),
-      .operand2( output_B[FFT_DW*2-1:FFT_DW*2/2] ),
-      .operand3( output_B[FFT_DW*2/2-1:0] ),
-      .min_bit_width( max_bit_width_after_butterfly )
-      );
+  //  bfp_bitWidthDetector 
+  //    #(
+  //      .FFT_MAX_BIT_WIDTH(FFT_MAX_BIT_WIDTH),
+  //      .FFT_DW(FFT_DW)
+  //      )
+  //    ubfp_bitWidth
+  //    (
+  //     .operand0( output_A[FFT_DW*2-1:FFT_DW*2/2] ),
+  //     .operand1( output_A[FFT_DW*2/2-1:0] ),
+  //     .operand2( output_B[FFT_DW*2-1:FFT_DW*2/2] ),
+  //     .operand3( output_B[FFT_DW*2/2-1:0] ),
+  //     .min_bit_width( max_bit_width_after_butterfly )
+  //     );
    
 
 endmodule // butterflyUnit

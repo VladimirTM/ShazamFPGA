@@ -47,7 +47,7 @@ module bfp_bitWidthAcc
    
    always @ ( posedge clk ) begin
            if (reset)   bfp_exponent_signed <= 8'h0;
-           else bfp_exponent_signed <= 8'b1111_1010; // exponent = -6
+           else bfp_exponent_signed <= 8'b1111_1101; // exponent = -3
       // ADAPTIVE VERSION:
       // we try to increase precision because we expect bfp_scale to be positive.
       // else if (init)    bfp_exponent_signed <= -bfp_scale;

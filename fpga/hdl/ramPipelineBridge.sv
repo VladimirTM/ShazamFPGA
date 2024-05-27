@@ -1,4 +1,5 @@
 
+// pipelines the input through 2 flipflops
 module ramPipelineBridge
   #(
 
