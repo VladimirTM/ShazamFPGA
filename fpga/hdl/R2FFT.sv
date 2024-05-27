@@ -105,7 +105,7 @@ module R2FFT
         
         ST_INPUT_STREAM:
           begin
-             if ( streamBufferFull && input_stream_active ) begin
+             if ( streamBufferFull ) begin
                 if ( autorun ) begin
                    status_n = ST_RUN_FFT;
                 end else begin

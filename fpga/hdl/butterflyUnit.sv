@@ -4,7 +4,7 @@ module butterflyUnit
     parameter FFT_N = 10,
     parameter FFT_DW = 16,
     parameter FFT_MAX_BIT_WIDTH = 5,
-    parameter PL_DEPTH = 0
+    parameter PL_DEPTH = 3
     )
   (
    input wire                  clk,

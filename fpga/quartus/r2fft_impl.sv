@@ -12,8 +12,7 @@ module FFT_IMPLEMENTATION
    input wire 			  clk,
    input wire 			  reset,
 
-    // status
-   output reg 			            done,
+   output wire                   done_all_processing,
    output reg [2:0] 		         status_o,
    output reg signed [7:0] 	   bfpexp_o,
 
@@ -22,25 +21,30 @@ module FFT_IMPLEMENTATION
    input wire signed [FFT_DW-1:0]    input_real_i,
    input wire signed [FFT_DW-1:0]    input_imaginary_i,
 
-   output reg [15:0]                magnitudes [1023:0],
-   output reg                       magnitudes_ready
+   input wire  [10:0]                index,                
+   output reg   [15:0]              magnitude,
+   output reg                       magnitude_ready
    );
 
 
-   reg 				      reset_reg;
-   reg         [32:0]   result;
+   reg         done_all_processing_reg = 0;
+   assign      done_all_processing = done_all_processing_reg;
+
+   reg         reset_reg;
+   reg [32:0]  result;
 
    always @ ( posedge clk ) begin
       reset_reg <= reset;
    end
    
    // status
-   wire 			               done_wire;
+   wire   done_FFT_wire;
+
    wire [2:0] 			         status;
    wire signed [7:0] 		   bfpexp;
 
+
    always @ ( posedge clk ) begin
-      done <= done_wire;
       status_o <= status;
       bfpexp_o <= bfpexp;
    end
@@ -89,77 +93,89 @@ module FFT_IMPLEMENTATION
    typedef enum logic [2:0] {
       MAGNITUDES_NOT_READY = 3'd0,
       MAGNITUDES_IN_PROGRESS = 3'd1,
-      MAGNITUDES_READY = 3'd2,
-      MAGNITUDES_PROCESS_DATA = 3'd4,
-      MAGNITUDES_ASK_RAM = 3'd5
+      MAGNITUDES_ASK_RAM = 3'd2,
+      MAGNITUDES_PROCESS_DATA = 3'd3,
+      MAGNITUDES_STORE_DATA = 3'd4,
+      MAGNITUDES_FINISH = 3'd5
    } states;
 
-   states current_state = MAGNITUDES_NOT_READY, next_state = MAGNITUDES_NOT_READY;
-
-   reg [33:0] magnitude_temp;
+   states current_state = MAGNITUDES_NOT_READY;
    
-   reg [FFT_N - 1: 0] index = 0;
 
-   wire product_done = 0, absolute_value_done = 0;
-   wire [15: 0] P1, P2;
-   fixed_point_multiplier #(.EXP_WIDTH_A(6), .EXP_WIDTH_B(6), .EXP_WIDTH_PRODUCT(5)) MULTIPLY_REAL_2 (
+   wire product_done, absolute_value_done;
+   wire [15: 0] P1, P2, absolute_value;
+
+   fixed_point_multiplier #(.EXP_WIDTH_A(6), .EXP_WIDTH_B(6), .EXP_WIDTH_PRODUCT(5)) MULTIPLY_REAL (
       .clk(clk),
       .enable(current_state == MAGNITUDES_PROCESS_DATA),
       .A(dmadr_real),
       .B(dmadr_real),
-      .done(absolute_value_done),
+      .done(product_done),
       .product(P1)
    );
 
-   fixed_point_multiplier #(.EXP_WIDTH_A(6), .EXP_WIDTH_B(6), .EXP_WIDTH_PRODUCT(5)) MULTIPLY_REAL_2 (
+   fixed_point_multiplier #(.EXP_WIDTH_A(6), .EXP_WIDTH_B(6), .EXP_WIDTH_PRODUCT(5)) MULTIPLY_IMAG (
       .clk(clk),
       .enable(current_state == MAGNITUDES_PROCESS_DATA),
       .A(dmadr_imag),
       .B(dmadr_imag),
-      .done(),
       .product(P2)
    );
 
-   fixed_point_adder OUT_B_REAL (
+   fixed_point_adder ADD (
       .clk(clk),
-      .enable(stage_2_full),
-      .A(real_1),
-      .B(~real_2 + 1),
-      .sum(out_B_real)
+      .enable(product_done),
+      .A(P1),
+      .B(P2),
+      .sum(absolute_value),
+      .done(absolute_value_done)
    );
 
-   always @ (*) begin 
-      if(reset) next_state = MAGNITUDES_NOT_READY;
+   reg wait_1_clk = 0;
+
+   always @ (posedge clk) begin 
+      if(reset) current_state = MAGNITUDES_NOT_READY;
       case (current_state)
          MAGNITUDES_NOT_READY: begin
-            magnitudes_ready <= 0;
-            index <= 0;
-            if(done_wire) next_state <= MAGNITUDES_IN_PROGRESS;
-            else next_state <= MAGNITUDES_NOT_READY;
+            if(!done_FFT_wire) begin
+               done_all_processing_reg <= 0;
+            end
+            magnitude_ready <= 0;
+            if(done_FFT_wire && !done_all_processing) current_state <= MAGNITUDES_ASK_RAM;
+            else current_state <= MAGNITUDES_NOT_READY;
          end
          MAGNITUDES_ASK_RAM: begin
-            magnitudes_ready <= 0;
-            dmaact <= 1;
-            dmaa <= index;
-            next_state <= MAGNITUDES_PROCESS_DATA;
+               if(wait_1_clk == 0) begin
+                  wait_1_clk <= 1;
+                  current_state <= MAGNITUDES_ASK_RAM;
+                  magnitude_ready <= 0;
+                  dmaact <= 1;
+                  dmaa <= index;
+               end
+               else begin 
+                  current_state <= MAGNITUDES_PROCESS_DATA;
+                  wait_1_clk <= 0;
+               end
          end
          MAGNITUDES_PROCESS_DATA: begin
+            magnitude_ready <= 0;
             if(!absolute_value_done) begin 
-               
-               next_state <= MAGNITUDES_PROCESS_DATA
+               current_state <= MAGNITUDES_PROCESS_DATA;
             end 
-            // two numbers on 16 bits with 4 bits fractional parts: 0000_0000_0000.0000
-            // the product of 2 of those numbers will be: xxxx_xxxx_xxxx_[0000_0000_0000.0000]_xxxx
-            // to eliminate the 
-            magnitude_temp <= (dmadr_real * dmadr_real + dmadr_imag * dmadr_imag);
+            else current_state <= MAGNITUDES_STORE_DATA;
          end
-         // MAGNITUDESS_STORE_DATA: begin
-            
-         // end 
-         MAGNITUDES_READY: begin
-            magnitudes_ready = 1;
-            next_state = MAGNITUDES_NOT_READY;
+         MAGNITUDES_STORE_DATA: begin
+            magnitude_ready <= 1;
+            magnitude <= absolute_value;
+
+            if(index == 1023) current_state <= MAGNITUDES_FINISH;
+            else current_state <= MAGNITUDES_ASK_RAM;
          end
+         MAGNITUDES_FINISH: begin
+            magnitude_ready <= 0;
+            done_all_processing_reg <= 1;
+            current_state <= MAGNITUDES_NOT_READY;
+         end 
       endcase
    end
 
@@ -179,7 +195,7 @@ module FFT_IMPLEMENTATION
       .fin(0),
       .ifft(0),
       
-      .done( done_wire ),
+      .done( done_FFT_wire ),
       .status( status ),
       .bfpexp( bfpexp ),
 
@@ -227,6 +243,7 @@ module FFT_IMPLEMENTATION
       .data( wdw_ram0 ),
       .rdaddress( ra_ram0 ),
       .wraddress( wa_ram0 ),
+      .wren(wact_ram0),
       .q( rdr_ram0 )
       );
 
@@ -236,6 +253,7 @@ module FFT_IMPLEMENTATION
       .data( wdw_ram1 ),
       .rdaddress( ra_ram1 ),
       .wraddress( wa_ram1 ),
+      .wren(wact_ram1),
       .q( rdr_ram1 )
       );
    

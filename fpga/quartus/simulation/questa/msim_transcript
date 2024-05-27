@@ -27,99 +27,149 @@
 # Copying c:/intelfpga_lite/22.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 21:16:03 on May 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus" C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v 
+# -- Compiling module shazam_core
+# 
+# Top level modules:
+# 	shazam_core
+# End time: 21:16:03 on May 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/controller {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/controller/adc_measurements_to_FFT.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 21:16:03 on May 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/controller" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/controller/adc_measurements_to_FFT.v 
+# -- Compiling module adc_measurements_to_FFT
+# 
+# Top level modules:
+# 	adc_measurements_to_FFT
+# End time: 21:16:03 on May 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_multiplier.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:56 on May 26,2024
+# Start time: 21:16:03 on May 26,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_multiplier.v 
 # -- Compiling module fixed_point_multiplier
 # 
 # Top level modules:
 # 	fixed_point_multiplier
-# End time: 05:20:56 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:03 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_adder.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:56 on May 26,2024
+# Start time: 21:16:03 on May 26,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_adder.v 
 # -- Compiling module fixed_point_adder
 # 
 # Top level modules:
 # 	fixed_point_adder
-# End time: 05:20:57 on May 26,2024, Elapsed time: 0:00:01
+# End time: 21:16:03 on May 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/twrom.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 21:16:03 on May 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus" C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/twrom.v 
+# -- Compiling module twrom
+# 
+# Top level modules:
+# 	twrom
+# End time: 21:16:03 on May 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/dpram.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 21:16:04 on May 26,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus" C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/dpram.v 
+# -- Compiling module dpram
+# 
+# Top level modules:
+# 	dpram
+# End time: 21:16:04 on May 26,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv}
+# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 21:16:04 on May 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus" C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv 
+# -- Compiling module FFT_IMPLEMENTATION
+# 
+# Top level modules:
+# 	FFT_IMPLEMENTATION
+# End time: 21:16:04 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/writeBusMux.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:57 on May 26,2024
+# Start time: 21:16:04 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/writeBusMux.sv 
 # -- Compiling module writeBusMux
 # 
 # Top level modules:
 # 	writeBusMux
-# End time: 05:20:57 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:04 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/twiddleFactorRomBridge.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:57 on May 26,2024
+# Start time: 21:16:04 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/twiddleFactorRomBridge.sv 
 # -- Compiling module twiddleFactorRomBridge
 # 
 # Top level modules:
 # 	twiddleFactorRomBridge
-# End time: 05:20:57 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:04 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/readBusMux.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:57 on May 26,2024
+# Start time: 21:16:04 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/readBusMux.sv 
 # -- Compiling module readBusMux
 # 
 # Top level modules:
 # 	readBusMux
-# End time: 05:20:57 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:04 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/ramPipelineBridge.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:57 on May 26,2024
+# Start time: 21:16:04 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/ramPipelineBridge.sv 
 # -- Compiling module ramPipelineBridge
 # 
 # Top level modules:
 # 	ramPipelineBridge
-# End time: 05:20:57 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:04 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:57 on May 26,2024
+# Start time: 21:16:04 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv 
 # -- Compiling module radix2Butterfly
 # 
 # Top level modules:
 # 	radix2Butterfly
-# End time: 05:20:57 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:04 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:57 on May 26,2024
+# Start time: 21:16:05 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv 
 # -- Compiling module R2FFT
 # 
 # Top level modules:
 # 	R2FFT
-# End time: 05:20:57 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:05 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/fftAddressGenerator.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:57 on May 26,2024
+# Start time: 21:16:05 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/fftAddressGenerator.sv 
 # -- Compiling module fftAddressGenerator
 # 
 # Top level modules:
 # 	fftAddressGenerator
-# End time: 05:20:58 on May 26,2024, Elapsed time: 0:00:01
+# End time: 21:16:05 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:58 on May 26,2024
+# Start time: 21:16:05 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv 
 # -- Compiling module butterflyUnit
 # ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv(188): (vlog-2583) [SVCHK] - Extra checking for conflicts with always_comb and always_latch variables is done at vopt time.
@@ -134,85 +184,74 @@
 # 
 # Top level modules:
 # 	butterflyUnit
-# End time: 05:20:58 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:05 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 9
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyCore.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:58 on May 26,2024
+# Start time: 21:16:05 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyCore.sv 
 # -- Compiling module butterflyCore
 # 
 # Top level modules:
 # 	butterflyCore
-# End time: 05:20:58 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:05 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bitReverseCounter.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:58 on May 26,2024
+# Start time: 21:16:05 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bitReverseCounter.sv 
 # -- Compiling module bitReverseCounter
 # 
 # Top level modules:
 # 	bitReverseCounter
-# End time: 05:20:58 on May 26,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_Shifter.sv}
-# Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:58 on May 26,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_Shifter.sv 
-# -- Compiling module bfp_Shifter
-# 
-# Top level modules:
-# 	bfp_Shifter
-# End time: 05:20:58 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:05 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_maxBitWidth.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:58 on May 26,2024
+# Start time: 21:16:05 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_maxBitWidth.sv 
 # -- Compiling module bfp_maxBitWidth
 # 
 # Top level modules:
 # 	bfp_maxBitWidth
-# End time: 05:20:59 on May 26,2024, Elapsed time: 0:00:01
+# End time: 21:16:05 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthDetector.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:59 on May 26,2024
+# Start time: 21:16:06 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthDetector.sv 
 # -- Compiling module bfp_bitWidthDetector
 # 
 # Top level modules:
 # 	bfp_bitWidthDetector
-# End time: 05:20:59 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:06 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl {C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthAcc.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:59 on May 26,2024
+# Start time: 21:16:06 on May 26,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/hdl" C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/bfp_bitWidthAcc.sv 
 # -- Compiling module bfp_bitWidthAcc
 # 
 # Top level modules:
 # 	bfp_bitWidthAcc
-# End time: 05:20:59 on May 26,2024, Elapsed time: 0:00:00
+# End time: 21:16:06 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/testbench.sv}
+# vlog -sv -work work +incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/4-full-FFTs {C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/4-full-FFTs/testbench.sv}
 # Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
-# Start time: 05:20:59 on May 26,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit" C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/testbench.sv 
-# -- Compiling module dpram
-# -- Compiling module twrom
+# Start time: 21:16:06 on May 26,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/4-full-FFTs" C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/4-full-FFTs/testbench.sv 
 # -- Compiling module testbench
+# -- Compiling module dpram
 # 
 # Top level modules:
 # 	testbench
-# End time: 05:21:00 on May 26,2024, Elapsed time: 0:00:01
+# End time: 21:16:06 on May 26,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 05:21:00 on May 26,2024
+# Start time: 21:16:06 on May 26,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 2 FSMs in module "R2FFT(fast)".
 # ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(94): (vopt-2685) [TFMPC] - Too few port connections for 'SUM_REAL'.  Expected 6, found 5.
@@ -235,9 +274,29 @@
 # ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(193): (vopt-2718) [TFMPC] - Missing connection for port 'done'.
 # ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(201): (vopt-2685) [TFMPC] - Too few port connections for 'OUT_B_IMAG'.  Expected 6, found 5.
 # ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv(201): (vopt-2718) [TFMPC] - Missing connection for port 'done'.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=20.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv(117): (vopt-2685) [TFMPC] - Too few port connections for 'MULTIPLY_IMAG'.  Expected 6, found 5.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv(117): (vopt-2718) [TFMPC] - Missing connection for port 'done'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "FFT_IMPLEMENTATION(fast)".
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(73): (vopt-2685) [TFMPC] - Too few port connections for 'FFT_0'.  Expected 11, found 9.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(73): (vopt-2718) [TFMPC] - Missing connection for port 'bfpexp_o'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(73): (vopt-2718) [TFMPC] - Missing connection for port 'status_o'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(92): (vopt-2685) [TFMPC] - Too few port connections for 'FFT_1'.  Expected 11, found 9.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(92): (vopt-2718) [TFMPC] - Missing connection for port 'bfpexp_o'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(92): (vopt-2718) [TFMPC] - Missing connection for port 'status_o'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(112): (vopt-2685) [TFMPC] - Too few port connections for 'FFT_2'.  Expected 11, found 9.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(112): (vopt-2718) [TFMPC] - Missing connection for port 'bfpexp_o'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(112): (vopt-2718) [TFMPC] - Missing connection for port 'status_o'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(132): (vopt-2685) [TFMPC] - Too few port connections for 'FFT_3'.  Expected 11, found 9.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(132): (vopt-2718) [TFMPC] - Missing connection for port 'bfpexp_o'.
+# ** Warning: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v(132): (vopt-2718) [TFMPC] - Missing connection for port 'status_o'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=34.
 # Loading sv_std.std
 # Loading work.testbench(fast)
+# Loading work.shazam_core(fast)
+# Loading work.adc_measurements_to_FFT(fast)
+# Loading work.FFT_IMPLEMENTATION(fast)
+# Loading work.fixed_point_multiplier(fast)
+# Loading work.fixed_point_adder(fast)
 # Loading work.R2FFT(fast)
 # Loading work.bitReverseCounter(fast)
 # Loading work.bfp_bitWidthDetector(fast)
@@ -249,40 +308,215 @@
 # Loading work.butterflyCore(fast)
 # Loading work.ramPipelineBridge(fast)
 # Loading work.radix2Butterfly(fast)
-# Loading work.fixed_point_adder(fast)
-# Loading work.fixed_point_multiplier(fast)
+# Loading work.fixed_point_multiplier(fast__1)
 # Loading work.readBusMux(fast)
 # Loading work.writeBusMux(fast)
 # Loading work.twrom(fast)
+# Loading altera_mf_ver.altsyncram(fast)
+# Loading altera_mf_ver.altsyncram_body(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION(fast)
 # Loading work.dpram(fast)
+# Loading altera_mf_ver.altsyncram(fast__1)
+# Loading altera_mf_ver.altsyncram_body(fast__1)
 # ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/testbench.sv Line: 47
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/4-full-FFTs/testbench.sv Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'input_imaginary_i'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0 File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v Line: 73
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'autorun'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(20).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/../include/header.sv Line: 77
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'run'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(21).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/../include/header.sv Line: 77
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'fin'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(22).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/../include/header.sv Line: 77
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
 # ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ifft'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(23).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/../include/header.sv Line: 77
-# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (15) for port 'twdr_cos'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(44).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/../include/header.sv Line: 77
-# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'twdr_cos'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/twiddleFactorRomBridge.sv(17).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/uR2FFT/ubutterflyUnit/utwiddleFactorRomBridge File: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/butterflyUnit.sv Line: 64
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'twdr_cos'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(44).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
 # ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_adder.v(6).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/uR2FFT/ubutterflyUnit/ubutterflyCore/uradix2bt/OUT_B_REAL File: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv Line: 193
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT/ubutterflyUnit/ubutterflyCore/uradix2bt/OUT_B_REAL File: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv Line: 193
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'input_imaginary_i'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1 File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v Line: 92
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'autorun'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'run'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'fin'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ifft'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'twdr_cos'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(44).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_adder.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT/ubutterflyUnit/ubutterflyCore/uradix2bt/OUT_B_REAL File: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv Line: 193
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'input_imaginary_i'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2 File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'autorun'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'run'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'fin'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ifft'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'twdr_cos'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(44).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_adder.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT/ubutterflyUnit/ubutterflyCore/uradix2bt/OUT_B_REAL File: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv Line: 193
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'input_imaginary_i'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3 File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v Line: 132
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'autorun'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'run'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'fin'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ifft'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'twdr_cos'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(44).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_adder.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT/ubutterflyUnit/ubutterflyCore/uradix2bt/OUT_B_REAL File: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv Line: 193
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: sergi  Hostname: DESKTOP-PLNR7AI  ProcessID: 13756
-#           Attempting to use alternate WLF file "./wlftyi3txg".
+#           Attempting to use alternate WLF file "./wlftn50w1b".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftyi3txg
+#           Using alternate file: ./wlftn50w1b
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 2 sec
-# ** Note: $stop    : C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/testbench.sv(87)
-#    Time: 73211 ns  Iteration: 0  Instance: /testbench
-# Break in Module testbench at C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/1024pt_16bit/testbench.sv line 87
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_0.ram0.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_0.ram1.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_1.ram0.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_1.ram1.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_2.ram0.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_2.ram1.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_3.ram0.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_3.ram1.altsyncram_component.m_default.altsyncram_inst
+add wave -position end sim:/testbench/SHAZAM_CORE/SELECT_AVAILABLE_FFT/*
+# Break key hit
+# Simulation stop requested.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=34.
+# Loading work.testbench(fast)
+# Loading work.shazam_core(fast)
+# Loading work.adc_measurements_to_FFT(fast)
+# Loading work.FFT_IMPLEMENTATION(fast)
+# Loading work.fixed_point_multiplier(fast)
+# Loading work.fixed_point_adder(fast)
+# Loading work.R2FFT(fast)
+# Loading work.bitReverseCounter(fast)
+# Loading work.bfp_bitWidthDetector(fast)
+# Loading work.bfp_maxBitWidth(fast)
+# Loading work.bfp_bitWidthAcc(fast)
+# Loading work.fftAddressGenerator(fast)
+# Loading work.butterflyUnit(fast)
+# Loading work.twiddleFactorRomBridge(fast)
+# Loading work.butterflyCore(fast)
+# Loading work.ramPipelineBridge(fast)
+# Loading work.radix2Butterfly(fast)
+# Loading work.fixed_point_multiplier(fast__1)
+# Loading work.readBusMux(fast)
+# Loading work.writeBusMux(fast)
+# Loading work.twrom(fast)
+# Loading altera_mf_ver.altsyncram(fast)
+# Loading altera_mf_ver.altsyncram_body(fast)
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES(fast)
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION(fast)
+# Loading work.dpram(fast)
+# Loading altera_mf_ver.altsyncram(fast__1)
+# Loading altera_mf_ver.altsyncram_body(fast__1)
+# ** Warning: (vsim-PLI-3691) Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/../test/4-full-FFTs/testbench.sv Line: 49
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'input_imaginary_i'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0 File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v Line: 73
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'autorun'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'run'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'fin'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ifft'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'twdr_cos'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(44).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_adder.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_0/uR2FFT/ubutterflyUnit/ubutterflyCore/uradix2bt/OUT_B_REAL File: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv Line: 193
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'input_imaginary_i'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1 File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v Line: 92
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'autorun'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'run'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'fin'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ifft'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'twdr_cos'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(44).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_adder.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_1/uR2FFT/ubutterflyUnit/ubutterflyCore/uradix2bt/OUT_B_REAL File: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv Line: 193
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'input_imaginary_i'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2 File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'autorun'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'run'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'fin'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ifft'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'twdr_cos'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(44).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_adder.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_2/uR2FFT/ubutterflyUnit/ubutterflyCore/uradix2bt/OUT_B_REAL File: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv Line: 193
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'input_imaginary_i'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3 File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/shazam-core.v Line: 132
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'autorun'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(20).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'run'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(21).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'fin'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(22).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'ifft'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(23).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (15) does not match connection size (16) for port 'twdr_cos'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/R2FFT.sv(44).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT File: C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/r2fft_impl.sv Line: 188
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/helper/fixed_point_adder.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/SHAZAM_CORE/FFT_3/uR2FFT/ubutterflyUnit/ubutterflyCore/uradix2bt/OUT_B_REAL File: C:/Users/sergi/apps/shazam-vladimir/fpga/hdl/radix2Butterfly.sv Line: 193
+run -all
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_0.ram0.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_0.ram1.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_1.ram0.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_1.ram1.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_2.ram0.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_2.ram1.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_3.ram0.altsyncram_component.m_default.altsyncram_inst
+# Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
+# Time: 0  Instance: testbench.SHAZAM_CORE.FFT_3.ram1.altsyncram_component.m_default.altsyncram_inst
+# Causality operation skipped due to absence of debug database file
+# Break key hit
+# Simulation stop requested.
+# End time: 23:14:18 on May 26,2024, Elapsed time: 1:58:12
+# Errors: 0, Warnings: 63

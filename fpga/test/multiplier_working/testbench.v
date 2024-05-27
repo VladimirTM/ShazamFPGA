@@ -123,5 +123,13 @@ module testbench;
         // A * B = -129.625
         $fwrite(output_file, "RESULT 7: %f * %f = %f (expecting -129.625)\n", A * EXP_B, B * EXP_B, result * EXP_B);
         #20;
+
+        enable = 1;
+        A = 16'b1111_1100_0011_0000; // -30.5
+        B = 16'b1111_1111_0111_1000; // -4.25
+
+        #20;
+        #20;
+        $fwrite(output_file, "RESULT 7: %f * %f = %f (expecting 129.625)\n", A * EXP_B, B * EXP_B, result * EXP_B);
     end
 endmodule

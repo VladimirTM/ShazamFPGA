@@ -8,7 +8,7 @@ module adc_measurements_to_FFT (
     output write_active_FFT_3
 );
 
-    reg [14:0]  sample_count;
+    reg [14:0]  sample_count = 0;
     reg         completed_first_iteration = 0;
 
     reg write_active_FFT_0_reg = 0;
@@ -25,57 +25,67 @@ module adc_measurements_to_FFT (
     // this leaves less than 512 samples unused in each second 
     
     always @ (posedge clk) begin
-        if(adc_input_valid) begin
-            if(sample_count == 2047) begin 
-                sample_count <= 0;
-                completed_first_iteration <= 1;
-            end 
-
-            if(sample_count >= 0 && sample_count < 512) begin
-                if(!completed_first_iteration) begin
-                    write_active_FFT_0_reg <= 1;
-                end
-                else begin
-                    write_active_FFT_0_reg <= 1;
-                    write_active_FFT_1_reg <= 1;
-                end 
-            end
-            else if(sample_count > 511 && sample_count < 1024) begin
-                if(!completed_first_iteration) begin
-                    write_active_FFT_0_reg <= 1;
-                    write_active_FFT_1_reg <= 1;
-                end 
-                else begin
-                    write_active_FFT_1_reg <= 1;
-                    write_active_FFT_2_reg <= 1;
-                end 
-            end 
-            else if (sample_count > 1023 && sample_count < 1536) begin
-                if(!completed_first_iteration) begin
-                    write_active_FFT_1_reg <= 1;
-                    write_active_FFT_2_reg <= 1;
-                end
-                else begin 
-                    write_active_FFT_2_reg <= 1;
-                    write_active_FFT_3_reg <= 1;
-                end
-            end
-            else if (sample_count > 1535 && sample_count < 2048) begin
-                    if(!completed_first_iteration) begin
-                        write_active_FFT_2_reg <= 1;
-                        write_active_FFT_3_reg <= 1;
-                    end 
-                    else begin
-                        write_active_FFT_3_reg <= 1;
-                        write_active_FFT_0_reg <= 1;
-                    end 
-                end 
-            end 
-        else begin 
+        if(reset) begin
+            sample_count <= 0;
             write_active_FFT_0_reg <= 0;
             write_active_FFT_1_reg <= 0;
             write_active_FFT_2_reg <= 0;
             write_active_FFT_3_reg <= 0;
-        end     
+        end 
+        else begin      
+            if(adc_input_valid) begin
+                sample_count <= sample_count + 1;      
+                if(sample_count == 2047) begin 
+                    sample_count <= 0;
+                    completed_first_iteration <= 1;
+                end 
+
+                if(sample_count >= 0 && sample_count < 512) begin
+                    if(!completed_first_iteration) begin
+                        write_active_FFT_0_reg <= 1;
+                    end
+                    else begin
+                        write_active_FFT_3_reg <= 1;
+                        write_active_FFT_0_reg <= 1;
+                    end 
+                end
+                else if(sample_count > 511 && sample_count < 1024) begin
+                    if(!completed_first_iteration) begin
+                        write_active_FFT_0_reg <= 1;
+                        write_active_FFT_1_reg <= 1;
+                    end 
+                    else begin
+                        write_active_FFT_0_reg <= 1;
+                        write_active_FFT_1_reg <= 1;
+                    end 
+                end 
+                else if (sample_count > 1023 && sample_count < 1536) begin
+                    if(!completed_first_iteration) begin
+                        write_active_FFT_1_reg <= 1;
+                        write_active_FFT_2_reg <= 1;
+                    end
+                    else begin 
+                        write_active_FFT_1_reg <= 1;
+                        write_active_FFT_2_reg <= 1;
+                    end
+                end
+                else if (sample_count > 1535 && sample_count < 2048) begin
+                        if(!completed_first_iteration) begin
+                            write_active_FFT_2_reg <= 1;
+                            write_active_FFT_3_reg <= 1;
+                        end 
+                        else begin
+                            write_active_FFT_2_reg <= 1;
+                            write_active_FFT_3_reg <= 1;
+                        end
+                    end 
+                end 
+            else begin 
+                write_active_FFT_0_reg <= 0;
+                write_active_FFT_1_reg <= 0;
+                write_active_FFT_2_reg <= 0;
+                write_active_FFT_3_reg <= 0;
+            end     
+        end 
     end
 endmodule

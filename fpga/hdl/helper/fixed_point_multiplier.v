@@ -41,7 +41,7 @@ module fixed_point_multiplier # (
             else begin 
                 // has overflow
                 if(full_product[31:((EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT) + 15)] != 0) product <= {1'b0, {15{1'b1}}};
-                // doesn't have overflow
+                else if (full_product[((EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT) + 15)] == 1) product <= ~full_product[((EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT) + 15) : (EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT)] + 1'b1;
                 else product <= full_product[((EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT) + 15) : (EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT)];
             end 
         end 

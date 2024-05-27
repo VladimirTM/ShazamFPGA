@@ -45,7 +45,7 @@ module radix2Butterfly
    reg stage_1_half = 0, stage_1_full = 0, stage_2_half = 0, stage_2_full = 0, stage_3_half = 0;
    reg [1:0] stage_1_half_ctrl = 0, stage_1_full_ctrl = 0, stage_2_half_ctrl = 0, stage_2_full_ctrl = 0, stage_3_half_ctrl = 0;
    reg [FFT_N-1-1:0] memory_address_stage_1_half, memory_address_stage_1_full, memory_address_stage_2_half, memory_address_stage_2_full, memory_address_stage_3_half;
-   always @(posedge clk or reset) begin
+   always @(posedge clk) begin
       if(reset) begin
          stage_1_half <= 0;
          stage_1_full <= 0;
