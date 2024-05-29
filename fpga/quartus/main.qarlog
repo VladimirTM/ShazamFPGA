@@ -1,0 +1,37 @@
+Quartus Prime Archive log --	C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/main.qarlog
+
+Archive:	C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/main.qar
+Date:		Tue May 28 21:36:43 2024
+Quartus Prime		22.1std.2 Build 922 07/20/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/qic_export_file_list
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.atm
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.dpi
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.hdbx
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.map.kpt
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.qxp_info
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.rcf
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.scidsc
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.atm
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.dpi
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.hdbx
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.map.kpt
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.qxp_info
+C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.scidsc
+	======= Total: 14 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Tue May 28 22:39:23 2024
+Source archive file:	C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/main.qxp
+Archive was extracted into	C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_import/
+		 - successfully.
+
+
+******* Archived project restoration attempt on Tue May 28 22:44:35 2024
+Source archive file:	C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/main.qxp
+Archive was extracted into	C:/Users/sergi/apps/shazam-vladimir/fpga/quartus/db/r2fft_impl_tmp_qic_import/
+		 - successfully.
