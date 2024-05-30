@@ -1,10 +1,23 @@
 import serial
 
-BAUD_RATE = 115200
-fpga_com = serial.Serial('COM3', BAUD_RATE, timeout=0.1)
+BAUD_RATE = 2_000_000
+fpga_com = serial.Serial('COM4', BAUD_RATE, timeout=0.1)
 
 def read_data():
-    return fpga_com.read(3);
+    reading = fpga_com.read(1)
+    if(reading):
+        return ord(reading) * 2
+    else:
+        return None
 
-while 1:
-    print("DATA FORM FPGA:", read_data());
+samples = []
+i = 0
+while i < 10_000:
+    data = read_data()
+    # print("gathering...")
+    if data: 
+        samples.append(data)
+        i = i + 1
+    
+
+print("SAMPLES:", samples)

@@ -4,24 +4,35 @@ module SPI (
     input [8:0] data_in,
     input data_ready,
     input fifo_empty,
-    output fifo_read_enable,
+    output fifo_refresh_data,
     output reg mosi,
     output reg cs
 );
 
-    reg fifo_read_enable_reg = 0;
-    assign fifo_read_enable = fifo_read_enable_reg;
+    reg fifo_refresh_reg = 0;
+    assign fifo_refresh_data = fifo_refresh_reg;
+
+    // reg [8:0] sintethic_data = 0;
+    // always @ (posedge sclk) begin
+    //     if(fifo_refresh_reg) begin 
+    //         if(sintethic_data == 9'd8) sintethic_data <= 0;
+    //         else sintethic_data <= sintethic_data + 2;
+    //     end 
+    // end
     
-    typedef enum logic [1:0] {
-        IDLE = 2'b00,
-        ASK_FIFO = 2'b01,
-        TRANSFER = 2'b10
+    typedef enum logic [2:0] {
+        IDLE = 3'b000,
+        FIFO_REFRESH = 3'b001,
+        TRANSFER_1 = 3'b010,
+        PAUSE = 3'b011
     } state_t;
 
     state_t state, next_state;
 
     reg [8:0] shift_reg;
     reg [3:0] bit_count;
+
+    reg [5:0] pause = 0;
 
     always @(negedge sclk) begin
         if (reset) begin
@@ -34,19 +45,23 @@ module SPI (
     always @(*) begin
         case (state)
             IDLE: begin
-                if(!fifo_empty) next_state = ASK_FIFO;
+                if(!fifo_empty && &pause) next_state = TRANSFER_1;
                 else next_state = IDLE;
             end
-            ASK_FIFO: begin
-                next_state = TRANSFER;
-            end 
-            TRANSFER: begin
-                if (bit_count == 4'd15) begin
-                    next_state = IDLE;
+            TRANSFER_1: begin
+                if (bit_count == 4'd7) begin
+                    next_state = PAUSE;
                 end else begin
-                    next_state = TRANSFER;
+                    next_state = TRANSFER_1;
                 end
             end
+            PAUSE: begin
+                if(&pause) next_state = FIFO_REFRESH;
+                else next_state = PAUSE;
+            end
+            FIFO_REFRESH: begin
+                next_state = IDLE;
+            end 
             default: next_state = IDLE;
         endcase
     end
@@ -54,36 +69,38 @@ module SPI (
     always @(negedge sclk) begin
         if (reset) begin
             cs <= 1;
-            fifo_read_enable_reg <= 0;
+            fifo_refresh_reg <= 0;
             mosi <= 0;
             shift_reg <= 0;
             bit_count <= 0;
+            pause <= 0;
         end else begin
             case (state)
                 IDLE: begin
-                    cs <= 1;
                     bit_count <= 0;
-                    fifo_read_enable_reg <= 0;
-                    shift_reg <= 0;
+                    fifo_refresh_reg <= 0;
                     mosi <= 0;
-                end
-                ASK_FIFO: begin
+                    pause <= pause + 1;
+                    shift_reg <= data_in;
                     cs <= 1;
-                    fifo_read_enable_reg <= 1;
-                    shift_reg <= 9'b1_0101_0010;
-                end 
-                TRANSFER: begin
-                    fifo_read_enable_reg <= 0;
+                end
+                TRANSFER_1: begin
+                    pause <= 0;
                     cs <= 0;
                     bit_count <= bit_count + 1;
-                    
-                    if(bit_count == 4'd9) begin
-                        mosi <= 0;
-                    end
-                    else begin  
-                        mosi <= shift_reg[8];
-                        shift_reg <= shift_reg << 1;
-                    end
+                    mosi <= shift_reg[8];
+                    shift_reg <= shift_reg << 1;
+                end
+                PAUSE: begin
+                    pause <= pause + 1;
+                    cs <= 1;
+                    mosi <= 0;
+                    bit_count <= bit_count;
+                end
+                FIFO_REFRESH: begin
+                    cs <= 1;
+                    pause <= 0;
+                    fifo_refresh_reg <= 1;
                 end
             endcase
         end

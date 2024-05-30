@@ -41,7 +41,7 @@ module testbench;
    reg should_read, data_ready;
    reg [8:0] frequency_input_for_arduino;
    
-   wire fifo_read_enable;
+   wire fifo_refresh_data;
    
    always @ (negedge generated_sclk) begin
       if(reset) frequency_input_for_arduino <= 0;
@@ -56,7 +56,7 @@ module testbench;
       .wfull(fifo_full),
       .rclk(generated_sclk),
       .rrst_n(~reset),
-      .rinc(fifo_read_enable),
+      .rinc(fifo_refresh_data),
       .rdata(frequency),
       .rempty(fifo_empty)
    );
@@ -65,7 +65,7 @@ module testbench;
       .sclk(generated_sclk),
       .reset(reset),
       .fifo_empty(fifo_empty),
-      .fifo_read_enable(fifo_read_enable),
+      .fifo_refresh_data(fifo_refresh_data),
       .data_ready(data_ready),
       .data_in(frequency_input_for_arduino),
       .mosi(mosi),

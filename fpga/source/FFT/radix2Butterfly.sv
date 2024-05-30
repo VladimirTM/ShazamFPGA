@@ -39,9 +39,9 @@ module radix2Butterfly
    output reg signed [FFT_DW-1:0] out_B_imag 
    );
    
-      localparam EXP_WIDTH_INPUT = 5;
+      localparam EXP_WIDTH_INPUT = 4;
       localparam EXP_WIDTH_TWIDDLE = 15;
-      localparam EXP_WIDTH_OUTPUT = 5;
+      localparam EXP_WIDTH_OUTPUT = 4;
    
    reg stage_1_half = 0, stage_1_full = 0, stage_2_half = 0, stage_2_full = 0, stage_3_half = 0;
    reg [1:0] stage_1_half_ctrl = 0, stage_1_full_ctrl = 0, stage_2_half_ctrl = 0, stage_2_full_ctrl = 0, stage_3_half_ctrl = 0;

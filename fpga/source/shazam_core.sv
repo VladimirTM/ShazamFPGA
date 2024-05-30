@@ -21,7 +21,7 @@ module shazam_core (
 
    wire FFT_0_all_done, FFT_1_all_done, FFT_2_all_done, FFT_3_all_done;
 
-   reg [15:0] magnitude;
+   reg [24:0] magnitude;
    reg magnitude_ready;
    reg [8:0] index = 0;
 
@@ -31,46 +31,52 @@ module shazam_core (
 
    wire magnitude_FFT_0_ready, magnitude_FFT_1_ready, magnitude_FFT_2_ready, magnitude_FFT_3_ready; 
    wire [15:0] magnitude_FFT_0, magnitude_FFT_1, magnitude_FFT_2, magnitude_FFT_3; 
-   reg [15:0] magnitudes [511:0];
    reg all_magnitudes_ready;
+   reg start_find_peaks = 0;
    
    always @(posedge clk) begin
       if(reset) begin
          all_magnitudes_ready <= 0;
          magnitude_ready <= 0;
+         start_find_peaks <= 0;
+         index <= 0;
+         magnitude <= {25{1'b0}};
       end 
       else begin
          if(magnitude_FFT_0_ready == 1) begin
             magnitude_ready <= 1;
-            magnitude <= magnitude_FFT_0;
+            magnitude <= {index, magnitude_FFT_0};
             index <= index + 1;
             all_magnitudes_ready <= index == 511;
-            magnitudes[index] <= magnitude;
          end  
          else if(magnitude_FFT_1_ready == 1) begin
             magnitude_ready <= 1;
-            magnitude <= magnitude_FFT_1;
+            magnitude <= {index, magnitude_FFT_1};
             index <= index + 1;
             all_magnitudes_ready <= index == 511;
-            magnitudes[index] <= magnitude;
          end
          else if(magnitude_FFT_2_ready == 1) begin
             magnitude_ready <= 1;
-            magnitude <= magnitude_FFT_2;
+            magnitude <= {index, magnitude_FFT_2};
             all_magnitudes_ready <= index == 511;
             index <= index + 1;
-            magnitudes[index] <= magnitude;
+
          end  
          else if(magnitude_FFT_3_ready == 1) begin
             magnitude_ready <= 1;
-            magnitude <= magnitude_FFT_3;
+            magnitude <= {index, magnitude_FFT_3};
             all_magnitudes_ready <= index == 511;
             index <= index + 1;
-            magnitudes[index] <= magnitude;
+
          end
          else magnitude_ready <= 0;
 
-         if(all_magnitudes_ready == 1) all_magnitudes_ready <= 0; 
+         if(all_magnitudes_ready == 1) begin 
+            all_magnitudes_ready <= 0;
+            start_find_peaks <= 1;
+         end
+
+         if(start_find_peaks == 1) start_find_peaks <= 0;
       end
 
    end 
@@ -87,7 +93,7 @@ module shazam_core (
         .reset(reset_FFT_0),
         .done_all_processing(FFT_0_all_done),
         .input_stream_active_i(write_active_FFT_0),
-        .input_real_i({adc_data[11], 1'b0, 1'b0, 1'b0, 1'b0, adc_data[10:0]}),
+        .input_real_i({adc_data[11:0], 1'b0, 1'b0, 1'b0, 1'b0}),
         .input_imaginary_i(0),
         .index(index),
         .magnitude(magnitude_FFT_0),
@@ -106,7 +112,7 @@ module shazam_core (
         .reset(reset_FFT_1),
         .done_all_processing(FFT_1_all_done),
         .input_stream_active_i(write_active_FFT_1),
-        .input_real_i({adc_data[11], 1'b0, 1'b0, 1'b0, 1'b0, adc_data[10:0]}),
+        .input_real_i({adc_data[11:0], 1'b0, 1'b0, 1'b0, 1'b0}),
         .input_imaginary_i(0),
         .index(index),
         .magnitude(magnitude_FFT_1),
@@ -126,7 +132,7 @@ module shazam_core (
         .reset(reset_FFT_2),
         .done_all_processing(FFT_2_all_done),
         .input_stream_active_i(write_active_FFT_2),
-        .input_real_i({adc_data[11], 1'b0, 1'b0, 1'b0, 1'b0, adc_data[10:0]}),
+        .input_real_i({adc_data[11:0], 1'b0, 1'b0, 1'b0, 1'b0}),
         .input_imaginary_i(0),
         .index(index),
         .magnitude(magnitude_FFT_2),
@@ -146,7 +152,7 @@ module shazam_core (
         .reset(reset_FFT_3),
         .done_all_processing(FFT_3_all_done),
         .input_stream_active_i(write_active_FFT_3),
-        .input_real_i({adc_data[11], 1'b0, 1'b0, 1'b0, 1'b0, adc_data[10:0]}),
+        .input_real_i({adc_data[11:0], 1'b0, 1'b0, 1'b0, 1'b0}),
         .input_imaginary_i(0),
         .index(index),
         .magnitude(magnitude_FFT_3),
@@ -156,8 +162,9 @@ module shazam_core (
    find_maximas FIND_MAXIM_MAGNITUDE (
       .clk(clk),
       .reset(reset),
-      .start(all_magnitudes_ready),
-      .data_in(magnitudes),
+      .load(magnitude_ready),
+      .data_in(magnitude),
+      .start(start_find_peaks),
       .data_out(maximas),
       .output_active(maximas_found_active)
    );

@@ -38,7 +38,7 @@ module testbench;
         most_signifcant_frequencies_file = $fopen("../../../data/shazam/most_significant_frequencies.txt", "w");
         maximas_file = $fopen("../../../data/shazam/maximas_frequencies_and_magnitudes.txt", "w");
         magnitudes_file = $fopen("../../../data/shazam/all_magnitudes.txt");
-        input_file = $fopen("../../../data/inputs/constant_input.txt", "r");
+        input_file = $fopen("../../../data/inputs/arduino_input.txt", "r");
         for ( i = 0; i < 3 * FFT_LENGTH; i = i + 1 ) begin
                 $fscanf(input_file, "%d,", inputReal);
                 adc_data <= inputReal;
@@ -68,7 +68,7 @@ module testbench;
             if(magnitude_index == 511) fft_count = fft_count + 1;
 
             if(magnitude_index == 0) $fwrite(most_signifcant_frequencies_file, "\n=============MAGNITUDES FROM FFT %d:============\n", fft_count);
-            else $fwrite(most_signifcant_frequencies_file, "%d: %f\n", magnitude_index, SHAZAM.SHAZAM_ANALYZE_SOUNDS.magnitude * EXP);
+            else $fwrite(most_signifcant_frequencies_file, "%d: %f\n", magnitude_index, SHAZAM.SHAZAM_ANALYZE_SOUNDS.magnitude[15:0] * EXP);
             
             magnitude_index <= magnitude_index + 1;
     end
