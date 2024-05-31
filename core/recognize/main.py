@@ -10,7 +10,7 @@ fpga_com = serial.Serial('COM4', BAUD_RATE, timeout=0.1)
 
 async def find_song_by_hash(hash, time):
     global database
-    cursor = await database.execute("SELECT hash, abs(? - time), song_id FROM song_hashes WHERE hash = ?", [hash, time])
+    cursor = await database.execute("SELECT hash, abs(? - time), song_id FROM song_hashes WHERE hash = ?", [time, hash])
     rows = await cursor.fetchall();
     print(rows)
     await cursor.close()
