@@ -1,8 +1,8 @@
 // expects 2's complement numbers and outputs 2's complement
 module fixed_point_multiplier # (
-    parameter EXP_WIDTH_A = 5, 
+    parameter EXP_WIDTH_A = 15, 
     parameter EXP_WIDTH_B = 15,
-    parameter EXP_WIDTH_PRODUCT = 5
+    parameter EXP_WIDTH_PRODUCT = 15
     ) (
     input clk,
     input reset,
@@ -15,8 +15,8 @@ module fixed_point_multiplier # (
 
  reg signed [31:0] full_product = 0;
  reg computed_full_product = 0;
- reg intermediary_done = 0;
  reg done_reg = 0;
+ 
  assign done = done_reg;
 
  // check if the output of the multiplication will be positive or negative.
@@ -25,19 +25,19 @@ module fixed_point_multiplier # (
  always @(posedge clk) begin
     if(reset) begin
         product <= 0;
-        intermediary_done <= 0;
+        computed_full_product <= 0;
         done_reg <= 0;
     end 
     else begin
-        intermediary_done <= enable;
-        done_reg <= intermediary_done;
+        computed_full_product <= enable;
+        done_reg <= computed_full_product;
+        
         if(enable) begin
             full_product <= A * B;
-            computed_full_product <= 1;
             result_is_negative <= A[15] ^ B[15];
         end 
         if(computed_full_product) begin
-            if(A == 0 || B == 0) begin
+            if(full_product == 0) begin
                 product <= 0;
             end
             else begin  

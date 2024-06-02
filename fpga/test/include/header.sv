@@ -16,7 +16,6 @@
    wire fin = fin_reg;
 
    reg 	ifft_reg = 1'b0;
-   wire ifft = ifft_reg;
 
    reg 	done_reg = 1'bZ;
    wire done = done_reg;
@@ -82,7 +81,6 @@
       .autorun(1),
       .run(1),
       .fin(0),
-      .ifft(0),
 
       .done( done ),
       .status( status ),

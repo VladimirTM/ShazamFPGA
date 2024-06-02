@@ -2,12 +2,14 @@
 module testbench;
     reg clk = 0, adc_data_valid = 0, start = 0, reset = 0;
     reg [11:0] adc_data;
+    real M_PI = 3.1415926535897932384626433832795029;
     
     `include "../include/dpram.sv"
     `include "../include/wait_clk.sv"
+    `include "../include/to_signed_int.sv"
     
     parameter FFT_LENGTH = 1024;
-    localparam FREQUENCY_HOP = 9.76; 
+    localparam EXP = 0.0625;
 
     integer inputReal;
     integer inputImag;
@@ -22,11 +24,12 @@ module testbench;
     reg [9:0] index = 0;
     reg [9:0] index_1 = 0;
     wire [15:0] magnitude;
+    
     FFT_IMPLEMENTATION fft_0 (
         .clk(clk),
         .input_stream_active_i(adc_data_valid),
         // change test here (make unsigned default)
-        .input_real_i({adc_data[11], 1'b0, 1'b0, 1'b0, 1'b0, adc_data[10:0]}),
+        .input_real_i({adc_data, 1'b0, 1'b0, 1'b0, 1'b0}),
         .input_imaginary_i({16{1'b0}}),
         .reset(reset || !start),
         .index(index),
@@ -56,9 +59,9 @@ module testbench;
 
         for ( i = 0; i < FFT_LENGTH; i = i + 1 ) begin
                 $fscanf(input_file, "%d,", inputReal);
-                
-                adc_data <= inputReal;
-                adc_data_valid <= 1;
+
+                adc_data = inputReal << 4;
+                adc_data_valid = 1;
                 
                 $fwrite(output_file, "REAL DATA: %d, IMAGINARY DATA: %d\n", inputReal, 0);
                 wait_clk (1);
@@ -70,16 +73,6 @@ module testbench;
         while(!done_FFT) #20;
         
         $fwrite(output_file, "\n========FFT_OUTPUT:=========\n");
-
-        for(i = 0; i < FFT_LENGTH; i = i + 1) begin
-            #80;
-        end 
-
-        $fclose(output_file);
-        $fclose(verify_products);
-        $fclose(magnitudes_fixed);
-        $fclose(input_file);
-        $stop();
     end
 
     always @ (posedge clk) begin
@@ -90,14 +83,10 @@ module testbench;
         
         if(dmadr_ready) begin
             // checking that the result should be mirrored
-            $fwrite(output_file, "%d. OUTPUT REAL: %f, OUTPUT IMAG: %f, MAGNITUDE: %f\n", index, fft_real_output *  0.03125, fft_imag_output *  0.03125, ((fft_real_output * fft_real_output) + (fft_imag_output * fft_imag_output)));
+            $fwrite(output_file, "%d. OUTPUT REAL: %f, OUTPUT IMAG: %f, MAGNITUDE: %f\n", index, fft_real_output *  EXP, fft_imag_output *  EXP, ((fft_real_output *  EXP * fft_real_output *  EXP) + (fft_imag_output * EXP * fft_imag_output *  EXP)));
+            $fwrite(magnitudes_fixed, "%f,", real_x_real + imag_x_imag);
             index <= index + 1;
         end 
     end 
-
-    always @ (posedge magnitude_ready) begin
-        $fwrite(magnitudes_fixed, "%f,", magnitude);
-        j = j + 1;
-    end
 
 endmodule

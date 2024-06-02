@@ -11,33 +11,28 @@ module fixed_point_adder (
 
     reg extra;
     reg done_reg = 0;
-    reg intermediary_done = 0;
 
     reg signed [15:0] temp_sum = 0;
-
-    assign done = done_reg;
-
     reg compute_sum_and_overflow = 0;
+    
+    assign done = done_reg;
 
     // to understand this algorithm of overflow detection refer to: https://stackoverflow.com/questions/24586842/signed-multiplication-overflow-detection-in-verilog
     always @(posedge clk) begin
         if(reset) begin
             done_reg <= 0;
-            intermediary_done <= 0;
+            compute_sum_and_overflow <= 0;
             sum <= 0;
         end 
         else begin
-            intermediary_done <= enable;
-            done_reg <= intermediary_done;
+            compute_sum_and_overflow <= enable;
+            done_reg <= compute_sum_and_overflow;
+
             if(enable) begin
-                {extra, temp_sum} <= {A[15], A} + {B[15], B};
-                compute_sum_and_overflow <= 1;
+                {temp_sum, extra} <= {A[15], A} + {B[15], B};
             end 
             if(compute_sum_and_overflow) begin
-                if ({extra, temp_sum[15]} == 2'b01) sum <= {{1'b0, {15{1'b1}}}};
-                else if ({extra, temp_sum[15]} == 2'b10) sum <=  {1'b1, {15{1'b0}}};
-                else sum <= temp_sum;
-                compute_sum_and_overflow <= 0;
+                sum <= temp_sum;
             end
         end 
     end

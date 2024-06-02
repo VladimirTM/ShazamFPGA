@@ -107,9 +107,10 @@ module FFT_IMPLEMENTATION
       MAGNITUDES_NOT_READY = 3'd0,
       MAGNITUDES_IN_PROGRESS = 3'd1,
       MAGNITUDES_ASK_RAM = 3'd2,
-      MAGNITUDES_PROCESS_DATA = 3'd3,
-      MAGNITUDES_STORE_DATA = 3'd4,
-      MAGNITUDES_FINISH = 3'd5
+      MAGNITUDES_WAIT_RAM = 3'd3,
+      MAGNITUDES_PROCESS_DATA = 3'd4,
+      MAGNITUDES_STORE_DATA = 3'd5,
+      MAGNITUDES_FINISH = 3'd6
    } states;
 
    states current_state = MAGNITUDES_NOT_READY;
@@ -123,7 +124,7 @@ module FFT_IMPLEMENTATION
    assign P2_out = P2;
    assign P_active = product_done;
 
-   fixed_point_multiplier #(.EXP_WIDTH_A(4), .EXP_WIDTH_B(4), .EXP_WIDTH_PRODUCT(0)) MULTIPLY_REAL (
+   fixed_point_multiplier #(.EXP_WIDTH_A(5), .EXP_WIDTH_B(5), .EXP_WIDTH_PRODUCT(0)) MULTIPLY_REAL (
       .clk(clk),
       .enable(current_state == MAGNITUDES_PROCESS_DATA),
       .reset(reset),
@@ -133,7 +134,7 @@ module FFT_IMPLEMENTATION
       .product(P1)
    );
 
-   fixed_point_multiplier #(.EXP_WIDTH_A(4), .EXP_WIDTH_B(4), .EXP_WIDTH_PRODUCT(0)) MULTIPLY_IMAG (
+   fixed_point_multiplier #(.EXP_WIDTH_A(5), .EXP_WIDTH_B(5), .EXP_WIDTH_PRODUCT(0)) MULTIPLY_IMAG (
       .clk(clk),
       .reset(reset),
       .enable(current_state == MAGNITUDES_PROCESS_DATA),
@@ -151,40 +152,43 @@ module FFT_IMPLEMENTATION
       .done(absolute_value_done)
    );
 
-   reg wait_1_clk = 0;
-
    always @ (posedge clk) begin 
-      if(reset) current_state <= MAGNITUDES_NOT_READY;
+      if(reset) begin 
+         current_state <= MAGNITUDES_NOT_READY;
+         dmaact <= 0;
+      end 
       case (current_state)
          MAGNITUDES_NOT_READY: begin
             if(!done_FFT_wire) begin
                done_all_processing_reg <= 0;
+               dmaact <= 0;
             end
             magnitude_ready <= 0;
+            dmaact <= 0;
             if(done_FFT_wire && !done_all_processing) current_state <= MAGNITUDES_ASK_RAM;
             else current_state <= MAGNITUDES_NOT_READY;
          end
          MAGNITUDES_ASK_RAM: begin
-               if(wait_1_clk == 0) begin
-                  wait_1_clk <= 1;
-                  current_state <= MAGNITUDES_ASK_RAM;
-                  magnitude_ready <= 0;
-                  dmaact <= 1;
-                  dmaa <= index;
-               end
-               else begin 
-                  current_state <= MAGNITUDES_PROCESS_DATA;
-                  wait_1_clk <= 0;
-               end
+            current_state <= MAGNITUDES_WAIT_RAM;
+            dmaact <= 1;
+            magnitude_ready <= 0;
+            dmaa <= {1'b0, index};
          end
+         MAGNITUDES_WAIT_RAM: begin
+            dmaact <= 0;
+            magnitude_ready <= 0;
+            current_state <= MAGNITUDES_PROCESS_DATA;
+         end 
          MAGNITUDES_PROCESS_DATA: begin
             magnitude_ready <= 0;
+            dmaact <= 0;
             if(!absolute_value_done) begin 
                current_state <= MAGNITUDES_PROCESS_DATA;
             end 
             else current_state <= MAGNITUDES_STORE_DATA;
          end
          MAGNITUDES_STORE_DATA: begin
+            dmaact <= 0;
             magnitude_ready <= 1;
             magnitude <= absolute_value;
 
@@ -192,6 +196,7 @@ module FFT_IMPLEMENTATION
             else current_state <= MAGNITUDES_ASK_RAM;
          end
          MAGNITUDES_FINISH: begin
+            dmaact <= 0;
             magnitude_ready <= 0;
             done_all_processing_reg <= 1;
             current_state <= MAGNITUDES_NOT_READY;
@@ -202,13 +207,12 @@ module FFT_IMPLEMENTATION
    R2FFT
      #(
        .FFT_LENGTH(FFT_LENGTH),
-       .FFT_DW(FFT_DW),
-       .PL_DEPTH(PL_DEPTH)
+       .FFT_DW(FFT_DW)
        )
    uR2FFT
      (
       .clk( clk ),
-      .reset( reset_reg ),
+      .rst( reset_reg ),
       
       .autorun(1),
       .run(0),
@@ -219,9 +223,9 @@ module FFT_IMPLEMENTATION
       .status( status ),
       .bfpexp( bfpexp ),
 
-      .input_stream_active( input_stream_active ),
-      .input_real( input_real ),
-      .input_imaginary( input_imaginary ),
+      .sact_istream( input_stream_active ),
+      .sdw_istream_real( input_real ),
+      .sdw_istream_imag( input_imaginary ),
 
       .dmaact( dmaact ),
       .dmaa( dmaa ),

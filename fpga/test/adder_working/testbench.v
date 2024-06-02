@@ -122,5 +122,7 @@ module testbench;
         // A + B = -26.25
         $fwrite(output_file, "RESULT 7: %f + %f = %f (expecting -26.25)\n", A * EXP_B, B * EXP_B, result * EXP_B);
         #20;
+
+        $fclose(output_file);
     end
 endmodule

@@ -1,5 +1,4 @@
 
-// pipelines the input through 2 flipflops
 module ramPipelineBridge
   #(
 
@@ -9,7 +8,7 @@ module ramPipelineBridge
   (
 
    input wire                   clk,
-   input wire                   reset,
+   input wire                   rst,
 
    input wire                   iact,
    output wire                  oact,
@@ -21,13 +20,13 @@ module ramPipelineBridge
    // 00: 2nd-n Stage EvenCycle
    // 11: 2nd-n Stage OddCycle
 
-   input wire [FFT_N-1-1:0]  input_memory_address,
-   input wire [FFT_DW*2-1:0]  input_A,
-   input wire [FFT_DW*2-1:0]  input_B,
+   input wire [FFT_N-1-1:0]  iMemAddr,
+   input wire [FFT_DW*2-1:0]  iEvenData,
+   input wire [FFT_DW*2-1:0]  iOddData,
 
-   output wire [FFT_N-1-1:0] output_memory_address,
-   output wire [FFT_DW*2-1:0] output_A,
-   output wire [FFT_DW*2-1:0] output_B
+   output wire [FFT_N-1-1:0] oMemAddr,
+   output wire [FFT_DW*2-1:0] oEvenData,
+   output wire [FFT_DW*2-1:0] oOddData
    
    );
 
@@ -37,15 +36,15 @@ module ramPipelineBridge
    reg [FFT_DW*2-1:0]         oddPipeData;
 
    always @ ( posedge clk ) begin
-      memPipeAddr <= input_memory_address;
-      evenPipeData <= input_A;
-      oddPipeData <= input_B;
+      memPipeAddr <= iMemAddr;
+      evenPipeData <= iEvenData;
+      oddPipeData <= iOddData;
    end
 
    reg actPipe;
    reg [1:0] ctrlPipe;
    always @ ( posedge clk ) begin
-      if ( reset ) begin
+      if ( rst ) begin
          actPipe <= 1'b0;
          ctrlPipe <= 2'h0;
       end else begin
@@ -59,7 +58,7 @@ module ramPipelineBridge
    reg [1:0] ctrl_f;
    assign octrl = ctrl_f;
    always @ ( posedge clk ) begin
-      if ( reset ) begin
+      if ( rst ) begin
          oact_f <= 1'b0;
          ctrl_f <= 2'h0;
       end else begin
@@ -80,9 +79,9 @@ module ramPipelineBridge
       od1Data <= od0Data;
    end
 
-   assign output_A = ( ctrl_f[0] == 1'b0 ) ? ev0Data      : od1Data;
-   assign output_B  = ( ctrl_f[1] == 1'b0 ) ? evenPipeData : od0Data;
-   assign output_memory_address = mem0Addr;
+   assign oEvenData = ( ctrl_f[0] == 1'b0 ) ? ev0Data      : od1Data;
+   assign oOddData  = ( ctrl_f[1] == 1'b0 ) ? evenPipeData : od0Data;
+   assign oMemAddr = mem0Addr;
 
 
 endmodule // ramBridgePipeline

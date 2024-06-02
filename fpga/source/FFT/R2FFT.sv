@@ -8,13 +8,12 @@ module R2FFT
   #(
     parameter FFT_LENGTH = 1024, // FFT Frame Length, 2^N
     parameter FFT_DW = 16,       // Data Bitwidth
-    parameter PL_DEPTH = 3,      // Pipeline Stage Depth Configuration (0 - 3)
     parameter FFT_N = $clog2( FFT_LENGTH ) // Don't override this
     )
    (
     // system
     input wire 			    clk,
-    input wire 			    reset,
+    input wire 			    rst,
 
     // control
     input wire 			    autorun,
@@ -28,12 +27,12 @@ module R2FFT
     output wire signed [7:0] 	      bfpexp,
 
     // input stream
-    input wire 			            input_stream_active,
-    input wire signed [FFT_DW-1:0]  input_real,
-    input wire signed [FFT_DW-1:0]  input_imaginary,
+    input wire 			            sact_istream,
+    input wire signed [FFT_DW-1:0]  sdw_istream_real,
+    input wire signed [FFT_DW-1:0]  sdw_istream_imag,
 
     // output / DMA bus
-    input wire		               dmaact,
+    input wire 			    dmaact,
     input wire [FFT_N-1:0] 	    dmaa,
     output wire signed [FFT_DW-1:0] dmadr_real,
     output wire signed [FFT_DW-1:0] dmadr_imag,
@@ -63,16 +62,7 @@ module R2FFT
    
     );
 
-   // Suppose we want a variable that stores the minimum number of bits needed to represent a number:
-   // integer min_bit_width;
-   // for 3 -> min_bit_width = 2 (2'b11), for 7 -> min_bit_width = 3 (3'b111), for 976 -> 10 (10'b1111010000)
-   // because we store signed number on 16 bits, we can expect data between:
-   // 16'b0000_0000_0000_0000 and 16'b0111_1111_1111_1111 (=32767). 
-   // the first number only needs 1 bit to be represented, whilst the second needs all 15 (magnitude bits)
-   // to account for the differences in bit_width we will keep track of the minimum number of bits needed to represent a number like this:
-   // reg [4:0] min_bit_width ∈ [0, 15];
-   // so we use: (FFT_MAX_BIT_WIDTH - 1) = 4 expression to represent the maximum number of bits that "min_bit_width" will use 
-   localparam FFT_MAX_BIT_WIDTH = $clog2( FFT_DW ) + 1; // for input data of length 16 this will be 5
+   localparam FFT_BFPDW = $clog2( FFT_DW ) + 1;
    
    // fft status
    typedef enum logic [2:0] {
@@ -152,7 +142,7 @@ module R2FFT
    end
 
    always @ ( posedge clk ) begin
-      if ( reset ) begin
+      if ( rst ) begin
          status_f <= ST_IDLE;
       end else begin
          status_f <= status_n;
@@ -183,51 +173,13 @@ module R2FFT
        )
      ubitReverseCounter
      (
-      .reset( reset ),
+      .rst( rst ),
       .clk( clk ),
       .clr( status_f != ST_INPUT_STREAM ),
-      .inc( input_stream_active ),
+      .inc( sact_istream ),
       .iter( istreamAddr ),
       .count(),
       .countFull( streamBufferFull )
-      );
-
-   // the minimum number of bits needed to represent the current nume
-   wire [FFT_MAX_BIT_WIDTH-1:0]  max_bit_width_for_current_input;
-
-   bfp_bitWidthDetector
-     #(
-       .FFT_MAX_BIT_WIDTH(FFT_MAX_BIT_WIDTH),
-       .FFT_DW(FFT_DW)
-       )
-     uistreamBitWidthDetector
-     (
-      // this module actually detects the minimum number of bits needed to accurately represent the data from ADC
-      // as the input_imaginary, operand2, operand3 will be 0
-      .operand0(input_real),
-      .operand1(input_imaginary),
-      .operand2({FFT_DW{1'b0}}), 
-      .operand3({FFT_DW{1'b0}}),
-      .min_bit_width(max_bit_width_for_current_input)
-      );
-
-   wire [FFT_MAX_BIT_WIDTH-1:0]  max_bit_width_for_all_input_stream;
-   bfp_maxBitWidth
-     #(
-       .FFT_MAX_BIT_WIDTH(FFT_MAX_BIT_WIDTH)
-       )
-     ubfp_maxBitWidthIstream
-     (
-      .reset( reset ),
-      .clk( clk ),
-      // make the max bit width 0 when idle or done
-      .clr( (status_f == ST_IDLE) || (status_f == ST_DONE) ),
-      
-      // compute the max only when the input is active and we are sampling from it
-      .max_bit_width_activate( input_stream_active && (status_f == ST_INPUT_STREAM) ),
-      .current_variable_bit_width( max_bit_width_for_current_input ),
-      .max_bit_width_all_stream( max_bit_width_for_all_input_stream )
-      
       );
    
    ///////////////////////
@@ -256,34 +208,11 @@ module R2FFT
    reg [STAGE_COUNT_BW-1:0] fftStageCount;
    wire        fftStageCountFull = (fftStageCount == MAX_FFT_STAGE);
    
-   wire [FFT_MAX_BIT_WIDTH-1:0]  currentBfpBw;
-   wire [FFT_MAX_BIT_WIDTH-1:0]  max_bit_width_current_FFT_stage;
+   wire [FFT_BFPDW-1:0]  currentBfpBw;
+   wire [FFT_BFPDW-1:0]  nextBfpBw;
    wire        iteratorDone;
    wire        oactFftUnit;
 
-   bfp_bitWidthAcc 
-     #(
-       .FFT_MAX_BIT_WIDTH( FFT_MAX_BIT_WIDTH ),
-       .FFT_DW( FFT_DW )
-       )
-     ubfpacc
-     (
-      .clk( clk ),
-      .reset( reset ),
-      
-      .init( sb_state_f == SB_SETUP ),
-      .bw_init( max_bit_width_for_all_input_stream ),
-      
-      // only when all butterflies are computed we move to the next stage (recompute ram addresses, twiddles, etc) 
-      // so this we try to find the max number of bits needed to represent ...
-      .update( (sb_state_f == SB_NEXT_STAGE) && !fftStageCountFull ),
-      .bw_new( max_bit_width_current_FFT_stage ),
-      
-      .bfp_bw( currentBfpBw ),
-      .bfp_exponent( bfpexp )
-      
-      );
-   
    always_comb begin
       if ( !run_fft ) begin
          sb_state_n = SB_IDLE;
@@ -331,7 +260,7 @@ module R2FFT
    end
 
    always @ ( posedge clk ) begin
-      if ( reset ) begin
+      if ( rst ) begin
          sb_state_f <= SB_IDLE;
       end else begin
          sb_state_f <= sb_state_n;
@@ -339,7 +268,7 @@ module R2FFT
    end
 
    always @ ( posedge clk ) begin
-      if ( reset ) begin
+      if ( rst ) begin
          fftStageCount <= 0;
       end else begin
          case ( sb_state_f )
@@ -363,7 +292,7 @@ module R2FFT
      ufftAddressGenerator
      (
       .clk( clk ),
-      .reset( reset ),
+      .rst( rst ),
       .stageCount( fftStageCount ),
       .run( sb_state_f == SB_RUN ),
       .done( iteratorDone ),
@@ -398,19 +327,18 @@ module R2FFT
      #(
        .FFT_N(FFT_N),
        .FFT_DW(FFT_DW),
-       .FFT_MAX_BIT_WIDTH(FFT_MAX_BIT_WIDTH),
-       .PL_DEPTH(PL_DEPTH)
+       .FFT_BFPDW(FFT_BFPDW)
        )
    ubutterflyUnit
      (
       
       .clk( clk ),
-      .reset( reset ),
+      .rst( rst ),
       
       .clr_bfp( sb_state_f == SB_NEXT_STAGE ),
       
       .ibfp( currentBfpBw ),
-      .max_bit_width_current_FFT_stage( max_bit_width_current_FFT_stage ),
+      .obfp( nextBfpBw ),
       
       .iact( iactFftUnit ),
       .oact( oactFftUnit ),
@@ -423,6 +351,7 @@ module R2FFT
 
       .evenOdd( iEvenOdd ),
       .ifft( ifft ),
+      .fftStageCount(fftStageCount),
 
       .twact( twact ),
       .twa( twa ),
@@ -524,9 +453,9 @@ module R2FFT
       .wa_fft( wa_fft0 ),
       .wdw_fft( wdw_fft0 ),
 
-      .wact_istream( input_stream_active && (istreamAddr[0] == 1'b0) ),
+      .wact_istream( sact_istream && (istreamAddr[0] == 1'b0) ),
       .wa_istream( istreamAddr[FFT_N-1:1] ),
-      .wdw_istream( { input_imaginary, input_real } ),
+      .wdw_istream( { sdw_istream_imag, sdw_istream_real } ),
 
       .wact_ram( wact_ram0 ),
       .wa_ram( wa_ram0 ),
@@ -550,9 +479,9 @@ module R2FFT
       .wa_fft( wa_fft1 ),
       .wdw_fft( wdw_fft1 ),
 
-      .wact_istream( input_stream_active && (istreamAddr[0] == 1'b1) ),
+      .wact_istream( sact_istream && (istreamAddr[0] == 1'b1) ),
       .wa_istream( istreamAddr[FFT_N-1:1] ),
-      .wdw_istream( { input_imaginary, input_real } ),
+      .wdw_istream( { sdw_istream_imag, sdw_istream_real } ),
 
       .wact_ram( wact_ram1 ),
       .wa_ram( wa_ram1 ),
