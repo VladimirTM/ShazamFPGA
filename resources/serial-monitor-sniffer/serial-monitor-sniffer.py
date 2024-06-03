@@ -1,7 +1,7 @@
 import serial
 
 BAUD_RATE = 2_000_000
-fpga_com = serial.Serial('COM4', BAUD_RATE, timeout=0)
+fpga_com = serial.Serial('COM5', BAUD_RATE, timeout=0)
 
 def read_data():
     reading = fpga_com.read(1)

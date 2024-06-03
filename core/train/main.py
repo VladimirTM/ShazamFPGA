@@ -4,9 +4,9 @@ import aiosqlite
 import asyncio
 
 BAUD_RATE = 2_000_000
-F_RANG = 10
+F_RANG = 20
 
-fpga_com = serial.Serial('COM4', BAUD_RATE, timeout=0)
+fpga_com = serial.Serial('COM5', BAUD_RATE, timeout=0)
 
 database: aiosqlite.Connection = None
 async def write_hashes_to_DB (hash, time, song_id):
