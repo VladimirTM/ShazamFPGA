@@ -57,7 +57,7 @@ module shazam (
       else frequency_input_for_arduino <= frequency;
    end 
    
-   DUAL_CLK_FIFO #(.DSIZE(9), .ASIZE(15)) fifo (
+   DUAL_CLK_FIFO #(.DSIZE(9), .ASIZE(6)) fifo (
       .wclk(MAX10_CLK1_50),
       .wrst_n(~reset_reg),
       .winc(PISO_output_active),

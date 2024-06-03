@@ -254,7 +254,7 @@ module FFT_IMPLEMENTATION
       
       );
 
-   twrom utwrom
+     twrom utwrom
      (
       .address( twa ),
       .clock( clk ),

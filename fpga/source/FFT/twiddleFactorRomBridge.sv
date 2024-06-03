@@ -8,8 +8,8 @@ module twiddleFactorRomBridge #(parameter FFT_N = 10, parameter FFT_DW = 16)
    input wire                   evenOdd,
    input wire                   ifft,
    
-   output reg signed [FFT_DW-1:0] tdr_rom_real,
-   output reg signed [FFT_DW-1:0] tdr_rom_imag,
+   output reg signed [FFT_DW:0] tdr_rom_real,
+   output reg signed [FFT_DW:0] tdr_rom_imag,
 
    // twiddle factor rom interface
    output wire                  twact,
@@ -72,11 +72,11 @@ module twiddleFactorRomBridge #(parameter FFT_N = 10, parameter FFT_DW = 16)
       sin0 <= ( sinAddr == 0 ) ? 1'b1 : 1'b0;
    end
    
-   wire signed [FFT_DW-1:0] cosReadData = twdr_cos;
-   wire signed [FFT_DW-1:0] sinReadData = sin0 ? 0 : twdr_cos;
+   wire signed [FFT_DW:0] cosReadData = {1'b0, twdr_cos};
+   wire signed [FFT_DW:0] sinReadData = sin0 ? 0 : {1'b0, twdr_cos};
 
-   reg signed [FFT_DW-1:0]  cosReadData_1;
-   reg signed [FFT_DW-1:0]  cosReadData_2;
+   reg signed [FFT_DW:0]  cosReadData_1;
+   reg signed [FFT_DW:0]  cosReadData_2;
    always @ ( posedge clk ) begin
       if ( cosRomDataPhase ) begin
          cosReadData_1 <= cosReadData;
@@ -84,7 +84,7 @@ module twiddleFactorRomBridge #(parameter FFT_N = 10, parameter FFT_DW = 16)
       cosReadData_2 <= cosReadData_1;
    end
 
-   reg signed [FFT_DW-1:0] sinReadData_2;
+   reg signed [FFT_DW:0] sinReadData_2;
    always @ ( posedge clk ) begin
       if ( sinRomDataPhase ) begin
          sinReadData_2 <= sinReadData;
@@ -94,10 +94,10 @@ module twiddleFactorRomBridge #(parameter FFT_N = 10, parameter FFT_DW = 16)
    always_comb begin
       if ( ta_msb_3 == 1'b0 ) begin
          tdr_rom_real = cosReadData_2;
-         tdr_rom_imag = ~sinReadData_2 + 1'b1;
+         tdr_rom_imag = ifft ? sinReadData_2 : -sinReadData_2;
       end else begin
-         tdr_rom_real = ~sinReadData_2 + 1'b1;
-         tdr_rom_imag = ~cosReadData_2 + 1'b1;
+         tdr_rom_real = -sinReadData_2;
+         tdr_rom_imag = ifft ? cosReadData_2 : -cosReadData_2;
       end
    end
    

@@ -21,7 +21,7 @@ module shazam_core (
    wire FFT_0_all_done, FFT_1_all_done, FFT_2_all_done;
    wire [11:0] fft_input_from_adc;
    
-   assign fft_input_from_adc = adc_data << 4;
+   assign fft_input_from_adc = adc_data;
 
    reg [24:0] magnitude;
    reg magnitude_ready;

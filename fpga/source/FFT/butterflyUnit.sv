@@ -3,7 +3,8 @@ module butterflyUnit
   #(
     parameter FFT_N = 10,
     parameter FFT_DW = 16,
-    parameter FFT_BFPDW = 5
+    parameter FFT_BFPDW = 5,
+    parameter PL_DEPTH = 0
     )
   (
    input wire                  clk,
@@ -12,8 +13,6 @@ module butterflyUnit
    input wire                  clr_bfp,
    input wire [FFT_BFPDW-1:0]  ibfp,
    output wire [FFT_BFPDW-1:0] obfp,
-
-   input [3:0]                 fftStageCount,
    
    input wire                  iact,
    output reg                  oact,
@@ -53,8 +52,8 @@ module butterflyUnit
    
    );
 
-   wire [FFT_DW-1:0]    tdr_rom_real;
-   wire [FFT_DW-1:0]    tdr_rom_imag;
+   wire [FFT_DW:0]    tdr_rom_real;
+   wire [FFT_DW:0]    tdr_rom_imag;
 
    // Twiddle Factor ROM Access
    twiddleFactorRomBridge 
@@ -112,8 +111,8 @@ module butterflyUnit
    end
    
    // twiddle factor rom access
-   reg [FFT_DW-1:0]                   twiddle_real;
-   reg [FFT_DW-1:0]                   twiddle_imag;
+   reg [FFT_DW:0]                   twiddle_real;
+   reg [FFT_DW:0]                   twiddle_imag;
 
    always_comb begin
       twiddle_real = tdr_rom_real;
@@ -132,50 +131,90 @@ module butterflyUnit
    butterflyCore 
      #(
        .FFT_N(FFT_N),
-       .FFT_DW(FFT_DW)
+       .FFT_DW(FFT_DW),
+       .FFT_BFPDW(FFT_BFPDW),
+       .PL_DEPTH(PL_DEPTH)
        )
    ubutterflyCore
      (
       .clk( clk ),
-      .reset( rst ),
+      .rst( rst ),
+      .clr_bfp( clr_bfp ),
+      .bw_ramwrite( bw_ramwrite ),
       
-      .fft_stage (fftStageCount),
-
+      .ibfp( ibfp ),
+      
       .iact( act ),
       .ictrl( ctrl ),
 
       .oact( oactCore ),
       .octrl( octrlCore ),
       
-      .input_memory_address( iMemAddr ),
-      .input_A( iEvenData ),
-      .input_B( iOddData ),
+      .iMemAddr( iMemAddr ),
+      .iEvenData( iEvenData ),
+      .iOddData( iOddData ),
       
-      .output_memory_address( oMemAddr ),
-      .output_A( oEvenData ),
-      .output_B( oOddData ),
+      .oMemAddr( oMemAddr ),
+      .oEvenData( oEvenData ),
+      .oOddData( oOddData ),
       
       .twiddle_real( twiddle_real ),
       .twiddle_imag( twiddle_imag )
       );
 
+   reg [FFT_BFPDW-1:0]  bw_ramwrite_dly;
 
+
+   generate if ( PL_DEPTH >= 3 ) begin
    
-   always @ ( posedge clk ) begin
-      oact <= rst ? 1'b0 : oactCore;
-      octrl <= octrlCore;
-      
-      wact_ram0 <= oactCore;
-      wa_ram0 <= oMemAddr;
-      wdw_ram0 <= oEvenData;
-      
-      wact_ram1 <= oactCore;
-      wa_ram1 <= oMemAddr;
-      wdw_ram1 <= oOddData;
-      
-   end // always @ ( posedge clk )
+      always @ ( posedge clk ) begin
+         oact <= rst ? 1'b0 : oactCore;
+         octrl <= octrlCore;
+         
+         wact_ram0 <= oactCore;
+         wa_ram0 <= oMemAddr;
+         wdw_ram0 <= oEvenData;
+         
+         wact_ram1 <= oactCore;
+         wa_ram1 <= oMemAddr;
+         wdw_ram1 <= oOddData;
+         
+         bw_ramwrite_dly <= bw_ramwrite;
+      end // always @ ( posedge clk )
 
+   end else begin
 
+      always_comb begin
+         oact = oactCore;
+         octrl = octrlCore;   
+         wact_ram0 = oactCore;
+         wa_ram0 = oMemAddr;
+         wdw_ram0 = oEvenData;
+         
+         wact_ram1 = oactCore;
+         wa_ram1 = oMemAddr;
+         wdw_ram1 = oOddData;
+         
+         bw_ramwrite_dly = bw_ramwrite;
+      end // always @ ( posedge clk )
+      
+   end endgenerate // else: !if( PL_DEPTH >= 3 )
+   
+
+   bfp_maxBitWidth 
+     #(
+       .FFT_BFPDW(FFT_BFPDW)
+       )
+     ubfp_maxBitWidth
+     (
+      .clk( clk ),
+      .rst( rst ),
+      
+      .clr( clr_bfp ),
+      .bw_act( oact ),
+      .bw( bw_ramwrite_dly ),
+      .max_bw( obfp )
+      );
    
    
 endmodule // butterflyUnit

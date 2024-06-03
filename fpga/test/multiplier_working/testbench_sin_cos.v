@@ -11,11 +11,11 @@ module testbench;
     reg clk = 0;
     always #10 clk = ~clk;
 
-    parameter EXP_WIDTH_B = 5;
+    parameter EXP_WIDTH_B = 15;
     parameter EXP_WIDTH_A = 15;
     
     parameter EXP_A = 0.000030517578125; // 2^-15
-    parameter EXP_B = 0.03125; // 2^-5
+    parameter EXP_B = 0.000030517578125; // 2^-15
 
     fixed_point_multiplier #(.EXP_WIDTH_A(EXP_WIDTH_A), .EXP_WIDTH_B(EXP_WIDTH_B), .EXP_WIDTH_PRODUCT(EXP_WIDTH_B)) MULTIPLIER_INSTANCE (
         .clk(clk),
@@ -31,13 +31,13 @@ module testbench;
     initial begin
         output_file = $fopen("multiplier_test_sin_cos.output.txt", "w");
         enable = 1;
-        A = 16'b0__010_1101_0100_0001; // this is approx ?
+        A = 16'b0__000_0010_0000_0001; // this is approx ?
         B = 16'b111_1111_1101__00000; // this is -3
         delayed_A = A;
         delayed_B = B;
         #20;
-        A = 16'b0__1110_1110_0100_000;
-        B = 16'b0011_1111_110_00000; // this is approx 510
+        A = 16'b1__1111_1101_0111_111;
+        B = 16'b0111_1111_011_11111; // this is approx 510
         #20;
         // A * B = 1024,96875
         $fwrite(output_file, "RESULT 1: %f * %f = %f (expecting small value) - decimal: %d\n", delayed_A * EXP_A, delayed_B * EXP_B, result * EXP_B, result);

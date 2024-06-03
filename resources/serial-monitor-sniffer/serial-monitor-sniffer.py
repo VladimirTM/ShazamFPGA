@@ -10,15 +10,14 @@ def read_data():
     else:
         return None
 
-samples = []
-i = 0
-while i < 100_000:
+# samples = []
+# i = 0
+while 1:
     data = read_data()
     # print("gathering...")
     if data: 
-        samples.append(data)
-        i = i + 1
+        print(data)
 
-output = open("output.txt", "w")
+# output = open("output.txt", "w")
 
-print(samples, file=output)
+# print(samples, file=output)

@@ -9,12 +9,12 @@ function signed [16-1:0] ToSignedInt;
 	 end else if ( inputValue <= -1.0 ) begin
 	    inputValue = -1.0;
 	 end
-	 fullScale = {1'b1,{16-1{1'b0}}};
+	 fullScale = {1'b0, 1'b0, 1'b1,{16-3{1'b0}}};
 	 fullScaleDouble = fullScale;
 	 scaledInput = $floor(inputValue * fullScaleDouble);
 	 
 	 if ( scaledInput >= fullScaleDouble ) begin
-	    ToSignedInt = {1'b0,{16-1{1'b1}}};
+	    ToSignedInt = {1'b0, 1'b0, 1'b0,{16-3{1'b1}}};
       end else begin
 	    ToSignedInt = scaledInput;
 	 end

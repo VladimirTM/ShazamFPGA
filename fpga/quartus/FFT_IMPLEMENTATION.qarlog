@@ -1,0 +1,25 @@
+Quartus Prime Archive log --	C:/Users/ratas/apps/shazam-improved/fpga/quartus/FFT_IMPLEMENTATION.qarlog
+
+Archive:	C:/Users/ratas/apps/shazam-improved/fpga/quartus/FFT_IMPLEMENTATION.qar
+Date:		Mon Jun  3 14:49:59 2024
+Quartus Prime		23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/qic_export_file_list
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.atm
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.dpi
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.hdbx
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.map.kpt
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.qxp_info
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.rcf
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.cmp.scidsc
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.atm
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.dpi
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.hdbx
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.map.kpt
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.qxp_info
+C:/Users/ratas/apps/shazam-improved/fpga/quartus/db/r2fft_impl_tmp_qic_export/r2fft_impl.map.scidsc
+	======= Total: 14 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -16,7 +16,7 @@ module testbench;
     integer input_file;
     integer i = 0, j = 0, k = 0;
     integer output_file;
-    integer magnitudes_raw, magnitudes_fixed, verify_products;
+    integer magnitudes_raw, magnitudes_fixed, verify_products, verify_input;
 
     wire signed [15:0] fft_real_output, fft_imag_output;
     wire [15:0] real_x_real, imag_x_imag;
@@ -56,12 +56,14 @@ module testbench;
         magnitudes_fixed = $fopen("../../../data/magnitudes/magnitudes_computed_fix.txt", "w");
         verify_products = $fopen("../../../data/magnitudes/verify_products_by_fixed_arithmetic.txt", "w");
         input_file = $fopen("../../../data/inputs/arduino_input.txt", "r");
-
+        verify_input = $fopen("../../../data/outputs/verify_1_FFT_input.txt", "w");
         for ( i = 0; i < FFT_LENGTH; i = i + 1 ) begin
                 $fscanf(input_file, "%d,", inputReal);
 
-                adc_data = inputReal << 4;
+                adc_data = inputReal;
                 adc_data_valid = 1;
+
+                $fwrite(verify_input, "%f, ", inputReal * 0.000030517578125);
                 
                 $fwrite(output_file, "REAL DATA: %d, IMAGINARY DATA: %d\n", inputReal, 0);
                 wait_clk (1);
@@ -76,15 +78,14 @@ module testbench;
     end
 
     always @ (posedge clk) begin
-        if(can_read_products) begin
-            $fwrite(verify_products, "%d. %f + %f = %f\n", index_1, real_x_real , imag_x_imag, real_x_real + imag_x_imag);
+        if(magnitude_ready) begin
+            $fwrite(magnitudes_fixed, "%f,", magnitude);
             index_1 <= index_1 + 1;
         end 
         
         if(dmadr_ready) begin
             // checking that the result should be mirrored
             $fwrite(output_file, "%d. OUTPUT REAL: %f, OUTPUT IMAG: %f, MAGNITUDE: %f\n", index, fft_real_output *  EXP, fft_imag_output *  EXP, ((fft_real_output *  EXP * fft_real_output *  EXP) + (fft_imag_output * EXP * fft_imag_output *  EXP)));
-            $fwrite(magnitudes_fixed, "%f,", real_x_real + imag_x_imag);
             index <= index + 1;
         end 
     end 
