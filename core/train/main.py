@@ -4,9 +4,9 @@ import aiosqlite
 import asyncio
 
 BAUD_RATE = 2_000_000
-F_RANG = 50
+F_RANG = 10
 
-fpga_com = serial.Serial('COM4', BAUD_RATE, timeout=0.1)
+fpga_com = serial.Serial('COM4', BAUD_RATE, timeout=0)
 
 database: aiosqlite.Connection = None
 async def write_hashes_to_DB (hash, time, song_id):
@@ -19,9 +19,7 @@ constellation_map = []
 async def upload_1_hash (idx, time, freq, song_id):
     if(idx > F_RANG): 
         return; 
-    # sampling at 25kHz
-    upper_frequency = 12_500
-    frequency_bits = 10
+
     # Iterate the constellation
     # Iterate the next 100 pairs to produce the combinatorial hashes
     # When we produced the constellation before, it was sorted by time already
@@ -30,14 +28,12 @@ async def upload_1_hash (idx, time, freq, song_id):
         diff = other_time - time
         # If the time difference between the pairs is too small or large
         # ignore this set of pairs
-        if diff < 1 or diff > 10:
+        if diff < 1 or diff > 100:
             continue
-        # Place the frequencies (in Hz) into a 1024 bins
-        freq_binned = ((freq * 24) / upper_frequency) * (2 ** frequency_bits)
-        other_freq_binned = ((other_freq * 24) / upper_frequency) * (2 ** frequency_bits)
+
         # Produce a 32 bit hash
         # Use bit shifting to move the bits to the correct location
-        hash = int(freq_binned) | (int(other_freq_binned) << 10) | (int(diff) << 20)
+        hash = int(freq) | (int(other_freq) << 10) | (int(diff) << 20)
         await write_hashes_to_DB(hash, time, song_id)
 
 
@@ -85,7 +81,7 @@ async def main():
     global database
     database = await aiosqlite.connect("shazam.db")
     
-    song_name = input("Please select the name of the song you want to train:")
+    song_name = input("Please select the name of the song you want to train: ")
 
     cursor = await database.execute("SELECT id FROM songs WHERE songs.name = ?", [song_name])
     id = await cursor.fetchone()

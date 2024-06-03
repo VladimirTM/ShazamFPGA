@@ -2,26 +2,32 @@ import serial
 import time
 import aiosqlite
 import asyncio
+import aiofiles
 
 BAUD_RATE = 2_000_000
-F_RANG = 50
+F_RANG = 10
 
-fpga_com = serial.Serial('COM4', BAUD_RATE, timeout=0.1)
+fpga_com = serial.Serial('COM4', BAUD_RATE, timeout=0)
+database: aiosqlite.Connection = None
+song_scores_by_offset = {}
+
+output_record = aiofiles.open("output_records", mode = "w") 
+output_row = aiofiles.open("output_row", mode = "w") 
+    
 
 async def find_song_by_hash(hash, time):
-    global database
-    cursor = await database.execute("SELECT hash, abs(? - time), song_id FROM song_hashes WHERE hash = ?", [time, hash])
+    global database, song_scores_by_offset, output_row
+    cursor = await database.execute("SELECT hash, CAST(abs(? - time) as INTEGER) as delta_t, song_id FROM song_hashes WHERE hash = ?", [time, hash])
     rows = await cursor.fetchall();
-    print(rows)
+    # for i, (hash, delta_t, song_id) in enumerate(rows):
+    #     print("delta_t and song_id:", delta_t, song_id)
     await cursor.close()
 
 constellation_map = []
 async def make_1_hash (idx, time, freq):
     if(idx > F_RANG): 
         return; 
-    # sampling at 25kHz
-    upper_frequency = 12_500
-    frequency_bits = 10
+
     # Iterate the constellation
     # Iterate the next 100 pairs to produce the combinatorial hashes
     # When we produced the constellation before, it was sorted by time already
@@ -32,13 +38,10 @@ async def make_1_hash (idx, time, freq):
         # ignore this set of pairs
         if diff < 1 or diff > 100:
             continue
-        # Place the frequencies (in Hz) into a 1024 bins
-        freq_binned = (freq * 24) / upper_frequency * (2 ** frequency_bits)
-        other_freq_binned = (other_freq * 24) / upper_frequency * (2 ** frequency_bits)
-        print("BINNED FREQ:", freq_binned, other_freq)
+
         # Produce a 32 bit hash
         # Use bit shifting to move the bits to the correct location
-        hash = int(freq_binned) | (int(other_freq_binned) << 10) | (int(diff) << 20)
+        hash = int(freq) | (int(other_freq) << 10) | (int(diff) << 20)
         await find_song_by_hash(hash, time)
 
 async def find_song():
@@ -60,7 +63,8 @@ async def read_frequencies ():
         global data_from_FPGA, i, j, started, constellation_map
         while (data_from_FPGA != None or not started):
             data_from_FPGA = read_data()
-            if data_from_FPGA: 
+            if data_from_FPGA:
+                print("FREQUENCY: ", data_from_FPGA)
                 started = 1;
                 constellation_map.append([time.perf_counter() * 10_000, data_from_FPGA])
                 if(j == 2 * F_RANG):

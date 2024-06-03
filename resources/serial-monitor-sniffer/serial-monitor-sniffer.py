@@ -1,7 +1,7 @@
 import serial
 
 BAUD_RATE = 2_000_000
-fpga_com = serial.Serial('COM4', BAUD_RATE, timeout=0.1)
+fpga_com = serial.Serial('COM4', BAUD_RATE, timeout=0)
 
 def read_data():
     reading = fpga_com.read(1)
@@ -12,12 +12,13 @@ def read_data():
 
 samples = []
 i = 0
-while i < 10_000:
+while i < 100_000:
     data = read_data()
     # print("gathering...")
     if data: 
         samples.append(data)
         i = i + 1
-    
 
-print("SAMPLES:", samples)
+output = open("output.txt", "w")
+
+print(samples, file=output)
