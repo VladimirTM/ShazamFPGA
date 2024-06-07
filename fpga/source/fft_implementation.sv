@@ -124,7 +124,7 @@ module FFT_IMPLEMENTATION
    assign P2_out = P2;
    assign P_active = product_done;
 
-   fixed_point_multiplier #(.EXP_WIDTH_A(5), .EXP_WIDTH_B(5), .EXP_WIDTH_PRODUCT(0)) MULTIPLY_REAL (
+   fixed_point_multiplier #(.EXP_WIDTH_A(4), .EXP_WIDTH_B(4), .EXP_WIDTH_PRODUCT(4)) MULTIPLY_REAL (
       .clk(clk),
       .enable(current_state == MAGNITUDES_PROCESS_DATA),
       .reset(reset),
@@ -134,7 +134,7 @@ module FFT_IMPLEMENTATION
       .product(P1)
    );
 
-   fixed_point_multiplier #(.EXP_WIDTH_A(5), .EXP_WIDTH_B(5), .EXP_WIDTH_PRODUCT(0)) MULTIPLY_IMAG (
+   fixed_point_multiplier #(.EXP_WIDTH_A(4), .EXP_WIDTH_B(4), .EXP_WIDTH_PRODUCT(4)) MULTIPLY_IMAG (
       .clk(clk),
       .reset(reset),
       .enable(current_state == MAGNITUDES_PROCESS_DATA),

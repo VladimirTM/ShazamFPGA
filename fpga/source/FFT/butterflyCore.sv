@@ -3,18 +3,13 @@ module butterflyCore
   #(
     parameter FFT_N = 10,
     parameter FFT_DW = 16,
-    parameter FFT_BFPDW = 5,
-    parameter PL_DEPTH = 0
+    parameter STAGE_COUNT_BW = 4
     )
   (
    input wire                 clk,
-   input wire                 rst,
+   input wire                 reset,
 
-   input wire                 clr_bfp,
-   input wire [FFT_BFPDW-1:0] ibfp,
-//   output wire [FFT_BFPDW-1:0] obfp,
-   output wire [FFT_BFPDW-1:0] bw_ramwrite,
-   
+   input wire [STAGE_COUNT_BW-1:0] fft_stage,
    
    input wire                 iact,
    output wire                oact,
@@ -22,72 +17,19 @@ module butterflyCore
    input wire [1:0]           ictrl,
    output wire [1:0]          octrl,
 
-   input wire [FFT_N-1-1:0]   iMemAddr,
+   input wire [FFT_N-1-1:0]   input_memory_address,
    
-   input wire [FFT_DW*2-1:0]  iEvenData,
-   input wire [FFT_DW*2-1:0]  iOddData,
+   input wire [FFT_DW*2-1:0]  input_A,
+   input wire [FFT_DW*2-1:0]  input_B,
 
-   output wire [FFT_N-1-1:0]  oMemAddr,
-   output wire [FFT_DW*2-1:0] oEvenData,
-   output wire [FFT_DW*2-1:0] oOddData,
+   output wire [FFT_N-1-1:0]  output_memory_address,
+   output wire [FFT_DW*2-1:0] output_A,
+   output wire [FFT_DW*2-1:0] output_B,
 
-   input wire [FFT_DW:0]      twiddle_real,
-   input wire [FFT_DW:0]      twiddle_imag
+   input wire [FFT_DW-1:0]      twiddle_real,
+   input wire [FFT_DW-1:0]      twiddle_imag
    
    );
-   
-
-   wire [FFT_DW*2-1:0]                  iEvenDataBfp;
-   wire [FFT_DW*2-1:0]                  iOddDataBfp;
-   
-   bfp_Shifter 
-     #(
-       .FFT_DW(FFT_DW),
-       .FFT_BFPDW(FFT_BFPDW)
-       )
-     ushifter0
-     ( 
-       .operand( iEvenData[FFT_DW*2-1:FFT_DW*2/2] ), 
-       .bfp_operand( iEvenDataBfp[FFT_DW*2-1:FFT_DW*2/2] ),
-       .bw( ibfp )
-       );
-   
-   bfp_Shifter
-     #(
-       .FFT_DW(FFT_DW),
-       .FFT_BFPDW(FFT_BFPDW)
-       )
-     ushifter1
-     (
-      .operand( iEvenData[FFT_DW*2/2-1:0] ),
-      .bfp_operand( iEvenDataBfp[FFT_DW*2/2-1:0] ),
-      .bw( ibfp )
-      );
-   
-   bfp_Shifter 
-     #(
-       .FFT_DW(FFT_DW),
-       .FFT_BFPDW(FFT_BFPDW)
-       )
-   ushifter2
-     (
-      .operand( iOddData[FFT_DW*2-1:FFT_DW*2/2] ),
-      .bfp_operand( iOddDataBfp[FFT_DW*2-1:FFT_DW*2/2] ),
-      .bw( ibfp )
-      );
-   
-   bfp_Shifter 
-     #(
-       .FFT_DW(FFT_DW),
-       .FFT_BFPDW(FFT_BFPDW)
-       )
-   ushifter3
-     (
-      .operand( iOddData[FFT_DW*2/2-1:0] ),
-      .bfp_operand( iOddDataBfp[FFT_DW*2/2-1:0] ),
-      .bw( ibfp )
-      );
-
    wire                         iact_calc;
    wire [1:0]                   ictrl_calc;
 
@@ -97,11 +39,12 @@ module butterflyCore
    wire [FFT_N-1-1:0]                  iMemAddrCalc;
    wire [FFT_N-1-1:0]                  oMemAddrCalc;
 
-   wire [FFT_DW-1:0]                   opa_real;
-   wire [FFT_DW-1:0]                   opa_imag;
-   wire [FFT_DW-1:0]                   opb_real;
-   wire [FFT_DW-1:0]                   opb_imag;
+   wire [FFT_DW-1:0]                   A_real;
+   wire [FFT_DW-1:0]                   A_imag;
+   wire [FFT_DW-1:0]                   B_real;
+   wire [FFT_DW-1:0]                   B_imag;
    
+   // pipelines the input to account for the delay in the twiddle pipeline
    ramPipelineBridge 
      #(
        .FFT_N(FFT_N),
@@ -110,7 +53,7 @@ module butterflyCore
      inputStagePipeline
      (
       .clk( clk ),
-      .rst( rst ),
+      .rst( reset ),
       
       .iact( iact ),
       .oact( iact_calc ),
@@ -119,53 +62,102 @@ module butterflyCore
       .octrl( ictrl_calc ),
 
 
-      .iMemAddr( iMemAddr ),
-      .iEvenData( iEvenDataBfp ),
-      .iOddData( iOddDataBfp ),
+      .iMemAddr( input_memory_address ),
+      .iEvenData( input_A ),
+      .iOddData( input_B ),
 
       .oMemAddr( iMemAddrCalc ),
-      .oEvenData( { opa_imag, opa_real } ),
-      .oOddData(  { opb_imag, opb_real } )
+      .oEvenData( {A_imag, A_real} ),
+      .oOddData(  {B_imag, B_real} )
       
       );
 
-   wire [FFT_DW-1:0]                   dst_opa_real;
-   wire [FFT_DW-1:0]                   dst_opa_imag;
-   wire [FFT_DW-1:0]                   dst_opb_real;
-   wire [FFT_DW-1:0]                   dst_opb_imag;
+   wire [FFT_DW-1:0]                   out_A_real;
+   wire [FFT_DW-1:0]                   out_A_imag;
+   wire [FFT_DW-1:0]                   out_B_real;
+   wire [FFT_DW-1:0]                   out_B_imag;
 
-   radix2Butterfly
-     #(
-       .FFT_DW(FFT_DW),
-       .FFT_N(FFT_N),
-       .PL_DEPTH(PL_DEPTH)
-       )
-     uradix2bt
-     (
+   reg [1:0] ictrl_butterfly_1_clk_delay;
+   reg [FFT_N-1-1:0] memory_address_butterfly_1_clk_delay;
+   reg [FFT_DW-1:0] A_real_1_clk_delay, A_imag_1_clk_delay, B_real_1_clk_delay, B_imag_1_clk_delay;
+   reg [FFT_DW-1:0] twiddle_real_1_clk_delay, twiddle_imag_1_clk_delay;
+
+
+    integer i;
+    reg butterfly_unit_active [0:9];
+
+    always @ (posedge clk) begin 
+      if(reset) begin
+        for(i = 0; i < 10; i = i + 1) butterfly_unit_active[i] <= 0;
+      end
+      else begin
+        if(fft_stage < 4'd10) begin
+          if(iact_calc) begin 
+            butterfly_unit_active[fft_stage] <= 1;
+            ictrl_butterfly_1_clk_delay <= ictrl_calc;
+            memory_address_butterfly_1_clk_delay <= iMemAddrCalc;
+            A_real_1_clk_delay <= A_real;
+            A_imag_1_clk_delay <= A_imag;
+            B_real_1_clk_delay <= B_real;
+            B_imag_1_clk_delay <= B_imag;
+
+            twiddle_real_1_clk_delay <= twiddle_real;
+            twiddle_imag_1_clk_delay <= twiddle_imag;
+
+          end 
+          else for(i = 0; i < 10; i = i + 1) butterfly_unit_active[i] <= 0;
+        end 
+        else for(i = 0; i < 10; i = i + 1) butterfly_unit_active[i] <= 0;
+      end 
+    end
+
+   wire butterfly_output_active [0:9];
+   wire [1:0] butterfly_octrl [0:9];
+   wire [FFT_N-1-1:0] butterfly_address_memory_calc [0:9];
+   wire [FFT_DW-1:0] butterfly_out_A_real [0:9];
+   wire [FFT_DW-1:0] butterfly_out_A_imag [0:9];
+   wire [FFT_DW-1:0] butterfly_out_B_real [0:9];
+   wire [FFT_DW-1:0] butterfly_out_B_imag [0:9];
+
+   assign oact_calc = butterfly_output_active[fft_stage];
+   assign octrl_calc = butterfly_octrl[fft_stage];
+   assign oMemAddrCalc = butterfly_address_memory_calc[fft_stage];
+   assign out_A_real = butterfly_out_A_real[fft_stage];
+   assign out_A_imag = butterfly_out_A_imag[fft_stage];
+   assign out_B_real = butterfly_out_B_real[fft_stage];
+   assign out_B_imag = butterfly_out_B_imag[fft_stage];
+
+   genvar stage;
+   generate
+    for (stage = 0; stage < 10; stage = stage + 1) begin : radix2instances
+      radix2Butterfly #(.FFT_DW(FFT_DW), .FFT_N(FFT_N), .FFT_STAGE(stage)) uradix2bt (
       .clk( clk ),
-      .rst( rst ),
-      .iact(  iact_calc ),
-      .ictrl( ictrl_calc ),
+      .reset( reset ),
+      .iact(  butterfly_unit_active[stage] ),
+      .ictrl( ictrl_butterfly_1_clk_delay ),
 
-      .oact( oact_calc ),
-      .octrl( octrl_calc ),
+      .oact( butterfly_output_active[stage] ),
+      .octrl( butterfly_octrl[stage] ),
 
-      .iMemAddr( iMemAddrCalc ),
-      .oMemAddr( oMemAddrCalc ),
+      .input_memory_address( memory_address_butterfly_1_clk_delay ),
+      .output_memory_address( butterfly_address_memory_calc[stage] ),
       
-      .opa_real( opa_real ),
-      .opa_imag( opa_imag ),
-      .opb_real( opb_real ),
-      .opb_imag( opb_imag ),
+      .A_real( A_real_1_clk_delay ),
+      .A_imag( A_imag_1_clk_delay ),
+      .B_real( B_real_1_clk_delay ),
+      .B_imag( B_imag_1_clk_delay ),
       
-      .twiddle_real( twiddle_real ),
-      .twiddle_imag( twiddle_imag ),
+      .twiddle_real( twiddle_real_1_clk_delay ),
+      .twiddle_imag( twiddle_imag_1_clk_delay ),
       
-      .dst_opa_real( dst_opa_real ),
-      .dst_opa_imag( dst_opa_imag ),
-      .dst_opb_real( dst_opb_real ),
-      .dst_opb_imag( dst_opb_imag )
+      .out_A_real( butterfly_out_A_real[stage] ),
+      .out_A_imag( butterfly_out_A_imag[stage] ),
+      .out_B_real( butterfly_out_B_real[stage] ),
+      .out_B_imag( butterfly_out_B_imag[stage] )
       );
+    end 
+   endgenerate
+  
 
    
    ramPipelineBridge 
@@ -176,7 +168,7 @@ module butterflyCore
    outputStagePipeline
      (
       .clk( clk ),
-      .rst( rst ),
+      .rst( reset ),
 
       .iact( oact_calc ),
       .oact( oact ),
@@ -185,29 +177,13 @@ module butterflyCore
       .octrl( octrl ),
 
       .iMemAddr( oMemAddrCalc ),
-      .iEvenData( { dst_opa_imag, dst_opa_real } ),
-      .iOddData( { dst_opb_imag, dst_opb_real } ),
+      .iEvenData( { out_A_imag, out_A_real } ),
+      .iOddData( { out_B_imag, out_B_real } ),
 
-      .oMemAddr( oMemAddr ),
-      .oEvenData( oEvenData ),
-      .oOddData( oOddData )      
-      
+      .oMemAddr( output_memory_address ),
+      .oEvenData( output_A ),
+      .oOddData( output_B )
       );
-
-   bfp_bitWidthDetector 
-     #(
-       .FFT_BFPDW(FFT_BFPDW),
-       .FFT_DW(FFT_DW)
-       )
-     ubfp_bitWidth
-     (
-      .operand0( oEvenData[FFT_DW*2-1:FFT_DW*2/2] ),
-      .operand1( oEvenData[FFT_DW*2/2-1:0] ),
-      .operand2( oOddData[FFT_DW*2-1:FFT_DW*2/2] ),
-      .operand3( oOddData[FFT_DW*2/2-1:0] ),
-      .bw( bw_ramwrite )
-      );
-   
 
 endmodule // butterflyUnit
 

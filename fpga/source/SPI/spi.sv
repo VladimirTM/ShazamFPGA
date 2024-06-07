@@ -12,11 +12,11 @@ module SPI (
     reg fifo_refresh_reg = 0;
     assign fifo_refresh_data = fifo_refresh_reg;
 
-    // reg [8:0] sintethic_data = 0;
+    // reg [8:0] synthetic_data = 0;
     // always @ (posedge sclk) begin
     //     if(fifo_refresh_reg) begin 
-    //         if(sintethic_data == 9'd8) sintethic_data <= 0;
-    //         else sintethic_data <= sintethic_data + 2;
+    //         if(synthetic_data == 9'd8) synthetic_data <= 0;
+    //         else synthetic_data <= synthetic_data + 2;
     //     end 
     // end
     
@@ -32,7 +32,7 @@ module SPI (
     reg [8:0] shift_reg;
     reg [3:0] bit_count;
 
-    reg [5:0] pause = 0;
+    reg [4:0] pause = 0;
 
     always @(negedge sclk) begin
         if (reset) begin
@@ -45,7 +45,7 @@ module SPI (
     always @(*) begin
         case (state)
             IDLE: begin
-                if(!fifo_empty && &pause) next_state = TRANSFER_1;
+                if(!fifo_empty && (&pause)) next_state = TRANSFER_1;
                 else next_state = IDLE;
             end
             TRANSFER_1: begin

@@ -1,4 +1,4 @@
-module shazam (
+module shazam #(parameter MAXIMAS_COUNT = 11) (
     input MAX10_CLK1_50,
     input reset,
     input start,
@@ -8,7 +8,7 @@ module shazam (
     output cs,
     output sclk
 );
-    wire [24:0] maximas [15:0];
+    wire [8:0] maximas [MAXIMAS_COUNT-1:0];
     wire maximas_found_active;
 
     reg reset_reg;
@@ -16,7 +16,7 @@ module shazam (
       reset_reg = reset || !start;
     end 
 
-    shazam_core SHAZAM_ANALYZE_SOUNDS (
+    shazam_core #(.MAXIMAS_COUNT(MAXIMAS_COUNT)) SHAZAM_ANALYZE_SOUNDS (
         .clk(MAX10_CLK1_50),
         .reset(reset),
         .adc_data(adc_data),
@@ -28,7 +28,7 @@ module shazam (
 
    wire [8:0] significant_frequency;
    wire PISO_output_active;
-   PISO parallel_in_serial_out (
+   PISO #(.MAXIMAS_COUNT(MAXIMAS_COUNT)) parallel_in_serial_out (
       .clk(MAX10_CLK1_50),
       .reset(reset_reg),
       .load(maximas_found_active),
@@ -57,10 +57,10 @@ module shazam (
       else frequency_input_for_arduino <= frequency;
    end 
    
-   DUAL_CLK_FIFO #(.DSIZE(9), .ASIZE(6)) fifo (
+   DUAL_CLK_FIFO #(.DSIZE(9), .ASIZE(16)) fifo (
       .wclk(MAX10_CLK1_50),
       .wrst_n(~reset_reg),
-      .winc(PISO_output_active),
+      .winc(PISO_output_active && !fifo_full),
       .wdata(significant_frequency),
       .wfull(fifo_full),
       .rclk(generated_sclk),

@@ -8,7 +8,6 @@ module R2FFT
   #(
     parameter FFT_LENGTH = 1024, // FFT Frame Length, 2^N
     parameter FFT_DW = 16,       // Data Bitwidth
-    parameter PL_DEPTH = 3,      // Pipeline Stage Depth Configuration (0 - 3)
     parameter FFT_N = $clog2( FFT_LENGTH ) // Don't override this
     )
    (
@@ -23,12 +22,12 @@ module R2FFT
     input wire 			    ifft,
     
     // status
-    output wire 		    done,
-    output wire [2:0] 		    status,
-    output wire signed [7:0] 	    bfpexp,
+    output wire 		               done,
+    output wire [2:0] 		         status,
+    output wire signed [7:0] 	      bfpexp,
 
     // input stream
-    input wire 			    sact_istream,
+    input wire 			            sact_istream,
     input wire signed [FFT_DW-1:0]  sdw_istream_real,
     input wire signed [FFT_DW-1:0]  sdw_istream_imag,
 
@@ -182,39 +181,6 @@ module R2FFT
       .count(),
       .countFull( streamBufferFull )
       );
-
-   wire [FFT_BFPDW-1:0]  istreamBw;
-   bfp_bitWidthDetector
-     #(
-       .FFT_BFPDW(FFT_BFPDW),
-       .FFT_DW(FFT_DW)
-       )
-     uistreamBitWidthDetector
-     (
-      .operand0(sdw_istream_real),
-      .operand1(sdw_istream_imag),
-      .operand2({FFT_DW{1'b0}}),
-      .operand3({FFT_DW{1'b0}}),
-      .bw(istreamBw)
-      );
-
-   wire [FFT_BFPDW-1:0]  istreamMaxBw;
-   bfp_maxBitWidth
-     #(
-       .FFT_BFPDW(FFT_BFPDW)
-       )
-     ubfp_maxBitWidthIstream
-     (
-      .rst( rst ),
-      .clk( clk ),
-
-      .clr( (status_f == ST_IDLE) ||
-	    (status_f == ST_DONE) ),
-      .bw_act( sact_istream && (status_f == ST_INPUT_STREAM) ),
-      .bw( istreamBw ),
-      .max_bw( istreamMaxBw )
-      
-      );
    
    ///////////////////////
    // fft sub sequencer
@@ -247,28 +213,6 @@ module R2FFT
    wire        iteratorDone;
    wire        oactFftUnit;
 
-   bfp_bitWidthAcc 
-     #(
-       .FFT_BFPDW( FFT_BFPDW ),
-       .FFT_DW( FFT_DW )
-       )
-     ubfpacc
-     (
-      
-      .clk( clk ),
-      .rst( rst ),
-      
-      .init( sb_state_f == SB_SETUP ),
-      .bw_init( istreamMaxBw ),
-      
-      .update( (sb_state_f == SB_NEXT_STAGE) && !fftStageCountFull ),
-      .bw_new( nextBfpBw ),
-      
-      .bfp_bw( currentBfpBw ),
-      .bfp_exponent( bfpexp )
-      
-      );
-   
    always_comb begin
       if ( !run_fft ) begin
          sb_state_n = SB_IDLE;
@@ -383,8 +327,7 @@ module R2FFT
      #(
        .FFT_N(FFT_N),
        .FFT_DW(FFT_DW),
-       .FFT_BFPDW(FFT_BFPDW),
-       .PL_DEPTH(PL_DEPTH)
+       .FFT_BFPDW(FFT_BFPDW)
        )
    ubutterflyUnit
      (
@@ -408,6 +351,7 @@ module R2FFT
 
       .evenOdd( iEvenOdd ),
       .ifft( ifft ),
+      .fftStageCount(fftStageCount),
 
       .twact( twact ),
       .twa( twa ),

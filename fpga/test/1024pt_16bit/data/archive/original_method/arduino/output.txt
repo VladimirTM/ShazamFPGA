@@ -1,0 +1,1537 @@
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         149, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         113, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         149, IMAGINARY DATA:           0
+REAL DATA:         158, IMAGINARY DATA:           0
+REAL DATA:         156, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:          90, IMAGINARY DATA:           0
+REAL DATA:          90, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         154, IMAGINARY DATA:           0
+REAL DATA:         168, IMAGINARY DATA:           0
+REAL DATA:         168, IMAGINARY DATA:           0
+REAL DATA:         154, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         107, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         109, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         145, IMAGINARY DATA:           0
+REAL DATA:         155, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         107, IMAGINARY DATA:           0
+REAL DATA:          98, IMAGINARY DATA:           0
+REAL DATA:          97, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         145, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         152, IMAGINARY DATA:           0
+REAL DATA:         152, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         113, IMAGINARY DATA:           0
+REAL DATA:          87, IMAGINARY DATA:           0
+REAL DATA:          73, IMAGINARY DATA:           0
+REAL DATA:          79, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         165, IMAGINARY DATA:           0
+REAL DATA:         176, IMAGINARY DATA:           0
+REAL DATA:         167, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:         109, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         154, IMAGINARY DATA:           0
+REAL DATA:         160, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         113, IMAGINARY DATA:           0
+REAL DATA:          98, IMAGINARY DATA:           0
+REAL DATA:          97, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         154, IMAGINARY DATA:           0
+REAL DATA:         161, IMAGINARY DATA:           0
+REAL DATA:         150, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:          96, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         152, IMAGINARY DATA:           0
+REAL DATA:         157, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:          91, IMAGINARY DATA:           0
+REAL DATA:          89, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         149, IMAGINARY DATA:           0
+REAL DATA:         162, IMAGINARY DATA:           0
+REAL DATA:         158, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:          98, IMAGINARY DATA:           0
+REAL DATA:          88, IMAGINARY DATA:           0
+REAL DATA:          93, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         159, IMAGINARY DATA:           0
+REAL DATA:         168, IMAGINARY DATA:           0
+REAL DATA:         164, IMAGINARY DATA:           0
+REAL DATA:         152, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         152, IMAGINARY DATA:           0
+REAL DATA:         155, IMAGINARY DATA:           0
+REAL DATA:         145, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:          90, IMAGINARY DATA:           0
+REAL DATA:          93, IMAGINARY DATA:           0
+REAL DATA:         113, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         154, IMAGINARY DATA:           0
+REAL DATA:         157, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         149, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:          88, IMAGINARY DATA:           0
+REAL DATA:          88, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         150, IMAGINARY DATA:           0
+REAL DATA:         157, IMAGINARY DATA:           0
+REAL DATA:         151, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         109, IMAGINARY DATA:           0
+REAL DATA:          95, IMAGINARY DATA:           0
+REAL DATA:          92, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         149, IMAGINARY DATA:           0
+REAL DATA:         161, IMAGINARY DATA:           0
+REAL DATA:         166, IMAGINARY DATA:           0
+REAL DATA:         161, IMAGINARY DATA:           0
+REAL DATA:         145, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:          91, IMAGINARY DATA:           0
+REAL DATA:          90, IMAGINARY DATA:           0
+REAL DATA:         100, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:          89, IMAGINARY DATA:           0
+REAL DATA:          91, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         155, IMAGINARY DATA:           0
+REAL DATA:         166, IMAGINARY DATA:           0
+REAL DATA:         162, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:          98, IMAGINARY DATA:           0
+REAL DATA:          98, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         109, IMAGINARY DATA:           0
+REAL DATA:          90, IMAGINARY DATA:           0
+REAL DATA:          86, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         162, IMAGINARY DATA:           0
+REAL DATA:         174, IMAGINARY DATA:           0
+REAL DATA:         168, IMAGINARY DATA:           0
+REAL DATA:         149, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         155, IMAGINARY DATA:           0
+REAL DATA:         157, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:          94, IMAGINARY DATA:           0
+REAL DATA:          99, IMAGINARY DATA:           0
+REAL DATA:         113, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         114, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         145, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         114, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:         107, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         145, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         150, IMAGINARY DATA:           0
+REAL DATA:         151, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:          97, IMAGINARY DATA:           0
+REAL DATA:          88, IMAGINARY DATA:           0
+REAL DATA:          90, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         158, IMAGINARY DATA:           0
+REAL DATA:         169, IMAGINARY DATA:           0
+REAL DATA:         170, IMAGINARY DATA:           0
+REAL DATA:         160, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:          98, IMAGINARY DATA:           0
+REAL DATA:          93, IMAGINARY DATA:           0
+REAL DATA:          98, IMAGINARY DATA:           0
+REAL DATA:         109, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         155, IMAGINARY DATA:           0
+REAL DATA:         157, IMAGINARY DATA:           0
+REAL DATA:         149, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:          99, IMAGINARY DATA:           0
+REAL DATA:         100, IMAGINARY DATA:           0
+REAL DATA:         109, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         150, IMAGINARY DATA:           0
+REAL DATA:         160, IMAGINARY DATA:           0
+REAL DATA:         162, IMAGINARY DATA:           0
+REAL DATA:         152, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:          89, IMAGINARY DATA:           0
+REAL DATA:          88, IMAGINARY DATA:           0
+REAL DATA:         100, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         159, IMAGINARY DATA:           0
+REAL DATA:         156, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:          87, IMAGINARY DATA:           0
+REAL DATA:          83, IMAGINARY DATA:           0
+REAL DATA:          87, IMAGINARY DATA:           0
+REAL DATA:          98, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         158, IMAGINARY DATA:           0
+REAL DATA:         175, IMAGINARY DATA:           0
+REAL DATA:         179, IMAGINARY DATA:           0
+REAL DATA:         168, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:          96, IMAGINARY DATA:           0
+REAL DATA:          89, IMAGINARY DATA:           0
+REAL DATA:          97, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         150, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         114, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         113, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         159, IMAGINARY DATA:           0
+REAL DATA:         163, IMAGINARY DATA:           0
+REAL DATA:         152, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         107, IMAGINARY DATA:           0
+REAL DATA:          90, IMAGINARY DATA:           0
+REAL DATA:          87, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         151, IMAGINARY DATA:           0
+REAL DATA:         168, IMAGINARY DATA:           0
+REAL DATA:         172, IMAGINARY DATA:           0
+REAL DATA:         162, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:          95, IMAGINARY DATA:           0
+REAL DATA:          87, IMAGINARY DATA:           0
+REAL DATA:          96, IMAGINARY DATA:           0
+REAL DATA:         113, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         149, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         158, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:          88, IMAGINARY DATA:           0
+REAL DATA:          89, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         166, IMAGINARY DATA:           0
+REAL DATA:         164, IMAGINARY DATA:           0
+REAL DATA:         152, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         100, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:         114, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         161, IMAGINARY DATA:           0
+REAL DATA:         157, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:          98, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:          97, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         157, IMAGINARY DATA:           0
+REAL DATA:         158, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         145, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:          94, IMAGINARY DATA:           0
+REAL DATA:          93, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         151, IMAGINARY DATA:           0
+REAL DATA:         172, IMAGINARY DATA:           0
+REAL DATA:         179, IMAGINARY DATA:           0
+REAL DATA:         166, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:          86, IMAGINARY DATA:           0
+REAL DATA:          80, IMAGINARY DATA:           0
+REAL DATA:          95, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         154, IMAGINARY DATA:           0
+REAL DATA:         149, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         159, IMAGINARY DATA:           0
+REAL DATA:         165, IMAGINARY DATA:           0
+REAL DATA:         156, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         107, IMAGINARY DATA:           0
+REAL DATA:          87, IMAGINARY DATA:           0
+REAL DATA:          81, IMAGINARY DATA:           0
+REAL DATA:          93, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         163, IMAGINARY DATA:           0
+REAL DATA:         164, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         151, IMAGINARY DATA:           0
+REAL DATA:         166, IMAGINARY DATA:           0
+REAL DATA:         171, IMAGINARY DATA:           0
+REAL DATA:         162, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:          96, IMAGINARY DATA:           0
+REAL DATA:          86, IMAGINARY DATA:           0
+REAL DATA:          90, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         156, IMAGINARY DATA:           0
+REAL DATA:         158, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         107, IMAGINARY DATA:           0
+REAL DATA:          92, IMAGINARY DATA:           0
+REAL DATA:          87, IMAGINARY DATA:           0
+REAL DATA:          95, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         150, IMAGINARY DATA:           0
+REAL DATA:         161, IMAGINARY DATA:           0
+REAL DATA:         162, IMAGINARY DATA:           0
+REAL DATA:         154, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         150, IMAGINARY DATA:           0
+REAL DATA:         160, IMAGINARY DATA:           0
+REAL DATA:         161, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         101, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         145, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         114, IMAGINARY DATA:           0
+REAL DATA:         114, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         148, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         154, IMAGINARY DATA:           0
+REAL DATA:         160, IMAGINARY DATA:           0
+REAL DATA:         157, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         104, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         149, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         113, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         152, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         100, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         150, IMAGINARY DATA:           0
+REAL DATA:         160, IMAGINARY DATA:           0
+REAL DATA:         161, IMAGINARY DATA:           0
+REAL DATA:         151, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         107, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         114, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         151, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         109, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         118, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         114, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         113, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         151, IMAGINARY DATA:           0
+REAL DATA:         161, IMAGINARY DATA:           0
+REAL DATA:         161, IMAGINARY DATA:           0
+REAL DATA:         150, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         103, IMAGINARY DATA:           0
+REAL DATA:         107, IMAGINARY DATA:           0
+REAL DATA:         114, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         120, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         130, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         161, IMAGINARY DATA:           0
+REAL DATA:         168, IMAGINARY DATA:           0
+REAL DATA:         161, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:          99, IMAGINARY DATA:           0
+REAL DATA:          91, IMAGINARY DATA:           0
+REAL DATA:          95, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         105, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         132, IMAGINARY DATA:           0
+REAL DATA:         147, IMAGINARY DATA:           0
+REAL DATA:         153, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         131, IMAGINARY DATA:           0
+REAL DATA:         113, IMAGINARY DATA:           0
+REAL DATA:         100, IMAGINARY DATA:           0
+REAL DATA:          99, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         151, IMAGINARY DATA:           0
+REAL DATA:         152, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         137, IMAGINARY DATA:           0
+REAL DATA:         129, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         111, IMAGINARY DATA:           0
+REAL DATA:         110, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         127, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         156, IMAGINARY DATA:           0
+REAL DATA:         162, IMAGINARY DATA:           0
+REAL DATA:         157, IMAGINARY DATA:           0
+REAL DATA:         144, IMAGINARY DATA:           0
+REAL DATA:         125, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:          97, IMAGINARY DATA:           0
+REAL DATA:          96, IMAGINARY DATA:           0
+REAL DATA:         106, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         138, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         143, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         115, IMAGINARY DATA:           0
+REAL DATA:         117, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         134, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         140, IMAGINARY DATA:           0
+REAL DATA:         135, IMAGINARY DATA:           0
+REAL DATA:         128, IMAGINARY DATA:           0
+REAL DATA:         122, IMAGINARY DATA:           0
+REAL DATA:         119, IMAGINARY DATA:           0
+REAL DATA:         121, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         133, IMAGINARY DATA:           0
+REAL DATA:         139, IMAGINARY DATA:           0
+REAL DATA:         141, IMAGINARY DATA:           0
+REAL DATA:         136, IMAGINARY DATA:           0
+REAL DATA:         124, IMAGINARY DATA:           0
+REAL DATA:         108, IMAGINARY DATA:           0
+REAL DATA:          96, IMAGINARY DATA:           0
+REAL DATA:          93, IMAGINARY DATA:           0
+REAL DATA:         102, IMAGINARY DATA:           0
+REAL DATA:         123, IMAGINARY DATA:           0
+REAL DATA:         146, IMAGINARY DATA:           0
+REAL DATA:         163, IMAGINARY DATA:           0
+REAL DATA:         167, IMAGINARY DATA:           0
+REAL DATA:         158, IMAGINARY DATA:           0
+REAL DATA:         142, IMAGINARY DATA:           0
+REAL DATA:         126, IMAGINARY DATA:           0
+REAL DATA:         116, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         112, IMAGINARY DATA:           0
+REAL DATA:         114, IMAGINARY DATA:           0
+
+========FFT_OUTPUT:=========
+   0. OUTPUT REAL: 1019.000000, OUTPUT IMAG: 0.000000, MAGNITUDE: 1038361.000000
+   1. OUTPUT REAL: 1019.000000, OUTPUT IMAG: 0.000000, MAGNITUDE: 1038361.000000
+   2. OUTPUT REAL: 1019.000000, OUTPUT IMAG: 0.000000, MAGNITUDE: 1038361.000000
+   3. OUTPUT REAL: 1019.000000, OUTPUT IMAG: 0.000000, MAGNITUDE: 1038361.000000
+   4. OUTPUT REAL: 1019.000000, OUTPUT IMAG: 0.000000, MAGNITUDE: 1038361.000000
+   5. OUTPUT REAL: -4.000000, OUTPUT IMAG: -0.312500, MAGNITUDE: 16.097656
+   6. OUTPUT REAL: -3.812500, OUTPUT IMAG: -0.312500, MAGNITUDE: 14.632813
+   7. OUTPUT REAL: -8.312500, OUTPUT IMAG: 0.375000, MAGNITUDE: 69.238281
+   8. OUTPUT REAL: -1.875000, OUTPUT IMAG: 0.000000, MAGNITUDE: 3.515625
+   9. OUTPUT REAL: -3.687500, OUTPUT IMAG: 0.375000, MAGNITUDE: 13.738281
+  10. OUTPUT REAL: -3.937500, OUTPUT IMAG: -0.250000, MAGNITUDE: 15.566406
+  11. OUTPUT REAL: -7.437500, OUTPUT IMAG: -0.750000, MAGNITUDE: 55.878906
+  12. OUTPUT REAL: -4.187500, OUTPUT IMAG: -0.500000, MAGNITUDE: 17.785156
+  13. OUTPUT REAL: -8.375000, OUTPUT IMAG: -0.750000, MAGNITUDE: 70.703125
+  14. OUTPUT REAL: -8.062500, OUTPUT IMAG: 0.437500, MAGNITUDE: 65.195313
+  15. OUTPUT REAL: -14.875000, OUTPUT IMAG: -1.000000, MAGNITUDE: 222.265625
+  16. OUTPUT REAL: -1.937500, OUTPUT IMAG: -0.250000, MAGNITUDE: 3.816406
+  17. OUTPUT REAL: -3.125000, OUTPUT IMAG: -1.625000, MAGNITUDE: 12.406250
+  18. OUTPUT REAL: -2.375000, OUTPUT IMAG: -3.375000, MAGNITUDE: 17.031250
+  19. OUTPUT REAL: -9.187500, OUTPUT IMAG: 4.937500, MAGNITUDE: 108.789063
+  20. OUTPUT REAL: -3.937500, OUTPUT IMAG: 0.875000, MAGNITUDE: 16.269531
+  21. OUTPUT REAL: -8.000000, OUTPUT IMAG: 0.812500, MAGNITUDE: 64.660156
+  22. OUTPUT REAL: -8.500000, OUTPUT IMAG: 0.187500, MAGNITUDE: 72.285156
+  23. OUTPUT REAL: -13.750000, OUTPUT IMAG: 2.187500, MAGNITUDE: 193.847656
+  24. OUTPUT REAL: -4.187500, OUTPUT IMAG: 0.000000, MAGNITUDE: 17.535156
+  25. OUTPUT REAL: -6.312500, OUTPUT IMAG: 0.312500, MAGNITUDE: 39.945313
+  26. OUTPUT REAL: -7.687500, OUTPUT IMAG: 0.437500, MAGNITUDE: 59.289063
+  27. OUTPUT REAL: -14.125000, OUTPUT IMAG: 1.437500, MAGNITUDE: 201.582031
+  28. OUTPUT REAL: -8.000000, OUTPUT IMAG: -0.062500, MAGNITUDE: 64.003906
+  29. OUTPUT REAL: -10.437500, OUTPUT IMAG: 6.937500, MAGNITUDE: 157.070313
+  30. OUTPUT REAL: -13.500000, OUTPUT IMAG: -2.250000, MAGNITUDE: 187.312500
+  31. OUTPUT REAL: -31.187500, OUTPUT IMAG: -2.125000, MAGNITUDE: 977.175781
+  32. OUTPUT REAL: -1.875000, OUTPUT IMAG: -0.625000, MAGNITUDE: 3.906250
+  33. OUTPUT REAL: -2.437500, OUTPUT IMAG: -1.250000, MAGNITUDE: 7.503906
+  34. OUTPUT REAL: -1.812500, OUTPUT IMAG: -0.625000, MAGNITUDE: 3.675781
+  35. OUTPUT REAL: -0.625000, OUTPUT IMAG: -8.687500, MAGNITUDE: 75.863281
+  36. OUTPUT REAL: 5.812500, OUTPUT IMAG: -14.125000, MAGNITUDE: 233.300781
+  37. OUTPUT REAL: -27.687500, OUTPUT IMAG: 21.625000, MAGNITUDE: 1234.238281
+  38. OUTPUT REAL: -16.625000, OUTPUT IMAG: 8.312500, MAGNITUDE: 345.488281
+  39. OUTPUT REAL: -26.687500, OUTPUT IMAG: 9.000000, MAGNITUDE: 793.222656
+  40. OUTPUT REAL: -5.500000, OUTPUT IMAG: 2.125000, MAGNITUDE: 34.765625
+  41. OUTPUT REAL: -11.250000, OUTPUT IMAG: 3.375000, MAGNITUDE: 137.953125
+  42. OUTPUT REAL: -11.375000, OUTPUT IMAG: -0.187500, MAGNITUDE: 129.425781
+  43. OUTPUT REAL: -15.187500, OUTPUT IMAG: 16.687500, MAGNITUDE: 509.132813
+  44. OUTPUT REAL: -9.250000, OUTPUT IMAG: 3.562500, MAGNITUDE: 98.253906
+  45. OUTPUT REAL: -15.937500, OUTPUT IMAG: 8.375000, MAGNITUDE: 324.144531
+  46. OUTPUT REAL: -12.437500, OUTPUT IMAG: 7.687500, MAGNITUDE: 213.789063
+  47. OUTPUT REAL: -7.625000, OUTPUT IMAG: 24.875000, MAGNITUDE: 676.906250
+  48. OUTPUT REAL: 5.000000, OUTPUT IMAG: -4.625000, MAGNITUDE: 46.390625
+  49. OUTPUT REAL: -21.375000, OUTPUT IMAG: 12.187500, MAGNITUDE: 605.425781
+  50. OUTPUT REAL: -12.875000, OUTPUT IMAG: 15.500000, MAGNITUDE: 406.015625
+  51. OUTPUT REAL: -38.062500, OUTPUT IMAG: 28.125000, MAGNITUDE: 2239.769531
+  52. OUTPUT REAL: -22.687500, OUTPUT IMAG: 19.000000, MAGNITUDE: 875.722656
+  53. OUTPUT REAL: -43.187500, OUTPUT IMAG: 69.937500, MAGNITUDE: 6756.414063
+  54. OUTPUT REAL: -80.687500, OUTPUT IMAG: 82.562500, MAGNITUDE: 13327.039063
+  55. OUTPUT REAL: -243.562500, OUTPUT IMAG: 97.625000, MAGNITUDE: 68853.332031
+  56. OUTPUT REAL: -33.250000, OUTPUT IMAG: -90.375000, MAGNITUDE: 9273.203125
+  57. OUTPUT REAL: 182.500000, OUTPUT IMAG: 109.062500, MAGNITUDE: 45200.878906
+  58. OUTPUT REAL: -20.062500, OUTPUT IMAG: -191.125000, MAGNITUDE: 36931.269531
+  59. OUTPUT REAL: -104.312500, OUTPUT IMAG: -194.062500, MAGNITUDE: 48541.351563
+  60. OUTPUT REAL: -34.500000, OUTPUT IMAG: -75.000000, MAGNITUDE: 6815.250000
+  61. OUTPUT REAL: -170.937500, OUTPUT IMAG: 30.937500, MAGNITUDE: 30176.757813
+  62. OUTPUT REAL: -72.562500, OUTPUT IMAG: -6.125000, MAGNITUDE: 5302.832031
+  63. OUTPUT REAL: -145.500000, OUTPUT IMAG: -106.562500, MAGNITUDE: 32525.816406
+  64. OUTPUT REAL: -3.375000, OUTPUT IMAG: -3.437500, MAGNITUDE: 23.207031
+  65. OUTPUT REAL: -9.437500, OUTPUT IMAG: -8.687500, MAGNITUDE: 164.539063
+  66. OUTPUT REAL: -9.937500, OUTPUT IMAG: -9.000000, MAGNITUDE: 179.753906
+  67. OUTPUT REAL: -25.500000, OUTPUT IMAG: -18.750000, MAGNITUDE: 1001.812500
+  68. OUTPUT REAL: -8.812500, OUTPUT IMAG: -5.562500, MAGNITUDE: 108.601563
+  69. OUTPUT REAL: -30.562500, OUTPUT IMAG: -19.875000, MAGNITUDE: 1329.082031
+  70. OUTPUT REAL: -25.187500, OUTPUT IMAG: -14.375000, MAGNITUDE: 841.050781
+  71. OUTPUT REAL: -58.562500, OUTPUT IMAG: -94.062500, MAGNITUDE: 12277.320313
+  72. OUTPUT REAL: -56.937500, OUTPUT IMAG: -50.125000, MAGNITUDE: 5754.394531
+  73. OUTPUT REAL: -120.000000, OUTPUT IMAG: 286.250000, MAGNITUDE: 96339.062500
+  74. OUTPUT REAL: -20.687500, OUTPUT IMAG: 49.062500, MAGNITUDE: 2835.101563
+  75. OUTPUT REAL: -57.562500, OUTPUT IMAG: 70.125000, MAGNITUDE: 8230.957031
+  76. OUTPUT REAL: 4.687500, OUTPUT IMAG: 47.687500, MAGNITUDE: 2296.070313
+  77. OUTPUT REAL: -631.500000, OUTPUT IMAG: -414.187500, MAGNITUDE: 570343.535156
+  78. OUTPUT REAL: 439.187500, OUTPUT IMAG: 135.937500, MAGNITUDE: 211364.664063
+  79. OUTPUT REAL: 159.625000, OUTPUT IMAG: -368.437500, MAGNITUDE: 161226.332031
+  80. OUTPUT REAL: -35.312500, OUTPUT IMAG: -2.500000, MAGNITUDE: 1253.222656
+  81. OUTPUT REAL: 25.375000, OUTPUT IMAG: 26.312500, MAGNITUDE: 1336.238281
+  82. OUTPUT REAL: 27.687500, OUTPUT IMAG: -22.187500, MAGNITUDE: 1258.882813
+  83. OUTPUT REAL: -21.250000, OUTPUT IMAG: -10.562500, MAGNITUDE: 563.128906
+  84. OUTPUT REAL: -12.062500, OUTPUT IMAG: 15.687500, MAGNITUDE: 391.601563
+  85. OUTPUT REAL: 26.375000, OUTPUT IMAG: -2.937500, MAGNITUDE: 704.269531
+  86. OUTPUT REAL: 6.875000, OUTPUT IMAG: -1.812500, MAGNITUDE: 50.550781
+  87. OUTPUT REAL: 48.312500, OUTPUT IMAG: -76.875000, MAGNITUDE: 8243.863281
+  88. OUTPUT REAL: 10.000000, OUTPUT IMAG: -12.250000, MAGNITUDE: 250.062500
+  89. OUTPUT REAL: -30.312500, OUTPUT IMAG: -21.625000, MAGNITUDE: 1386.488281
+  90. OUTPUT REAL: 27.500000, OUTPUT IMAG: 16.250000, MAGNITUDE: 1020.312500
+  91. OUTPUT REAL: -12.562500, OUTPUT IMAG: -52.937500, MAGNITUDE: 2960.195313
+  92. OUTPUT REAL: 21.250000, OUTPUT IMAG: -44.687500, MAGNITUDE: 2448.535156
+  93. OUTPUT REAL: -81.750000, OUTPUT IMAG: 40.562500, MAGNITUDE: 8328.378906
+  94. OUTPUT REAL: 11.562500, OUTPUT IMAG: -20.375000, MAGNITUDE: 548.832031
+  95. OUTPUT REAL: 51.875000, OUTPUT IMAG: -89.875000, MAGNITUDE: 10768.531250
+  96. OUTPUT REAL: -0.625000, OUTPUT IMAG: -4.062500, MAGNITUDE: 16.894531
+  97. OUTPUT REAL: -16.500000, OUTPUT IMAG: -14.750000, MAGNITUDE: 489.812500
+  98. OUTPUT REAL: 0.125000, OUTPUT IMAG: -81.437500, MAGNITUDE: 6632.082031
+  99. OUTPUT REAL: 10.875000, OUTPUT IMAG: -3.500000, MAGNITUDE: 130.515625
+ 100. OUTPUT REAL: -8.812500, OUTPUT IMAG: 0.875000, MAGNITUDE: 78.425781
+ 101. OUTPUT REAL: -4.625000, OUTPUT IMAG: 10.750000, MAGNITUDE: 136.953125
+ 102. OUTPUT REAL: -14.312500, OUTPUT IMAG: 15.000000, MAGNITUDE: 429.847656
+ 103. OUTPUT REAL: -12.812500, OUTPUT IMAG: 15.750000, MAGNITUDE: 412.222656
+ 104. OUTPUT REAL: -16.750000, OUTPUT IMAG: -3.125000, MAGNITUDE: 290.328125
+ 105. OUTPUT REAL: -14.750000, OUTPUT IMAG: 14.312500, MAGNITUDE: 422.410156
+ 106. OUTPUT REAL: 17.687500, OUTPUT IMAG: -58.000000, MAGNITUDE: 3676.847656
+ 107. OUTPUT REAL: -42.125000, OUTPUT IMAG: -78.625000, MAGNITUDE: 7956.406250
+ 108. OUTPUT REAL: 102.687500, OUTPUT IMAG: -116.062500, MAGNITUDE: 24015.226563
+ 109. OUTPUT REAL: 577.812500, OUTPUT IMAG: -313.750000, MAGNITUDE: 432306.347656
+ 110. OUTPUT REAL: 98.875000, OUTPUT IMAG: -161.312500, MAGNITUDE: 35797.988281
+ 111. OUTPUT REAL: 1068.125000, OUTPUT IMAG: 1063.500000, MAGNITUDE: 2271923.265625
+ 112. OUTPUT REAL: -201.812500, OUTPUT IMAG: 65.000000, MAGNITUDE: 44953.285156
+ 113. OUTPUT REAL: 263.187500, OUTPUT IMAG: -134.750000, MAGNITUDE: 87425.222656
+ 114. OUTPUT REAL: -251.437500, OUTPUT IMAG: 532.937500, MAGNITUDE: 347243.195313
+ 115. OUTPUT REAL: 994.125000, OUTPUT IMAG: 414.312500, MAGNITUDE: 1159939.363281
+ 116. OUTPUT REAL: 336.687500, OUTPUT IMAG: 2.750000, MAGNITUDE: 113366.035156
+ 117. OUTPUT REAL: -96.875000, OUTPUT IMAG: -375.625000, MAGNITUDE: 150478.906250
+ 118. OUTPUT REAL: 36.187500, OUTPUT IMAG: -180.125000, MAGNITUDE: 33754.550781
+ 119. OUTPUT REAL: -7.500000, OUTPUT IMAG: -288.437500, MAGNITUDE: 83252.441406
+ 120. OUTPUT REAL: -27.187500, OUTPUT IMAG: -19.750000, MAGNITUDE: 1129.222656
+ 121. OUTPUT REAL: 0.312500, OUTPUT IMAG: -66.625000, MAGNITUDE: 4438.988281
+ 122. OUTPUT REAL: -10.312500, OUTPUT IMAG: -73.375000, MAGNITUDE: 5490.238281
+ 123. OUTPUT REAL: -27.187500, OUTPUT IMAG: -123.562500, MAGNITUDE: 16006.851563
+ 124. OUTPUT REAL: -14.750000, OUTPUT IMAG: -62.375000, MAGNITUDE: 4108.203125
+ 125. OUTPUT REAL: -31.750000, OUTPUT IMAG: -88.812500, MAGNITUDE: 8895.722656
+ 126. OUTPUT REAL: -39.375000, OUTPUT IMAG: -83.187500, MAGNITUDE: 8470.550781
+ 127. OUTPUT REAL: -63.937500, OUTPUT IMAG: -141.937500, MAGNITUDE: 24234.257813
+ 128. OUTPUT REAL: -0.812500, OUTPUT IMAG: -1.562500, MAGNITUDE: 3.101563
+ 129. OUTPUT REAL: -1.500000, OUTPUT IMAG: -3.625000, MAGNITUDE: 15.390625
+ 130. OUTPUT REAL: -1.750000, OUTPUT IMAG: -3.000000, MAGNITUDE: 12.062500
+ 131. OUTPUT REAL: -2.937500, OUTPUT IMAG: -4.312500, MAGNITUDE: 27.226563
+ 132. OUTPUT REAL: -1.500000, OUTPUT IMAG: -2.437500, MAGNITUDE: 8.191406
+ 133. OUTPUT REAL: -2.500000, OUTPUT IMAG: -2.625000, MAGNITUDE: 13.140625
+ 134. OUTPUT REAL: -4.375000, OUTPUT IMAG: -2.937500, MAGNITUDE: 27.769531
+ 135. OUTPUT REAL: -15.937500, OUTPUT IMAG: -9.875000, MAGNITUDE: 351.519531
+ 136. OUTPUT REAL: -2.812500, OUTPUT IMAG: -4.250000, MAGNITUDE: 25.972656
+ 137. OUTPUT REAL: -1.375000, OUTPUT IMAG: -8.500000, MAGNITUDE: 74.140625
+ 138. OUTPUT REAL: 0.062500, OUTPUT IMAG: -4.187500, MAGNITUDE: 17.539063
+ 139. OUTPUT REAL: -0.937500, OUTPUT IMAG: -6.562500, MAGNITUDE: 43.945313
+ 140. OUTPUT REAL: -1.437500, OUTPUT IMAG: -2.937500, MAGNITUDE: 10.695313
+ 141. OUTPUT REAL: 5.500000, OUTPUT IMAG: -4.187500, MAGNITUDE: 47.785156
+ 142. OUTPUT REAL: -7.875000, OUTPUT IMAG: -6.500000, MAGNITUDE: 104.265625
+ 143. OUTPUT REAL: -21.562500, OUTPUT IMAG: 22.812500, MAGNITUDE: 985.351563
+ 144. OUTPUT REAL: 0.312500, OUTPUT IMAG: 6.062500, MAGNITUDE: 36.851563
+ 145. OUTPUT REAL: -9.562500, OUTPUT IMAG: 28.125000, MAGNITUDE: 882.457031
+ 146. OUTPUT REAL: 30.687500, OUTPUT IMAG: 37.750000, MAGNITUDE: 2366.785156
+ 147. OUTPUT REAL: 127.750000, OUTPUT IMAG: -21.125000, MAGNITUDE: 16766.328125
+ 148. OUTPUT REAL: -67.812500, OUTPUT IMAG: -74.937500, MAGNITUDE: 10214.164063
+ 149. OUTPUT REAL: -39.812500, OUTPUT IMAG: -36.625000, MAGNITUDE: 2926.425781
+ 150. OUTPUT REAL: 4.187500, OUTPUT IMAG: -15.000000, MAGNITUDE: 242.535156
+ 151. OUTPUT REAL: 33.562500, OUTPUT IMAG: -57.625000, MAGNITUDE: 4447.082031
+ 152. OUTPUT REAL: -5.000000, OUTPUT IMAG: -25.625000, MAGNITUDE: 681.640625
+ 153. OUTPUT REAL: 6.562500, OUTPUT IMAG: 6.500000, MAGNITUDE: 85.316406
+ 154. OUTPUT REAL: 70.000000, OUTPUT IMAG: -34.062500, MAGNITUDE: 6060.253906
+ 155. OUTPUT REAL: -228.375000, OUTPUT IMAG: 102.187500, MAGNITUDE: 62597.425781
+ 156. OUTPUT REAL: 40.500000, OUTPUT IMAG: -10.250000, MAGNITUDE: 1745.312500
+ 157. OUTPUT REAL: -46.250000, OUTPUT IMAG: -150.125000, MAGNITUDE: 24676.578125
+ 158. OUTPUT REAL: -97.375000, OUTPUT IMAG: -53.937500, MAGNITUDE: 12391.144531
+ 159. OUTPUT REAL: -5.375000, OUTPUT IMAG: 6.500000, MAGNITUDE: 71.140625
+ 160. OUTPUT REAL: 3.687500, OUTPUT IMAG: -8.687500, MAGNITUDE: 89.070313
+ 161. OUTPUT REAL: -2.937500, OUTPUT IMAG: -16.125000, MAGNITUDE: 268.644531
+ 162. OUTPUT REAL: -2.562500, OUTPUT IMAG: -12.125000, MAGNITUDE: 153.582031
+ 163. OUTPUT REAL: -5.125000, OUTPUT IMAG: -22.000000, MAGNITUDE: 510.265625
+ 164. OUTPUT REAL: -1.750000, OUTPUT IMAG: -13.750000, MAGNITUDE: 192.125000
+ 165. OUTPUT REAL: -1.000000, OUTPUT IMAG: -24.687500, MAGNITUDE: 610.472656
+ 166. OUTPUT REAL: -3.437500, OUTPUT IMAG: -23.437500, MAGNITUDE: 561.132813
+ 167. OUTPUT REAL: -1.500000, OUTPUT IMAG: -50.500000, MAGNITUDE: 2552.500000
+ 168. OUTPUT REAL: -3.437500, OUTPUT IMAG: -13.687500, MAGNITUDE: 199.164063
+ 169. OUTPUT REAL: -3.500000, OUTPUT IMAG: -27.500000, MAGNITUDE: 768.500000
+ 170. OUTPUT REAL: -11.625000, OUTPUT IMAG: -22.437500, MAGNITUDE: 638.582031
+ 171. OUTPUT REAL: -15.875000, OUTPUT IMAG: -28.625000, MAGNITUDE: 1071.406250
+ 172. OUTPUT REAL: -4.500000, OUTPUT IMAG: -13.250000, MAGNITUDE: 195.812500
+ 173. OUTPUT REAL: 8.125000, OUTPUT IMAG: -22.375000, MAGNITUDE: 566.656250
+ 174. OUTPUT REAL: -11.687500, OUTPUT IMAG: -39.625000, MAGNITUDE: 1706.738281
+ 175. OUTPUT REAL: -4.250000, OUTPUT IMAG: -77.500000, MAGNITUDE: 6024.312500
+ 176. OUTPUT REAL: -2.500000, OUTPUT IMAG: -10.812500, MAGNITUDE: 123.160156
+ 177. OUTPUT REAL: -3.812500, OUTPUT IMAG: -20.312500, MAGNITUDE: 427.132813
+ 178. OUTPUT REAL: -4.312500, OUTPUT IMAG: -19.812500, MAGNITUDE: 411.132813
+ 179. OUTPUT REAL: -4.812500, OUTPUT IMAG: -39.875000, MAGNITUDE: 1613.175781
+ 180. OUTPUT REAL: -3.687500, OUTPUT IMAG: -19.437500, MAGNITUDE: 391.414063
+ 181. OUTPUT REAL: -7.062500, OUTPUT IMAG: -38.250000, MAGNITUDE: 1512.941406
+ 182. OUTPUT REAL: -20.687500, OUTPUT IMAG: -36.062500, MAGNITUDE: 1728.476563
+ 183. OUTPUT REAL: -3.562500, OUTPUT IMAG: -47.812500, MAGNITUDE: 2298.726563
+ 184. OUTPUT REAL: -6.062500, OUTPUT IMAG: -16.250000, MAGNITUDE: 300.816406
+ 185. OUTPUT REAL: 5.812500, OUTPUT IMAG: -48.812500, MAGNITUDE: 2416.445313
+ 186. OUTPUT REAL: -5.562500, OUTPUT IMAG: -35.125000, MAGNITUDE: 1264.707031
+ 187. OUTPUT REAL: 5.562500, OUTPUT IMAG: -92.625000, MAGNITUDE: 8610.332031
+ 188. OUTPUT REAL: -6.750000, OUTPUT IMAG: -37.687500, MAGNITUDE: 1465.910156
+ 189. OUTPUT REAL: -12.937500, OUTPUT IMAG: -65.687500, MAGNITUDE: 4482.226563
+ 190. OUTPUT REAL: -2.312500, OUTPUT IMAG: -62.875000, MAGNITUDE: 3958.613281
+ 191. OUTPUT REAL: -4.187500, OUTPUT IMAG: -136.687500, MAGNITUDE: 18701.007813
+ 192. OUTPUT REAL: -0.375000, OUTPUT IMAG: -4.437500, MAGNITUDE: 19.832031
+ 193. OUTPUT REAL: -1.437500, OUTPUT IMAG: -8.500000, MAGNITUDE: 74.316406
+ 194. OUTPUT REAL: -1.437500, OUTPUT IMAG: -8.625000, MAGNITUDE: 76.457031
+ 195. OUTPUT REAL: 0.875000, OUTPUT IMAG: -18.062500, MAGNITUDE: 327.019531
+ 196. OUTPUT REAL: 0.000000, OUTPUT IMAG: -10.062500, MAGNITUDE: 101.253906
+ 197. OUTPUT REAL: -14.875000, OUTPUT IMAG: -8.375000, MAGNITUDE: 291.406250
+ 198. OUTPUT REAL: 17.750000, OUTPUT IMAG: -14.437500, MAGNITUDE: 523.503906
+ 199. OUTPUT REAL: -4.625000, OUTPUT IMAG: -40.750000, MAGNITUDE: 1681.953125
+ 200. OUTPUT REAL: -0.250000, OUTPUT IMAG: -11.437500, MAGNITUDE: 130.878906
+ 201. OUTPUT REAL: -1.562500, OUTPUT IMAG: -18.125000, MAGNITUDE: 330.957031
+ 202. OUTPUT REAL: -2.000000, OUTPUT IMAG: -17.750000, MAGNITUDE: 319.062500
+ 203. OUTPUT REAL: 1.312500, OUTPUT IMAG: -37.062500, MAGNITUDE: 1375.351563
+ 204. OUTPUT REAL: 1.500000, OUTPUT IMAG: -18.062500, MAGNITUDE: 328.503906
+ 205. OUTPUT REAL: -2.812500, OUTPUT IMAG: -38.500000, MAGNITUDE: 1490.160156
+ 206. OUTPUT REAL: -2.062500, OUTPUT IMAG: -39.500000, MAGNITUDE: 1564.503906
+ 207. OUTPUT REAL: -6.000000, OUTPUT IMAG: -74.937500, MAGNITUDE: 5651.628906
+ 208. OUTPUT REAL: -0.562500, OUTPUT IMAG: -9.562500, MAGNITUDE: 91.757813
+ 209. OUTPUT REAL: 0.000000, OUTPUT IMAG: -18.000000, MAGNITUDE: 324.000000
+ 210. OUTPUT REAL: 0.312500, OUTPUT IMAG: -18.750000, MAGNITUDE: 351.660156
+ 211. OUTPUT REAL: -3.625000, OUTPUT IMAG: -39.062500, MAGNITUDE: 1539.019531
+ 212. OUTPUT REAL: -1.062500, OUTPUT IMAG: -17.312500, MAGNITUDE: 300.851563
+ 213. OUTPUT REAL: 0.562500, OUTPUT IMAG: -38.375000, MAGNITUDE: 1472.957031
+ 214. OUTPUT REAL: -2.375000, OUTPUT IMAG: -38.062500, MAGNITUDE: 1454.394531
+ 215. OUTPUT REAL: -7.125000, OUTPUT IMAG: -71.812500, MAGNITUDE: 5207.800781
+ 216. OUTPUT REAL: -0.250000, OUTPUT IMAG: -17.812500, MAGNITUDE: 317.347656
+ 217. OUTPUT REAL: 2.500000, OUTPUT IMAG: -36.625000, MAGNITUDE: 1347.640625
+ 218. OUTPUT REAL: 2.562500, OUTPUT IMAG: -33.187500, MAGNITUDE: 1107.976563
+ 219. OUTPUT REAL: 13.750000, OUTPUT IMAG: -76.312500, MAGNITUDE: 6012.660156
+ 220. OUTPUT REAL: 3.937500, OUTPUT IMAG: -47.625000, MAGNITUDE: 2283.644531
+ 221. OUTPUT REAL: -6.625000, OUTPUT IMAG: -41.937500, MAGNITUDE: 1802.644531
+ 222. OUTPUT REAL: 33.625000, OUTPUT IMAG: -29.937500, MAGNITUDE: 2026.894531
+ 223. OUTPUT REAL: -10.625000, OUTPUT IMAG: -295.375000, MAGNITUDE: 87359.281250
+ 224. OUTPUT REAL: -0.750000, OUTPUT IMAG: -6.812500, MAGNITUDE: 46.972656
+ 225. OUTPUT REAL: -7.937500, OUTPUT IMAG: -20.000000, MAGNITUDE: 463.003906
+ 226. OUTPUT REAL: -0.312500, OUTPUT IMAG: -15.812500, MAGNITUDE: 250.132813
+ 227. OUTPUT REAL: -5.687500, OUTPUT IMAG: -39.125000, MAGNITUDE: 1563.113281
+ 228. OUTPUT REAL: -0.375000, OUTPUT IMAG: -18.437500, MAGNITUDE: 340.082031
+ 229. OUTPUT REAL: -4.437500, OUTPUT IMAG: -29.750000, MAGNITUDE: 904.753906
+ 230. OUTPUT REAL: 3.000000, OUTPUT IMAG: -30.375000, MAGNITUDE: 931.640625
+ 231. OUTPUT REAL: 6.500000, OUTPUT IMAG: -69.312500, MAGNITUDE: 4846.472656
+ 232. OUTPUT REAL: 1.125000, OUTPUT IMAG: -18.500000, MAGNITUDE: 343.515625
+ 233. OUTPUT REAL: 1.125000, OUTPUT IMAG: -37.625000, MAGNITUDE: 1416.906250
+ 234. OUTPUT REAL: -0.437500, OUTPUT IMAG: -34.375000, MAGNITUDE: 1181.832031
+ 235. OUTPUT REAL: 3.687500, OUTPUT IMAG: -61.750000, MAGNITUDE: 3826.660156
+ 236. OUTPUT REAL: -0.125000, OUTPUT IMAG: -30.937500, MAGNITUDE: 957.144531
+ 237. OUTPUT REAL: 7.625000, OUTPUT IMAG: -66.437500, MAGNITUDE: 4472.082031
+ 238. OUTPUT REAL: 4.000000, OUTPUT IMAG: -67.437500, MAGNITUDE: 4563.816406
+ 239. OUTPUT REAL: 29.875000, OUTPUT IMAG: -142.000000, MAGNITUDE: 21056.515625
+ 240. OUTPUT REAL: 0.187500, OUTPUT IMAG: -17.312500, MAGNITUDE: 299.757813
+ 241. OUTPUT REAL: 3.000000, OUTPUT IMAG: -33.625000, MAGNITUDE: 1139.640625
+ 242. OUTPUT REAL: 3.875000, OUTPUT IMAG: -34.687500, MAGNITUDE: 1218.238281
+ 243. OUTPUT REAL: 8.375000, OUTPUT IMAG: -66.250000, MAGNITUDE: 4459.203125
+ 244. OUTPUT REAL: 2.187500, OUTPUT IMAG: -32.875000, MAGNITUDE: 1085.550781
+ 245. OUTPUT REAL: 11.250000, OUTPUT IMAG: -71.562500, MAGNITUDE: 5247.753906
+ 246. OUTPUT REAL: 9.500000, OUTPUT IMAG: -69.937500, MAGNITUDE: 4981.503906
+ 247. OUTPUT REAL: 29.437500, OUTPUT IMAG: -148.375000, MAGNITUDE: 22881.707031
+ 248. OUTPUT REAL: 3.375000, OUTPUT IMAG: -37.250000, MAGNITUDE: 1398.953125
+ 249. OUTPUT REAL: 9.375000, OUTPUT IMAG: -64.375000, MAGNITUDE: 4232.031250
+ 250. OUTPUT REAL: 5.937500, OUTPUT IMAG: -78.250000, MAGNITUDE: 6158.316406
+ 251. OUTPUT REAL: 14.625000, OUTPUT IMAG: -132.187500, MAGNITUDE: 17687.425781
+ 252. OUTPUT REAL: 5.750000, OUTPUT IMAG: -66.500000, MAGNITUDE: 4455.312500
+ 253. OUTPUT REAL: 16.125000, OUTPUT IMAG: -125.187500, MAGNITUDE: 15931.925781
+ 254. OUTPUT REAL: 12.750000, OUTPUT IMAG: -138.000000, MAGNITUDE: 19206.562500
+ 255. OUTPUT REAL: 37.375000, OUTPUT IMAG: -276.125000, MAGNITUDE: 77641.906250
+ 256. OUTPUT REAL: 0.125000, OUTPUT IMAG: -2.187500, MAGNITUDE: 4.800781
+ 257. OUTPUT REAL: 0.875000, OUTPUT IMAG: -4.437500, MAGNITUDE: 20.457031
+ 258. OUTPUT REAL: 0.437500, OUTPUT IMAG: -3.750000, MAGNITUDE: 14.253906
+ 259. OUTPUT REAL: 1.750000, OUTPUT IMAG: -8.500000, MAGNITUDE: 75.312500
+ 260. OUTPUT REAL: 0.750000, OUTPUT IMAG: -4.000000, MAGNITUDE: 16.562500
+ 261. OUTPUT REAL: 0.750000, OUTPUT IMAG: -8.812500, MAGNITUDE: 78.222656
+ 262. OUTPUT REAL: 1.125000, OUTPUT IMAG: -8.000000, MAGNITUDE: 65.265625
+ 263. OUTPUT REAL: 2.312500, OUTPUT IMAG: -17.375000, MAGNITUDE: 307.238281
+ 264. OUTPUT REAL: 0.812500, OUTPUT IMAG: -4.562500, MAGNITUDE: 21.476563
+ 265. OUTPUT REAL: 2.125000, OUTPUT IMAG: -8.187500, MAGNITUDE: 71.550781
+ 266. OUTPUT REAL: 1.750000, OUTPUT IMAG: -8.687500, MAGNITUDE: 78.535156
+ 267. OUTPUT REAL: 3.750000, OUTPUT IMAG: -17.250000, MAGNITUDE: 311.625000
+ 268. OUTPUT REAL: 1.312500, OUTPUT IMAG: -8.562500, MAGNITUDE: 75.039063
+ 269. OUTPUT REAL: 5.125000, OUTPUT IMAG: -17.250000, MAGNITUDE: 323.828125
+ 270. OUTPUT REAL: 4.125000, OUTPUT IMAG: -18.000000, MAGNITUDE: 341.015625
+ 271. OUTPUT REAL: 6.750000, OUTPUT IMAG: -32.875000, MAGNITUDE: 1126.328125
+ 272. OUTPUT REAL: 1.000000, OUTPUT IMAG: -4.375000, MAGNITUDE: 20.140625
+ 273. OUTPUT REAL: 2.187500, OUTPUT IMAG: -7.937500, MAGNITUDE: 67.789063
+ 274. OUTPUT REAL: 2.500000, OUTPUT IMAG: -8.625000, MAGNITUDE: 80.640625
+ 275. OUTPUT REAL: 3.187500, OUTPUT IMAG: -16.812500, MAGNITUDE: 292.820313
+ 276. OUTPUT REAL: 2.312500, OUTPUT IMAG: -7.937500, MAGNITUDE: 68.351563
+ 277. OUTPUT REAL: 3.062500, OUTPUT IMAG: -16.312500, MAGNITUDE: 275.476563
+ 278. OUTPUT REAL: 6.000000, OUTPUT IMAG: -15.125000, MAGNITUDE: 264.765625
+ 279. OUTPUT REAL: 7.500000, OUTPUT IMAG: -34.375000, MAGNITUDE: 1237.890625
+ 280. OUTPUT REAL: 2.062500, OUTPUT IMAG: -7.875000, MAGNITUDE: 66.269531
+ 281. OUTPUT REAL: 4.250000, OUTPUT IMAG: -16.312500, MAGNITUDE: 284.160156
+ 282. OUTPUT REAL: 5.062500, OUTPUT IMAG: -16.687500, MAGNITUDE: 304.101563
+ 283. OUTPUT REAL: 11.000000, OUTPUT IMAG: -32.437500, MAGNITUDE: 1173.191406
+ 284. OUTPUT REAL: 5.062500, OUTPUT IMAG: -15.375000, MAGNITUDE: 262.019531
+ 285. OUTPUT REAL: 10.500000, OUTPUT IMAG: -32.375000, MAGNITUDE: 1158.390625
+ 286. OUTPUT REAL: 9.062500, OUTPUT IMAG: -35.437500, MAGNITUDE: 1337.945313
+ 287. OUTPUT REAL: 25.875000, OUTPUT IMAG: -63.000000, MAGNITUDE: 4638.515625
+ 288. OUTPUT REAL: 1.250000, OUTPUT IMAG: -3.875000, MAGNITUDE: 16.578125
+ 289. OUTPUT REAL: 2.375000, OUTPUT IMAG: -7.562500, MAGNITUDE: 62.832031
+ 290. OUTPUT REAL: 2.625000, OUTPUT IMAG: -7.625000, MAGNITUDE: 65.031250
+ 291. OUTPUT REAL: 5.812500, OUTPUT IMAG: -15.375000, MAGNITUDE: 270.175781
+ 292. OUTPUT REAL: 2.750000, OUTPUT IMAG: -8.687500, MAGNITUDE: 83.035156
+ 293. OUTPUT REAL: 6.562500, OUTPUT IMAG: -15.437500, MAGNITUDE: 281.382813
+ 294. OUTPUT REAL: 4.562500, OUTPUT IMAG: -15.000000, MAGNITUDE: 245.816406
+ 295. OUTPUT REAL: 15.250000, OUTPUT IMAG: -29.875000, MAGNITUDE: 1125.078125
+ 296. OUTPUT REAL: 2.875000, OUTPUT IMAG: -8.500000, MAGNITUDE: 80.515625
+ 297. OUTPUT REAL: 6.187500, OUTPUT IMAG: -16.375000, MAGNITUDE: 306.425781
+ 298. OUTPUT REAL: 3.687500, OUTPUT IMAG: -16.562500, MAGNITUDE: 287.914063
+ 299. OUTPUT REAL: 14.937500, OUTPUT IMAG: -30.687500, MAGNITUDE: 1164.851563
+ 300. OUTPUT REAL: 7.187500, OUTPUT IMAG: -16.312500, MAGNITUDE: 317.757813
+ 301. OUTPUT REAL: 9.250000, OUTPUT IMAG: -29.937500, MAGNITUDE: 981.816406
+ 302. OUTPUT REAL: 9.562500, OUTPUT IMAG: -30.812500, MAGNITUDE: 1040.851563
+ 303. OUTPUT REAL: 24.500000, OUTPUT IMAG: -61.562500, MAGNITUDE: 4390.191406
+ 304. OUTPUT REAL: 3.187500, OUTPUT IMAG: -7.562500, MAGNITUDE: 67.351563
+ 305. OUTPUT REAL: 7.312500, OUTPUT IMAG: -14.375000, MAGNITUDE: 260.113281
+ 306. OUTPUT REAL: 7.000000, OUTPUT IMAG: -14.875000, MAGNITUDE: 270.265625
+ 307. OUTPUT REAL: 14.187500, OUTPUT IMAG: -29.312500, MAGNITUDE: 1060.507813
+ 308. OUTPUT REAL: 7.312500, OUTPUT IMAG: -14.875000, MAGNITUDE: 274.738281
+ 309. OUTPUT REAL: 10.875000, OUTPUT IMAG: -30.062500, MAGNITUDE: 1022.019531
+ 310. OUTPUT REAL: 15.000000, OUTPUT IMAG: -29.937500, MAGNITUDE: 1121.253906
+ 311. OUTPUT REAL: 30.500000, OUTPUT IMAG: -63.500000, MAGNITUDE: 4962.500000
+ 312. OUTPUT REAL: 7.375000, OUTPUT IMAG: -14.875000, MAGNITUDE: 275.656250
+ 313. OUTPUT REAL: 16.812500, OUTPUT IMAG: -33.187500, MAGNITUDE: 1384.070313
+ 314. OUTPUT REAL: 16.500000, OUTPUT IMAG: -32.250000, MAGNITUDE: 1312.312500
+ 315. OUTPUT REAL: 29.000000, OUTPUT IMAG: -61.187500, MAGNITUDE: 4584.910156
+ 316. OUTPUT REAL: 15.687500, OUTPUT IMAG: -29.375000, MAGNITUDE: 1108.988281
+ 317. OUTPUT REAL: 30.812500, OUTPUT IMAG: -59.750000, MAGNITUDE: 4519.472656
+ 318. OUTPUT REAL: 25.562500, OUTPUT IMAG: -58.187500, MAGNITUDE: 4039.226563
+ 319. OUTPUT REAL: 65.125000, OUTPUT IMAG: -116.625000, MAGNITUDE: 17842.656250
+ 320. OUTPUT REAL: 2.062500, OUTPUT IMAG: -3.875000, MAGNITUDE: 19.269531
+ 321. OUTPUT REAL: 4.562500, OUTPUT IMAG: -7.562500, MAGNITUDE: 78.007813
+ 322. OUTPUT REAL: 3.437500, OUTPUT IMAG: -7.750000, MAGNITUDE: 71.878906
+ 323. OUTPUT REAL: 9.062500, OUTPUT IMAG: -15.437500, MAGNITUDE: 320.445313
+ 324. OUTPUT REAL: 3.812500, OUTPUT IMAG: -6.687500, MAGNITUDE: 59.257813
+ 325. OUTPUT REAL: 8.562500, OUTPUT IMAG: -14.750000, MAGNITUDE: 290.878906
+ 326. OUTPUT REAL: 7.750000, OUTPUT IMAG: -15.812500, MAGNITUDE: 310.097656
+ 327. OUTPUT REAL: 14.812500, OUTPUT IMAG: -31.250000, MAGNITUDE: 1195.972656
+ 328. OUTPUT REAL: 4.937500, OUTPUT IMAG: -8.000000, MAGNITUDE: 88.378906
+ 329. OUTPUT REAL: 8.750000, OUTPUT IMAG: -13.500000, MAGNITUDE: 258.812500
+ 330. OUTPUT REAL: 7.625000, OUTPUT IMAG: -14.500000, MAGNITUDE: 268.390625
+ 331. OUTPUT REAL: 17.312500, OUTPUT IMAG: -30.625000, MAGNITUDE: 1237.613281
+ 332. OUTPUT REAL: 9.812500, OUTPUT IMAG: -14.687500, MAGNITUDE: 312.007813
+ 333. OUTPUT REAL: 16.125000, OUTPUT IMAG: -31.187500, MAGNITUDE: 1232.675781
+ 334. OUTPUT REAL: 14.687500, OUTPUT IMAG: -26.750000, MAGNITUDE: 931.285156
+ 335. OUTPUT REAL: 36.312500, OUTPUT IMAG: -58.187500, MAGNITUDE: 4704.382813
+ 336. OUTPUT REAL: 4.437500, OUTPUT IMAG: -7.000000, MAGNITUDE: 68.691406
+ 337. OUTPUT REAL: 9.687500, OUTPUT IMAG: -14.250000, MAGNITUDE: 296.910156
+ 338. OUTPUT REAL: 9.062500, OUTPUT IMAG: -14.187500, MAGNITUDE: 283.414063
+ 339. OUTPUT REAL: 19.375000, OUTPUT IMAG: -27.312500, MAGNITUDE: 1121.363281
+ 340. OUTPUT REAL: 9.812500, OUTPUT IMAG: -14.500000, MAGNITUDE: 306.535156
+ 341. OUTPUT REAL: 15.687500, OUTPUT IMAG: -27.937500, MAGNITUDE: 1026.601563
+ 342. OUTPUT REAL: 19.375000, OUTPUT IMAG: -29.562500, MAGNITUDE: 1249.332031
+ 343. OUTPUT REAL: 38.312500, OUTPUT IMAG: -49.312500, MAGNITUDE: 3899.570313
+ 344. OUTPUT REAL: 10.562500, OUTPUT IMAG: -14.375000, MAGNITUDE: 318.207031
+ 345. OUTPUT REAL: 20.250000, OUTPUT IMAG: -28.562500, MAGNITUDE: 1225.878906
+ 346. OUTPUT REAL: 17.937500, OUTPUT IMAG: -26.625000, MAGNITUDE: 1030.644531
+ 347. OUTPUT REAL: 39.687500, OUTPUT IMAG: -52.312500, MAGNITUDE: 4311.695313
+ 348. OUTPUT REAL: 18.812500, OUTPUT IMAG: -28.062500, MAGNITUDE: 1141.414063
+ 349. OUTPUT REAL: 42.812500, OUTPUT IMAG: -54.562500, MAGNITUDE: 4809.976563
+ 350. OUTPUT REAL: 43.750000, OUTPUT IMAG: -53.750000, MAGNITUDE: 4803.125000
+ 351. OUTPUT REAL: 85.375000, OUTPUT IMAG: -108.125000, MAGNITUDE: 18979.906250
+ 352. OUTPUT REAL: 5.062500, OUTPUT IMAG: -7.000000, MAGNITUDE: 74.628906
+ 353. OUTPUT REAL: 10.375000, OUTPUT IMAG: -13.875000, MAGNITUDE: 300.156250
+ 354. OUTPUT REAL: 11.250000, OUTPUT IMAG: -12.500000, MAGNITUDE: 282.812500
+ 355. OUTPUT REAL: 17.875000, OUTPUT IMAG: -27.625000, MAGNITUDE: 1082.656250
+ 356. OUTPUT REAL: 11.062500, OUTPUT IMAG: -13.312500, MAGNITUDE: 299.601563
+ 357. OUTPUT REAL: 23.875000, OUTPUT IMAG: -26.750000, MAGNITUDE: 1285.578125
+ 358. OUTPUT REAL: 21.437500, OUTPUT IMAG: -25.437500, MAGNITUDE: 1106.632813
+ 359. OUTPUT REAL: 47.812500, OUTPUT IMAG: -50.125000, MAGNITUDE: 4798.550781
+ 360. OUTPUT REAL: 10.812500, OUTPUT IMAG: -12.937500, MAGNITUDE: 284.289063
+ 361. OUTPUT REAL: 20.062500, OUTPUT IMAG: -23.312500, MAGNITUDE: 945.976563
+ 362. OUTPUT REAL: 25.062500, OUTPUT IMAG: -25.187500, MAGNITUDE: 1262.539063
+ 363. OUTPUT REAL: 43.875000, OUTPUT IMAG: -48.687500, MAGNITUDE: 4295.488281
+ 364. OUTPUT REAL: 22.062500, OUTPUT IMAG: -25.437500, MAGNITUDE: 1133.820313
+ 365. OUTPUT REAL: 41.125000, OUTPUT IMAG: -45.625000, MAGNITUDE: 3772.906250
+ 366. OUTPUT REAL: 46.625000, OUTPUT IMAG: -51.187500, MAGNITUDE: 4794.050781
+ 367. OUTPUT REAL: 84.812500, OUTPUT IMAG: -97.625000, MAGNITUDE: 16723.800781
+ 368. OUTPUT REAL: 11.250000, OUTPUT IMAG: -13.375000, MAGNITUDE: 305.453125
+ 369. OUTPUT REAL: 23.750000, OUTPUT IMAG: -22.500000, MAGNITUDE: 1070.312500
+ 370. OUTPUT REAL: 19.125000, OUTPUT IMAG: -25.312500, MAGNITUDE: 1006.488281
+ 371. OUTPUT REAL: 48.625000, OUTPUT IMAG: -47.500000, MAGNITUDE: 4620.640625
+ 372. OUTPUT REAL: 25.687500, OUTPUT IMAG: -25.250000, MAGNITUDE: 1297.410156
+ 373. OUTPUT REAL: 44.375000, OUTPUT IMAG: -48.750000, MAGNITUDE: 4345.703125
+ 374. OUTPUT REAL: 44.625000, OUTPUT IMAG: -46.250000, MAGNITUDE: 4130.453125
+ 375. OUTPUT REAL: 87.062500, OUTPUT IMAG: -91.750000, MAGNITUDE: 15997.941406
+ 376. OUTPUT REAL: 23.187500, OUTPUT IMAG: -23.875000, MAGNITUDE: 1107.675781
+ 377. OUTPUT REAL: 46.625000, OUTPUT IMAG: -43.937500, MAGNITUDE: 4104.394531
+ 378. OUTPUT REAL: 42.812500, OUTPUT IMAG: -36.687500, MAGNITUDE: 3178.882813
+ 379. OUTPUT REAL: 102.125000, OUTPUT IMAG: -94.062500, MAGNITUDE: 19277.269531
+ 380. OUTPUT REAL: 45.562500, OUTPUT IMAG: -51.750000, MAGNITUDE: 4754.003906
+ 381. OUTPUT REAL: 97.500000, OUTPUT IMAG: -99.437500, MAGNITUDE: 19394.066406
+ 382. OUTPUT REAL: 97.562500, OUTPUT IMAG: -96.250000, MAGNITUDE: 18782.503906
+ 383. OUTPUT REAL: 200.187500, OUTPUT IMAG: -189.437500, MAGNITUDE: 75961.601563
+ 384. OUTPUT REAL: 2.937500, OUTPUT IMAG: -2.625000, MAGNITUDE: 15.519531
+ 385. OUTPUT REAL: 6.000000, OUTPUT IMAG: -4.687500, MAGNITUDE: 57.972656
+ 386. OUTPUT REAL: 6.750000, OUTPUT IMAG: -5.562500, MAGNITUDE: 76.503906
+ 387. OUTPUT REAL: 14.437500, OUTPUT IMAG: -9.937500, MAGNITUDE: 307.195313
+ 388. OUTPUT REAL: 6.250000, OUTPUT IMAG: -5.687500, MAGNITUDE: 71.410156
+ 389. OUTPUT REAL: 11.750000, OUTPUT IMAG: -10.812500, MAGNITUDE: 254.972656
+ 390. OUTPUT REAL: 11.875000, OUTPUT IMAG: -11.250000, MAGNITUDE: 267.578125
+ 391. OUTPUT REAL: 25.062500, OUTPUT IMAG: -20.500000, MAGNITUDE: 1048.378906
+ 392. OUTPUT REAL: 6.687500, OUTPUT IMAG: -5.375000, MAGNITUDE: 73.613281
+ 393. OUTPUT REAL: 14.437500, OUTPUT IMAG: -11.625000, MAGNITUDE: 343.582031
+ 394. OUTPUT REAL: 11.562500, OUTPUT IMAG: -11.125000, MAGNITUDE: 257.457031
+ 395. OUTPUT REAL: 29.500000, OUTPUT IMAG: -21.875000, MAGNITUDE: 1348.765625
+ 396. OUTPUT REAL: 12.312500, OUTPUT IMAG: -9.312500, MAGNITUDE: 238.320313
+ 397. OUTPUT REAL: 24.500000, OUTPUT IMAG: -22.062500, MAGNITUDE: 1087.003906
+ 398. OUTPUT REAL: 24.437500, OUTPUT IMAG: -21.625000, MAGNITUDE: 1064.832031
+ 399. OUTPUT REAL: 55.187500, OUTPUT IMAG: -45.625000, MAGNITUDE: 5127.300781
+ 400. OUTPUT REAL: 5.625000, OUTPUT IMAG: -5.125000, MAGNITUDE: 57.906250
+ 401. OUTPUT REAL: 12.750000, OUTPUT IMAG: -10.875000, MAGNITUDE: 280.828125
+ 402. OUTPUT REAL: 15.062500, OUTPUT IMAG: -9.812500, MAGNITUDE: 323.164063
+ 403. OUTPUT REAL: 28.562500, OUTPUT IMAG: -18.375000, MAGNITUDE: 1153.457031
+ 404. OUTPUT REAL: 12.062500, OUTPUT IMAG: -9.750000, MAGNITUDE: 240.566406
+ 405. OUTPUT REAL: 23.437500, OUTPUT IMAG: -21.125000, MAGNITUDE: 995.582031
+ 406. OUTPUT REAL: 28.187500, OUTPUT IMAG: -21.187500, MAGNITUDE: 1243.445313
+ 407. OUTPUT REAL: 57.875000, OUTPUT IMAG: -36.375000, MAGNITUDE: 4672.656250
+ 408. OUTPUT REAL: 11.875000, OUTPUT IMAG: -9.937500, MAGNITUDE: 239.769531
+ 409. OUTPUT REAL: 28.562500, OUTPUT IMAG: -19.062500, MAGNITUDE: 1179.195313
+ 410. OUTPUT REAL: 30.187500, OUTPUT IMAG: -19.875000, MAGNITUDE: 1306.300781
+ 411. OUTPUT REAL: 52.500000, OUTPUT IMAG: -40.375000, MAGNITUDE: 4386.390625
+ 412. OUTPUT REAL: 28.250000, OUTPUT IMAG: -21.125000, MAGNITUDE: 1244.328125
+ 413. OUTPUT REAL: 57.687500, OUTPUT IMAG: -37.312500, MAGNITUDE: 4720.070313
+ 414. OUTPUT REAL: 57.000000, OUTPUT IMAG: -31.687500, MAGNITUDE: 4253.097656
+ 415. OUTPUT REAL: 116.062500, OUTPUT IMAG: -62.375000, MAGNITUDE: 17361.144531
+ 416. OUTPUT REAL: 6.687500, OUTPUT IMAG: -4.250000, MAGNITUDE: 62.785156
+ 417. OUTPUT REAL: 15.625000, OUTPUT IMAG: -7.375000, MAGNITUDE: 298.531250
+ 418. OUTPUT REAL: 14.000000, OUTPUT IMAG: -9.187500, MAGNITUDE: 280.410156
+ 419. OUTPUT REAL: 28.687500, OUTPUT IMAG: -15.062500, MAGNITUDE: 1049.851563
+ 420. OUTPUT REAL: 14.437500, OUTPUT IMAG: -8.875000, MAGNITUDE: 287.207031
+ 421. OUTPUT REAL: 27.812500, OUTPUT IMAG: -15.375000, MAGNITUDE: 1009.925781
+ 422. OUTPUT REAL: 29.500000, OUTPUT IMAG: -16.000000, MAGNITUDE: 1126.250000
+ 423. OUTPUT REAL: 57.125000, OUTPUT IMAG: -35.812500, MAGNITUDE: 4545.800781
+ 424. OUTPUT REAL: 14.000000, OUTPUT IMAG: -7.500000, MAGNITUDE: 252.250000
+ 425. OUTPUT REAL: 27.750000, OUTPUT IMAG: -14.437500, MAGNITUDE: 978.503906
+ 426. OUTPUT REAL: 29.687500, OUTPUT IMAG: -14.062500, MAGNITUDE: 1079.101563
+ 427. OUTPUT REAL: 57.000000, OUTPUT IMAG: -34.562500, MAGNITUDE: 4443.566406
+ 428. OUTPUT REAL: 31.250000, OUTPUT IMAG: -14.375000, MAGNITUDE: 1183.203125
+ 429. OUTPUT REAL: 63.875000, OUTPUT IMAG: -34.812500, MAGNITUDE: 5291.925781
+ 430. OUTPUT REAL: 52.250000, OUTPUT IMAG: -31.937500, MAGNITUDE: 3750.066406
+ 431. OUTPUT REAL: 120.187500, OUTPUT IMAG: -55.000000, MAGNITUDE: 17470.035156
+ 432. OUTPUT REAL: 15.625000, OUTPUT IMAG: -8.375000, MAGNITUDE: 314.281250
+ 433. OUTPUT REAL: 30.500000, OUTPUT IMAG: -12.375000, MAGNITUDE: 1083.390625
+ 434. OUTPUT REAL: 33.125000, OUTPUT IMAG: -12.625000, MAGNITUDE: 1256.656250
+ 435. OUTPUT REAL: -0.062500, OUTPUT IMAG: -35.500000, MAGNITUDE: 1260.253906
+ 436. OUTPUT REAL: 33.062500, OUTPUT IMAG: -13.562500, MAGNITUDE: 1277.070313
+ 437. OUTPUT REAL: 59.750000, OUTPUT IMAG: -29.687500, MAGNITUDE: 4451.410156
+ 438. OUTPUT REAL: 59.250000, OUTPUT IMAG: -26.000000, MAGNITUDE: 4186.562500
+ 439. OUTPUT REAL: 115.375000, OUTPUT IMAG: -0.062500, MAGNITUDE: 13311.394531
+ 440. OUTPUT REAL: 27.812500, OUTPUT IMAG: -12.312500, MAGNITUDE: 925.132813
+ 441. OUTPUT REAL: 59.250000, OUTPUT IMAG: -26.437500, MAGNITUDE: 4209.503906
+ 442. OUTPUT REAL: 65.125000, OUTPUT IMAG: -29.875000, MAGNITUDE: 5133.781250
+ 443. OUTPUT REAL: 124.937500, OUTPUT IMAG: -41.000000, MAGNITUDE: 17290.378906
+ 444. OUTPUT REAL: 66.062500, OUTPUT IMAG: -18.500000, MAGNITUDE: 4706.503906
+ 445. OUTPUT REAL: 119.750000, OUTPUT IMAG: -46.437500, MAGNITUDE: 16496.503906
+ 446. OUTPUT REAL: 122.875000, OUTPUT IMAG: -41.437500, MAGNITUDE: 16815.332031
+ 447. OUTPUT REAL: 244.375000, OUTPUT IMAG: -90.000000, MAGNITUDE: 67819.140625
+ 448. OUTPUT REAL: 8.437500, OUTPUT IMAG: -3.500000, MAGNITUDE: 83.441406
+ 449. OUTPUT REAL: 16.250000, OUTPUT IMAG: -5.937500, MAGNITUDE: 299.316406
+ 450. OUTPUT REAL: 16.625000, OUTPUT IMAG: -5.062500, MAGNITUDE: 302.019531
+ 451. OUTPUT REAL: 28.500000, OUTPUT IMAG: -10.312500, MAGNITUDE: 918.597656
+ 452. OUTPUT REAL: 15.125000, OUTPUT IMAG: -6.750000, MAGNITUDE: 274.328125
+ 453. OUTPUT REAL: 32.750000, OUTPUT IMAG: -10.687500, MAGNITUDE: 1186.785156
+ 454. OUTPUT REAL: 31.625000, OUTPUT IMAG: -12.250000, MAGNITUDE: 1150.203125
+ 455. OUTPUT REAL: 66.062500, OUTPUT IMAG: -21.500000, MAGNITUDE: 4826.503906
+ 456. OUTPUT REAL: 15.812500, OUTPUT IMAG: -3.562500, MAGNITUDE: 262.726563
+ 457. OUTPUT REAL: 34.125000, OUTPUT IMAG: -8.937500, MAGNITUDE: 1244.394531
+ 458. OUTPUT REAL: 33.125000, OUTPUT IMAG: -9.625000, MAGNITUDE: 1189.906250
+ 459. OUTPUT REAL: 60.562500, OUTPUT IMAG: -21.062500, MAGNITUDE: 4111.445313
+ 460. OUTPUT REAL: 33.875000, OUTPUT IMAG: -9.000000, MAGNITUDE: 1228.515625
+ 461. OUTPUT REAL: 58.875000, OUTPUT IMAG: -22.937500, MAGNITUDE: 3992.394531
+ 462. OUTPUT REAL: 64.250000, OUTPUT IMAG: -13.000000, MAGNITUDE: 4297.062500
+ 463. OUTPUT REAL: 130.250000, OUTPUT IMAG: -34.812500, MAGNITUDE: 18176.972656
+ 464. OUTPUT REAL: 16.250000, OUTPUT IMAG: -6.125000, MAGNITUDE: 301.578125
+ 465. OUTPUT REAL: 30.562500, OUTPUT IMAG: -8.187500, MAGNITUDE: 1001.101563
+ 466. OUTPUT REAL: 30.500000, OUTPUT IMAG: -8.437500, MAGNITUDE: 1001.441406
+ 467. OUTPUT REAL: 61.750000, OUTPUT IMAG: -13.375000, MAGNITUDE: 3991.953125
+ 468. OUTPUT REAL: 27.000000, OUTPUT IMAG: -9.375000, MAGNITUDE: 816.890625
+ 469. OUTPUT REAL: 60.562500, OUTPUT IMAG: -24.187500, MAGNITUDE: 4252.851563
+ 470. OUTPUT REAL: 64.062500, OUTPUT IMAG: -14.375000, MAGNITUDE: 4310.644531
+ 471. OUTPUT REAL: 139.500000, OUTPUT IMAG: -32.500000, MAGNITUDE: 20516.500000
+ 472. OUTPUT REAL: 32.500000, OUTPUT IMAG: -7.500000, MAGNITUDE: 1112.500000
+ 473. OUTPUT REAL: 65.625000, OUTPUT IMAG: -17.187500, MAGNITUDE: 4602.050781
+ 474. OUTPUT REAL: 63.125000, OUTPUT IMAG: -19.437500, MAGNITUDE: 4362.582031
+ 475. OUTPUT REAL: 133.625000, OUTPUT IMAG: -32.750000, MAGNITUDE: 18928.203125
+ 476. OUTPUT REAL: 66.625000, OUTPUT IMAG: -5.375000, MAGNITUDE: 4467.781250
+ 477. OUTPUT REAL: 126.750000, OUTPUT IMAG: -27.312500, MAGNITUDE: 16811.535156
+ 478. OUTPUT REAL: 126.125000, OUTPUT IMAG: -22.875000, MAGNITUDE: 16430.781250
+ 479. OUTPUT REAL: 291.687500, OUTPUT IMAG: -80.437500, MAGNITUDE: 91551.789063
+ 480. OUTPUT REAL: 14.937500, OUTPUT IMAG: -1.500000, MAGNITUDE: 225.378906
+ 481. OUTPUT REAL: 32.250000, OUTPUT IMAG: -7.062500, MAGNITUDE: 1089.941406
+ 482. OUTPUT REAL: 34.375000, OUTPUT IMAG: -6.125000, MAGNITUDE: 1219.156250
+ 483. OUTPUT REAL: 64.187500, OUTPUT IMAG: -6.500000, MAGNITUDE: 4162.285156
+ 484. OUTPUT REAL: 37.187500, OUTPUT IMAG: -5.187500, MAGNITUDE: 1409.820313
+ 485. OUTPUT REAL: 62.375000, OUTPUT IMAG: -13.500000, MAGNITUDE: 4072.890625
+ 486. OUTPUT REAL: 67.687500, OUTPUT IMAG: -8.562500, MAGNITUDE: 4654.914063
+ 487. OUTPUT REAL: 132.000000, OUTPUT IMAG: -21.375000, MAGNITUDE: 17880.890625
+ 488. OUTPUT REAL: 33.000000, OUTPUT IMAG: -2.812500, MAGNITUDE: 1096.910156
+ 489. OUTPUT REAL: 65.000000, OUTPUT IMAG: -13.000000, MAGNITUDE: 4394.000000
+ 490. OUTPUT REAL: 66.062500, OUTPUT IMAG: -4.000000, MAGNITUDE: 4380.253906
+ 491. OUTPUT REAL: 130.000000, OUTPUT IMAG: -17.937500, MAGNITUDE: 17221.753906
+ 492. OUTPUT REAL: 64.875000, OUTPUT IMAG: -2.312500, MAGNITUDE: 4214.113281
+ 493. OUTPUT REAL: 141.687500, OUTPUT IMAG: -9.375000, MAGNITUDE: 20163.238281
+ 494. OUTPUT REAL: 118.625000, OUTPUT IMAG: -8.937500, MAGNITUDE: 14151.769531
+ 495. OUTPUT REAL: 273.312500, OUTPUT IMAG: -35.437500, MAGNITUDE: 75955.539063
+ 496. OUTPUT REAL: 33.375000, OUTPUT IMAG: -5.375000, MAGNITUDE: 1142.781250
+ 497. OUTPUT REAL: 65.812500, OUTPUT IMAG: -6.750000, MAGNITUDE: 4376.847656
+ 498. OUTPUT REAL: 67.937500, OUTPUT IMAG: -6.812500, MAGNITUDE: 4661.914063
+ 499. OUTPUT REAL: 134.187500, OUTPUT IMAG: -11.687500, MAGNITUDE: 18142.882813
+ 500. OUTPUT REAL: 63.187500, OUTPUT IMAG: -6.375000, MAGNITUDE: 4033.300781
+ 501. OUTPUT REAL: 132.687500, OUTPUT IMAG: 6.687500, MAGNITUDE: 17650.695313
+ 502. OUTPUT REAL: 127.125000, OUTPUT IMAG: -9.125000, MAGNITUDE: 16244.031250
+ 503. OUTPUT REAL: 272.125000, OUTPUT IMAG: -34.562500, MAGNITUDE: 75246.582031
+ 504. OUTPUT REAL: 65.625000, OUTPUT IMAG: -4.125000, MAGNITUDE: 4323.656250
+ 505. OUTPUT REAL: 142.750000, OUTPUT IMAG: -0.500000, MAGNITUDE: 20377.812500
+ 506. OUTPUT REAL: 124.937500, OUTPUT IMAG: 10.250000, MAGNITUDE: 15714.441406
+ 507. OUTPUT REAL: 292.875000, OUTPUT IMAG: -9.375000, MAGNITUDE: 85863.656250
+ 508. OUTPUT REAL: 138.250000, OUTPUT IMAG: 10.937500, MAGNITUDE: 19232.691406
+ 509. OUTPUT REAL: 262.750000, OUTPUT IMAG: 3.500000, MAGNITUDE: 69049.812500
+ 510. OUTPUT REAL: 293.375000, OUTPUT IMAG: -23.125000, MAGNITUDE: 86603.656250

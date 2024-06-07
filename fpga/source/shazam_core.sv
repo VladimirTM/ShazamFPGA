@@ -1,12 +1,15 @@
-module shazam_core (
+module shazam_core #(parameter MAXIMAS_COUNT = 11) (
     input clk,
     input [11:0] adc_data,
     input adc_data_valid,
     input start,
     input reset,
-    output [24:0] maximas [15:0],
+    output [24:0] maximas [MAXIMAS_COUNT-1:0],
     output wire maximas_found_active
 );
+
+   wire [11:0] fft_input;
+   assign fft_input = adc_data << 2;
 
    wire write_active_FFT_0, write_active_FFT_1, write_active_FFT_2;
    adc_measurements_to_FFT SELECT_AVAILABLE_FFT (
@@ -19,9 +22,6 @@ module shazam_core (
    );
 
    wire FFT_0_all_done, FFT_1_all_done, FFT_2_all_done;
-   wire [11:0] fft_input_from_adc;
-   
-   assign fft_input_from_adc = adc_data;
 
    reg [24:0] magnitude;
    reg magnitude_ready;
@@ -88,7 +88,7 @@ module shazam_core (
         .reset(reset_FFT_0),
         .done_all_processing(FFT_0_all_done),
         .input_stream_active_i(write_active_FFT_0),
-        .input_real_i({fft_input_from_adc, 1'b0, 1'b0, 1'b0, 1'b0}),
+        .input_real_i({fft_input, 1'b0, 1'b0, 1'b0, 1'b0}),
         .input_imaginary_i(0),
         .index(index),
         .magnitude(magnitude_FFT_0),
@@ -107,7 +107,7 @@ module shazam_core (
         .reset(reset_FFT_1),
         .done_all_processing(FFT_1_all_done),
         .input_stream_active_i(write_active_FFT_1),
-        .input_real_i({fft_input_from_adc, 1'b0, 1'b0, 1'b0, 1'b0}),
+        .input_real_i({fft_input, 1'b0, 1'b0, 1'b0, 1'b0}),
         .input_imaginary_i(0),
         .index(index),
         .magnitude(magnitude_FFT_1),
@@ -127,14 +127,14 @@ module shazam_core (
         .reset(reset_FFT_2),
         .done_all_processing(FFT_2_all_done),
         .input_stream_active_i(write_active_FFT_2),
-        .input_real_i({fft_input_from_adc, 1'b0, 1'b0, 1'b0, 1'b0}),
+        .input_real_i({fft_input, 1'b0, 1'b0, 1'b0, 1'b0}),
         .input_imaginary_i(0),
         .index(index),
         .magnitude(magnitude_FFT_2),
         .magnitude_ready(magnitude_FFT_2_ready)
    );
 
-   find_maximas FIND_MAXIM_MAGNITUDE (
+   find_maximas #(.MAXIMAS_COUNT(MAXIMAS_COUNT)) FIND_MAXIM_MAGNITUDE (
       .clk(clk),
       .reset(reset),
       .load(magnitude_ready),

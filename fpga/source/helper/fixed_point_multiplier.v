@@ -23,6 +23,9 @@ module fixed_point_multiplier # (
  reg result_is_negative = 0;
  reg last_digit;
  
+ wire [31:0] rounding;
+ assign rounding = {full_product[EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT - 1], {(EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT - 2){1'b0}}};
+ 
  always @(posedge clk) begin
     if(reset) begin
         product <= 0;
@@ -44,15 +47,15 @@ module fixed_point_multiplier # (
             else begin  
                 if(result_is_negative) begin
                     // has overflow
-                    if((&full_product[31:((EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT) + 15)]) == 0) product <= {1'b1, {15{1'b0}}};
+                    if((&full_product[31:((EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT) + 15 + 1)]) == 0) product <= {1'b1, {15{1'b0}}};
                     // doesn't have overflow
-                    else product <= (full_product >> (EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT)) + full_product[EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT - 1];
+                    else product <= ((full_product + rounding) >> (EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT));
                 end 
                 else begin 
                     // has overflow
-                    if(full_product[31:((EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT) + 15)] != 0) product <= {1'b0, {15{1'b1}}};
-                    else if (full_product[((EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT) + 15)] == 1) product <= ~(full_product[((EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT) + 15) : (EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT)] + full_product[EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT - 1]) + 1'b1;
-                    else product <= (full_product >> (EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT)) + full_product[EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT - 1];
+                    if(full_product[31:((EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT) + 15 + 1)] != 0) product <= {1'b0, {15{1'b1}}};
+                    else if (full_product[((EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT) + 15)] == 1) product <= ~((full_product + rounding) >> (EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT)) + 1'b1;
+                    else product <= (full_product + rounding >> (EXP_WIDTH_A + EXP_WIDTH_B - EXP_WIDTH_PRODUCT));
                 end 
             end 
         end

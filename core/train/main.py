@@ -59,13 +59,12 @@ async def read_frequencies (song_id):
         global data_from_FPGA, i, j, started, constellation_map
         while (data_from_FPGA != None or not started):
             data_from_FPGA = read_data()
-            print("FREQUENCY: ", data_from_FPGA)
             if data_from_FPGA: 
                 started = 1;
+                print("FREQUENCY: ", data_from_FPGA)
                 constellation_map.append([time.perf_counter() * 10_000, data_from_FPGA])
                 if(j == 2 * F_RANG):
                     await upload_to_database(song_id)
-                    print("Progress: Uploaded Successfully!")
                     constellation_map = []
                     j = 0
                 else:

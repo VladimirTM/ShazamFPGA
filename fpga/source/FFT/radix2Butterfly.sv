@@ -1,13 +1,18 @@
-
+// Purpose:	This routine caculates a butterfly for a decimation
+//	in frequency version of an FFT.  Specifically, given
+//	complex Left and Right values together with a Twiddle (C), the output
+//	of this routine is given by:
+//		L' = L + R
+//		R' = (L - R)*C
 module radix2Butterfly
   #(
     parameter FFT_DW = 16,
     parameter FFT_N = 10,
-    parameter PL_DEPTH = 3
-    )
+    parameter FFT_STAGE = 0
+   )
   (
    input wire                     clk,
-   input wire                     rst,
+   input wire                     reset,
    
    input wire                     iact,
    input wire [1:0]               ictrl,
@@ -15,232 +20,200 @@ module radix2Butterfly
    output reg                     oact,
    output reg [1:0]               octrl,
 
-   input wire [FFT_N-1-1:0]       iMemAddr,
-   output reg [FFT_N-1-1:0]       oMemAddr,
+   input wire [FFT_N-1-1:0]       input_memory_address,
+   output reg [FFT_N-1-1:0]       output_memory_address,
    
    // input
-   input wire signed [FFT_DW-1:0] opa_real, // [-1,1)
-   input wire signed [FFT_DW-1:0] opa_imag, // [-1,1)
-   input wire signed [FFT_DW-1:0] opb_real, // [-1,1)
-   input wire signed [FFT_DW-1:0] opb_imag, // [-1,1)
+   input wire signed [FFT_DW-1:0] A_real,
+   input wire signed [FFT_DW-1:0] A_imag,
+   input wire signed [FFT_DW-1:0] B_real,
+   input wire signed [FFT_DW-1:0] B_imag,
+  
    // twiddle factor
-   input wire signed [FFT_DW:0]   twiddle_real, // [-1,1]
-   input wire signed [FFT_DW:0]   twiddle_imag, // [-1,1]
+   input wire signed [FFT_DW-1:0]   twiddle_real,
+   input wire signed [FFT_DW-1:0]   twiddle_imag,
+
    // output
-   output reg signed [FFT_DW-1:0] dst_opa_real, // [-1,1)
-   output reg signed [FFT_DW-1:0] dst_opa_imag, // [-1,1)
-   output reg signed [FFT_DW-1:0] dst_opb_real, // [-1,1)
-   output reg signed [FFT_DW-1:0] dst_opb_imag  // [-1,1)
+   output reg signed [FFT_DW-1:0] out_A_real,
+   output reg signed [FFT_DW-1:0] out_A_imag,
+   output reg signed [FFT_DW-1:0] out_B_real,
+   output reg signed [FFT_DW-1:0] out_B_imag 
    );
 
-`ifdef DEBUG_PRINT
-   always @ ( negedge clk ) begin
-      if ( PL_DEPTH == 0 ) begin
-	 if ( iact ) begin
-	    $display(",%04x,%04x,%04x,%04x,%04x,%04x,%04x,%04x,%05x,%05x",
-		     opa_real,
-		     opa_imag,
-		     opb_real,
-		     opb_imag,
-		     dst_opa_real,
-		     dst_opa_imag,
-		     dst_opb_real,
-		     dst_opb_imag,
-		     twiddle_real,
-		     twiddle_imag
-		     );
-	 end // if ( iact )
-      end // if ( PL_DEPTH == 0 )
-   end // always @ ( negedge clk )
-`endif
-   
-   function [FFT_DW-1:0] AddAvg
-     (
-      input signed [FFT_DW-1:0] opa_,
-      input signed [FFT_DW-1:0] opb_
-      );
-      reg signed [FFT_DW:0]   tmp;
-      begin
-         tmp = { opa_[FFT_DW-1], opa_[FFT_DW-1:0] } + { opb_[FFT_DW-1], opb_[FFT_DW-1:0] };
-         AddAvg = tmp[FFT_DW:1];
-      end
-   endfunction //
+   reg stage_1_half = 0, stage_1_full = 0, stage_2_half = 0, stage_2_full = 0, stage_3_half = 0;
+   reg [1:0] stage_1_half_ctrl = 0, stage_1_full_ctrl = 0, stage_2_half_ctrl = 0, stage_2_full_ctrl = 0, stage_3_half_ctrl = 0;
+   reg [FFT_N-1-1:0] memory_address_stage_1_half, memory_address_stage_1_full, memory_address_stage_2_half, memory_address_stage_2_full, memory_address_stage_3_half;
+   always @(posedge clk) begin
+      if(reset) begin
+         stage_1_half <= 0;
+         stage_1_full <= 0;
+         stage_2_half <= 0;
+         stage_2_full <= 0;
+         stage_3_half <= 0;
+         oact <= 0;
+      end 
+      else begin
+         stage_1_half <= iact;
+         stage_1_full <= stage_1_half;
+         stage_2_half <= stage_1_full;
+         stage_2_full <= stage_2_half;
+         stage_3_half <= stage_2_full;
+         oact <= stage_3_half;
 
-   function [FFT_DW-1:0] SubAvg
-     (
-      input signed [FFT_DW-1:0] opa_,
-      input signed [FFT_DW-1:0] opb_
-      );
-      reg signed [FFT_DW:0] tmp;
-      begin
-         tmp = { opa_[FFT_DW-1], opa_[FFT_DW-1:0] } - { opb_[FFT_DW-1], opb_[FFT_DW-1:0] };
-         SubAvg = tmp[FFT_DW:1];
-      end
-   endfunction
+         stage_1_half_ctrl <= ictrl;
+         stage_1_full_ctrl <= stage_1_half_ctrl;
+         stage_2_half_ctrl <= stage_1_full_ctrl;
+         stage_2_full_ctrl <= stage_2_half_ctrl;
+         stage_3_half_ctrl <= stage_2_full_ctrl;
+         octrl <= stage_3_half_ctrl;
 
-   function [FFT_DW-1:0] LimitOperand
-     (
-      input [FFT_DW+3:0] value_
-      );
-      begin
-         if ( (value_[FFT_DW] == 1'b0) && (value_[FFT_DW-1] == 1'b1) ) begin
-            LimitOperand = {1'b0,{(FFT_DW-1){1'b1}}};
-      end else if ( (value_[FFT_DW] == 1'b1) && (value_[FFT_DW-1] == 1'b0) ) begin
-	 LimitOperand = {1'b1,{(FFT_DW-1){1'b0}}};
-            end else begin
-               LimitOperand = value_[FFT_DW-1:0];
-            end
-      end
-   endfunction
-   
-   // Stage 1
+         memory_address_stage_1_half <= input_memory_address;
+         memory_address_stage_1_full <= memory_address_stage_1_half;
+         memory_address_stage_2_half <= memory_address_stage_1_full;
+         memory_address_stage_2_full <= memory_address_stage_2_half;
+         memory_address_stage_3_half <= memory_address_stage_2_full;
+         output_memory_address <= memory_address_stage_3_half;
+      end 
+   end 
 
-   wire signed [FFT_DW-1:0] xbuf_real_stage1 = SubAvg ( opa_real, opb_real );
-   wire signed [FFT_DW-1:0] xbuf_imag_stage1 = SubAvg ( opa_imag, opb_imag );
-   wire signed [FFT_DW:0]   xbuf_real_p_imag_stage1 = xbuf_real_stage1 + xbuf_imag_stage1;
-   wire signed [FFT_DW+1:0]   twiddle_real_p_imag_stage1 = twiddle_real + twiddle_imag;
-   wire signed [FFT_DW+1:0]   twiddle_real_m_imag_stage1 = twiddle_real - twiddle_imag;
+   wire signed [FFT_DW-1:0] sum_real, sum_imag, diff_real, diff_imag;
+   // stage 1 is computing the sum (A + B) and difference (A - B)
+   reg signed [15:0] twiddle_real_reg_1, twiddle_imag_reg_1;
+   reg signed [15:0] twiddle_real_reg_2, twiddle_imag_reg_2;
+   always @ (posedge clk) begin
+      // stage 1 and half
+      twiddle_real_reg_1 <= twiddle_real;
+      twiddle_imag_reg_1 <= twiddle_imag;
 
-   reg signed [FFT_DW-1:0]   xbuf_real_stage2;
-   reg signed [FFT_DW-1:0]   xbuf_imag_stage2;
-   reg signed [FFT_DW:0]     xbuf_real_p_imag_stage2;
-   reg signed [FFT_DW+1:0]   twiddle_real_p_imag_stage2;
-   reg signed [FFT_DW+1:0]   twiddle_real_m_imag_stage2;
-   reg signed [FFT_DW:0]     twiddle_real_stage2;
-
-   generate if ( PL_DEPTH >= 1 ) begin
-
-      always @ ( posedge clk ) begin
-         xbuf_real_stage2 <= xbuf_real_stage1;
-         xbuf_imag_stage2 <= xbuf_imag_stage1;
-         xbuf_real_p_imag_stage2 <= xbuf_real_p_imag_stage1;
-         twiddle_real_p_imag_stage2 <= twiddle_real_p_imag_stage1;
-         twiddle_real_m_imag_stage2 <= twiddle_real_m_imag_stage1;
-         twiddle_real_stage2 <= twiddle_real;
-      end
-      
-   end else begin
-
-      always_comb begin
-         xbuf_real_stage2 = xbuf_real_stage1;
-         xbuf_imag_stage2 = xbuf_imag_stage1;
-         xbuf_real_p_imag_stage2 = xbuf_real_p_imag_stage1;
-         twiddle_real_p_imag_stage2 = twiddle_real_p_imag_stage1;
-         twiddle_real_m_imag_stage2 = twiddle_real_m_imag_stage1;
-         twiddle_real_stage2 = twiddle_real;
-      end
-   
-   end endgenerate // else: !if( PL_DEPTH >= 1 )
-   
-   // Stage 2
-
-   wire signed [(FFT_DW+1+FFT_DW+1)-1:0] tmp_a = ( xbuf_real_p_imag_stage2 ) * twiddle_real_stage2;
-   wire signed [(FFT_DW+2+FFT_DW)-1:0] tmp_r =   ( twiddle_real_p_imag_stage2 ) * xbuf_imag_stage2;
-   wire signed [(FFT_DW+2+FFT_DW)-1:0] tmp_i =   ( twiddle_real_m_imag_stage2 ) * xbuf_real_stage2;
-
-   reg signed [(FFT_DW+1+FFT_DW+1)-1:0] tmp_a_stage3;
-   reg signed [(FFT_DW+2+FFT_DW)-1:0]   tmp_r_stage3;
-   reg signed [(FFT_DW+2+FFT_DW)-1:0]   tmp_i_stage3;
-
-   generate if ( PL_DEPTH >= 2 ) begin
-      
-      always @ ( posedge clk ) begin
-         tmp_a_stage3 <= tmp_a;
-         tmp_r_stage3 <= tmp_r;
-         tmp_i_stage3 <= tmp_i;
-      end
-      
-   end else begin
-
-      always_comb begin
-         tmp_a_stage3 = tmp_a;
-         tmp_r_stage3 = tmp_r;
-         tmp_i_stage3 = tmp_i;
-      end
-      
-   end endgenerate
-   
-   // Stage 3
-   
-   wire signed [FFT_DW*2+2:0]   yr = ({tmp_a_stage3[FFT_DW*2+1],tmp_a_stage3} - {tmp_r_stage3[FFT_DW*2+1],tmp_r_stage3})
-    + {2'b01,{FFT_DW-2{1'b0}}};
-   wire signed [FFT_DW*2+2:0] 	yi = ({tmp_a_stage3[FFT_DW*2+1],tmp_a_stage3} - {tmp_i_stage3[FFT_DW*2+1],tmp_i_stage3})
-    + {2'b01,{FFT_DW-2{1'b0}}};
-
-   wire signed [FFT_DW+3:0] yr_truncated = yr[FFT_DW*2+2:FFT_DW-1];
-   wire signed [FFT_DW+3:0] yi_truncated = yi[FFT_DW*2+2:FFT_DW-1];
-
-   always_comb begin
-      dst_opb_real = LimitOperand( yr_truncated );
-      dst_opb_imag = LimitOperand( yi_truncated );
+      // stage 1 full
+      twiddle_real_reg_2 <= twiddle_real_reg_1;
+      twiddle_imag_reg_2 <= twiddle_imag_reg_1;
    end
+   fixed_point_adder SUM_REAL (
+      .clk(clk),
+      .enable(iact),
+      .reset(reset),
+      .A(A_real),
+      .B(B_real),
+      .sum(sum_real)
+   );
 
-   // OpA Pipeline
+   fixed_point_adder SUM_IMAG (
+      .clk(clk),
+      .enable(iact),
+      .reset(reset),
+      .A(A_imag),
+      .B(B_imag),
+      .sum(sum_imag)
+   );
 
-   reg signed [FFT_DW-1:0] dst_opa_real_stage2;
-   reg signed [FFT_DW-1:0] dst_opa_imag_stage2;
+   fixed_point_adder DIFF_REAL (
+      .clk(clk),
+      .enable(iact),
+      .reset(reset),
+      .A(A_real),
+      .B(~B_real + 1'b1),
+      .sum(diff_real)   
+   );
 
-   reg                     iact_stage2;
-   reg [1:0]               ictrl_stage2;
-   reg [FFT_N-1-1:0]       iMemAddr_stage2;
-   
-   generate if ( PL_DEPTH >= 1 ) begin
+   fixed_point_adder DIFF_IMAG (
+      .clk(clk),
+      .enable(iact),
+      .reset(reset),
+      .A(A_imag),
+      .B(~B_imag + 1'b1),
+      .sum(diff_imag)
+   );
 
-      always @ ( posedge clk ) begin
-         dst_opa_real_stage2 <= AddAvg( opa_real, opb_real );
-         dst_opa_imag_stage2 <= AddAvg( opa_imag, opb_imag );
-      end
+   // to compute A * B (where A and B are complex numbers) we have to do:
+   // real(A * B) = A_real * B_real - A_imag * B_imag
+   // imaginary(A * B) = A_real * B_imag + A_imag * B_real
+   // this implies the need for 2 more stages (3 if following the "documentation"):
+   // stage 2: compute "A_real * B_real", "A_imag * B_imag", "A_real * B_imag", "A_imag * B_real"
+   // stage 3: save those intermediary values in flip-flops
+   // stage 4: compute out_B_real, out_B_imag
 
-      always @ ( posedge clk ) begin
-         iact_stage2 <= rst ? 1'b0 : iact;
-         ictrl_stage2 <= ictrl;
-         iMemAddr_stage2 <= iMemAddr;
-      end
-      
-   end else begin
-   
-      always_comb begin
-         dst_opa_real_stage2 = AddAvg( opa_real, opb_real );
-         dst_opa_imag_stage2 = AddAvg( opa_imag, opb_imag ); 
-      end
+   // starting stage 2: save the sum in a reg to prevent mixing up the data
+   reg signed [FFT_DW-1:0] sum_stage_2_real, sum_stage_2_imag;
+   reg signed [FFT_DW-1:0] sum_stage_2_real_reupload, sum_stage_2_imag_reupload;
 
-      always_comb begin
-         iact_stage2 = iact;
-         ictrl_stage2 = ictrl;
-         iMemAddr_stage2 = iMemAddr;
-      end
+   always @(posedge clk) begin
+      // stage 2 and half
+      sum_stage_2_real <= sum_real;
+      sum_stage_2_imag <= sum_imag;
 
+      // stage 2 full
+      sum_stage_2_real_reupload <= sum_stage_2_real;
+      sum_stage_2_imag_reupload <= sum_stage_2_imag;
+   end 
 
-   end endgenerate // else: !if( PL_DEPTH >= 1 )
-   
-   generate if ( PL_DEPTH >= 2 ) begin
-      
-      always @ ( posedge clk ) begin
-         dst_opa_real <= dst_opa_real_stage2;
-         dst_opa_imag <= dst_opa_imag_stage2;
-      end
+   localparam EXP_WIDTH_TWIDDLE = 15;
+   localparam EXP_WIDTH_INPUT = FFT_DW - FFT_STAGE - 2;
+   // stage 2: compute "A_real * B_real", "A_imag * B_imag", "A_real * B_imag", "A_imag * B_real"
+   wire signed [FFT_DW-1:0] real_1, real_2, imag_1, imag_2;
+   fixed_point_multiplier #(.EXP_WIDTH_A(EXP_WIDTH_TWIDDLE), .EXP_WIDTH_B(EXP_WIDTH_INPUT), .EXP_WIDTH_PRODUCT(EXP_WIDTH_INPUT)) MULTIPLY_REAL_1 (
+      .clk(clk),
+      .enable(stage_1_full),
+      .A(twiddle_real_reg_2),
+      .B(diff_real),
+      .product(real_1)
+   );
 
-      always @ (posedge clk) begin
-         oact <= rst ? 1'b0 : iact_stage2;
-         octrl <= ictrl_stage2;
-         oMemAddr <= iMemAddr_stage2;
-      end      
-      
-   end else begin
+   fixed_point_multiplier #(.EXP_WIDTH_A(EXP_WIDTH_TWIDDLE), .EXP_WIDTH_B(EXP_WIDTH_INPUT), .EXP_WIDTH_PRODUCT(EXP_WIDTH_INPUT)) MULTIPLY_REAL_2 (
+      .clk(clk),
+      .enable(stage_1_full),
+      .reset(reset),
+      .A(twiddle_imag_reg_2),
+      .B(diff_imag),
+      .product(real_2)
+   );
 
-      always_comb begin
-         dst_opa_real = dst_opa_real_stage2;
-         dst_opa_imag = dst_opa_imag_stage2;
-      end
+   fixed_point_multiplier #(.EXP_WIDTH_A(EXP_WIDTH_TWIDDLE), .EXP_WIDTH_B(EXP_WIDTH_INPUT), .EXP_WIDTH_PRODUCT(EXP_WIDTH_INPUT)) MULTIPLY_IMAG_1 (
+      .clk(clk),
+      .enable(stage_1_full),
+      .reset(reset),
+      .A(twiddle_real_reg_2),
+      .B(diff_imag), 
+      .product(imag_1)
+   );
 
-      always_comb begin
-         oact = iact_stage2;
-         octrl = ictrl_stage2;
-         oMemAddr = iMemAddr_stage2;
-      end
-      
-   end endgenerate // else: !if( PL_DEPTH >= 2 )
-   
-endmodule // radix2Butterfly
+   fixed_point_multiplier #(.EXP_WIDTH_A(EXP_WIDTH_TWIDDLE), .EXP_WIDTH_B(EXP_WIDTH_INPUT), .EXP_WIDTH_PRODUCT(EXP_WIDTH_INPUT)) MULTIPLY_IMAG_2 (
+      .clk(clk),
+      .enable(stage_1_full),
+      .reset(reset),
+      .A(twiddle_imag_reg_2),
+      .B(diff_real),
+      .product(imag_2)   
+   );
 
+   reg signed [FFT_DW-1:0] sum_stage_3_real, sum_stage_3_imag;
+   always @ (posedge clk) begin
+      // stage 3 and half
+      sum_stage_3_real <= sum_stage_2_real_reupload;
+      sum_stage_3_imag <= sum_stage_2_imag_reupload;
+
+      // output (stage 3 full)
+      out_A_real <= sum_stage_3_real;
+      out_A_imag <= sum_stage_3_imag;
+   end 
+
+   fixed_point_truncation_adder OUT_B_REAL (
+      .clk(clk),
+      .enable(stage_2_full),
+      .reset(reset),
+      .A(real_1),
+      .B(~real_2 + 1'b1),
+      .sum(out_B_real)
+   );
+
+   fixed_point_truncation_adder OUT_B_IMAG (
+      .clk(clk),
+      .enable(stage_2_full),
+      .reset(reset),
+      .A(imag_1),
+      .B(imag_2),
+      .sum(out_B_imag)
+   );
+
+endmodule
 

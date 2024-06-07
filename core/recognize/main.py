@@ -17,11 +17,14 @@ output_row = aiofiles.open("output_row", mode = "w")
     
 
 async def find_song_by_hash(hash, time):
-    global database, song_scores_by_offset, output_row
+    global database, song_scores_by_offset, output_row, song_id_deltas
     cursor = await database.execute("SELECT hash, CAST(abs(? - time) as INTEGER) as delta_t, song_id FROM song_hashes WHERE hash = ?", [time, hash])
     rows = await cursor.fetchall();
     for i, (hash, delta_t, song_id) in enumerate(rows):
-        song_id_deltas[song_id].append(delta_t)  
+        if song_id not in song_id_deltas:
+            song_id_deltas[song_id] = []
+        else:
+            song_id_deltas[song_id].append(delta_t)  
     await cursor.close()
 
 constellation_map = []
@@ -65,12 +68,11 @@ async def read_frequencies ():
         while (data_from_FPGA != None or not started):
             data_from_FPGA = read_data()
             if data_from_FPGA:
-                print("FREQUENCY: ", data_from_FPGA)
+                print("FREQuENCY:", data_from_FPGA)
                 started = 1;
                 constellation_map.append([time.perf_counter() * 10_000, data_from_FPGA])
                 if(j == 2 * F_RANG):
                     await find_song()
-                    print("RECOGNIZING...")
                     constellation_map = []
                     j = 0
                 else:
@@ -83,29 +85,32 @@ async def read_frequencies ():
         print("An error occurred in read_frequencies: ", e)
 
 async def main():
-    global database
+    global database, scores, song_id_deltas
     database = await aiosqlite.connect("../train/shazam.db")
 
     await read_frequencies()
 
-    for song_id in song_id_deltas:
+    for song_id in song_id_deltas.keys():
         scores_by_song_id = {}
-        for song_id_1, delta_t in song_id_deltas:
+        for song_id_1, delta_t in song_id_deltas.items():
             if(song_id_1 == song_id):
-                if delta_t not in scores_by_song_id:
-                    scores_by_song_id[delta_t] = 0
-                scores_by_song_id[delta_t] += 1
+                for delta_t_1 in delta_t:
+                    if delta_t_1 not in scores_by_song_id:
+                        scores_by_song_id[delta_t_1] = 0
+                    scores_by_song_id[delta_t_1] += 1
         maximum = (0, 0)
         for offset, score in scores_by_song_id.items():
             if score > maximum[1]:
                 maximum = (offset, score)
         
-        scores[song_id] = max;
+        scores[song_id] = maximum;
     
-    max_scores = sorted(scores.items(), key=lambda tup: tup[1], reverse=True)
+    max_scores = sorted(scores.items(), key=lambda tup: tup[1][1], reverse=True)
+    print(max_scores)
     best_match_id = max_scores[0][0]
+    print("BEST MATCH ID:", best_match_id)
 
-    cursor = await database.execute("SELECT name FROM songs WHERE id = ?", best_match_id)
+    cursor = await database.execute("SELECT name FROM songs WHERE id = ?", [int(best_match_id)])
     name = await cursor.fetchone()
     await database.close()
     print("THE BEST MATCH IS: ", name)
