@@ -18,9 +18,6 @@ module adc_measurements_to_FFT (
     assign write_active_FFT_1 = write_active_FFT_1_reg;
     assign write_active_FFT_2 = write_active_FFT_2_reg;
     
-    // recording data at 25k samples/second, but we will only use 24,576 samples (for 24 FFTs).
-    // this leaves less than 512 samples unused in each second 
-    
     always @ (posedge clk) begin
         if(reset) begin
             sample_count <= 0;
@@ -30,7 +27,8 @@ module adc_measurements_to_FFT (
         end 
         else begin      
             if(adc_input_valid) begin
-                sample_count <= sample_count + 1;      
+                sample_count <= sample_count + 1;  
+
                 if(sample_count == 1535) begin 
                     sample_count <= 0;
                     completed_first_iteration <= 1;
@@ -45,7 +43,7 @@ module adc_measurements_to_FFT (
                         write_active_FFT_0_reg <= 1;
                     end 
                 end
-                else if(sample_count > 511 && sample_count < 1024) begin
+                else if(sample_count >= 512 && sample_count < 1024) begin
                     if(!completed_first_iteration) begin
                         write_active_FFT_0_reg <= 1;
                         write_active_FFT_1_reg <= 1;
@@ -55,7 +53,7 @@ module adc_measurements_to_FFT (
                         write_active_FFT_1_reg <= 1;
                     end 
                 end 
-                else if (sample_count > 1023 && sample_count < 1536) begin
+                else if (sample_count >= 1024 && sample_count < 1536) begin
                     if(!completed_first_iteration) begin
                         write_active_FFT_1_reg <= 1;
                         write_active_FFT_2_reg <= 1;

@@ -4,7 +4,7 @@ module ADC_show_data (
       output            [15:0]         time_between_2_ADC_reads,
       
       ///////// Clocks /////////
-      input              MAX10_CLK1_50,
+      input              clk,
 
       ///////// HEX /////////
       output   [7:0]   HEX0,
@@ -18,7 +18,7 @@ module ADC_show_data (
    
    wire clk_2MHz_wire, clk_2MHz_locked;
    clk_2MHz clk_2MHz_INSTANCE (
-	   .inclk0(MAX10_CLK1_50),
+	   .inclk0(clk),
 	   .c0(clk_2MHz_wire),
 	   .locked(clk_2MHz_locked)
    );
@@ -35,7 +35,7 @@ module ADC_show_data (
    reg [15:0] time_between_2_ADC_reads_reg = 0; // counter can go up to 2^17 - 1
    reg start_count = 0;
 
-    always @ (posedge MAX10_CLK1_50)
+    always @ (posedge clk)
     begin
         if (response_valid)
         begin
@@ -59,7 +59,7 @@ module ADC_show_data (
    ADC ADC_INSTANCE (
       .adc_pll_clock_clk(clk_2MHz_wire),
       .adc_pll_locked_export(clk_2MHz_locked),
-      .clock_clk(MAX10_CLK1_50),
+      .clock_clk(clk),
       .command_valid(1),
       .command_channel(1),
       .command_startofpacket(1),

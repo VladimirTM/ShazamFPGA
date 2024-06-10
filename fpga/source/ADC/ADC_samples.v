@@ -29,6 +29,9 @@ module ADC_samples (
             adc_data_valid_reg <= 1;
             adc_data_reg <= response_data;
         end 
+        else begin
+            adc_data_valid_reg <= 0;
+        end 
     end 
 
    ADC ADC_INSTANCE (

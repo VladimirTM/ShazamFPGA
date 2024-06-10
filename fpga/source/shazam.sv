@@ -1,5 +1,5 @@
 module shazam #(parameter MAXIMAS_COUNT = 11) (
-    input MAX10_CLK1_50,
+    input clk,
     input reset,
     input start,
     input [11:0] adc_data,
@@ -12,12 +12,12 @@ module shazam #(parameter MAXIMAS_COUNT = 11) (
     wire maximas_found_active;
 
     reg reset_reg;
-    always @(posedge MAX10_CLK1_50) begin
+    always @(posedge clk) begin
       reset_reg = reset || !start;
     end 
 
     shazam_core #(.MAXIMAS_COUNT(MAXIMAS_COUNT)) SHAZAM_ANALYZE_SOUNDS (
-        .clk(MAX10_CLK1_50),
+        .clk(clk),
         .reset(reset),
         .adc_data(adc_data),
         .adc_data_valid(adc_data_valid),
@@ -29,7 +29,7 @@ module shazam #(parameter MAXIMAS_COUNT = 11) (
    wire [8:0] significant_frequency;
    wire PISO_output_active;
    PISO #(.MAXIMAS_COUNT(MAXIMAS_COUNT)) parallel_in_serial_out (
-      .clk(MAX10_CLK1_50),
+      .clk(clk),
       .reset(reset_reg),
       .load(maximas_found_active),
       .data_in(maximas),
@@ -43,7 +43,7 @@ module shazam #(parameter MAXIMAS_COUNT = 11) (
    wire generated_sclk;
    assign sclk = generated_sclk;
    clk_4MHz CLK_4MHZ_INSTANCE (
-      .inclk0(MAX10_CLK1_50),
+      .inclk0(clk),
       .c0(generated_sclk)
    );
 
@@ -58,7 +58,7 @@ module shazam #(parameter MAXIMAS_COUNT = 11) (
    end 
    
    DUAL_CLK_FIFO #(.DSIZE(9), .ASIZE(16)) fifo (
-      .wclk(MAX10_CLK1_50),
+      .wclk(clk),
       .wrst_n(~reset_reg),
       .winc(PISO_output_active && !fifo_full),
       .wdata(significant_frequency),

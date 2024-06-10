@@ -1,9 +1,10 @@
 
 module FFT_IMPLEMENTATION
   #(
+    parameter MAGNITUDES_COUNT = 512,
+    parameter MAGNITUDE_N = $clog2( MAGNITUDES_COUNT ),
     parameter FFT_LENGTH = 1024, // FFT Frame Length, 2^N
     parameter FFT_DW = 16,       // Data Bitwidth
-    parameter PL_DEPTH = 3,      // Pipeline Stage Depth Configuration (0 - 3)
     parameter FFT_N = $clog2( FFT_LENGTH ) // Don't override this
     )
   (
@@ -30,7 +31,7 @@ module FFT_IMPLEMENTATION
    output wire [15:0]               P2_out,
    output wire [15:0]               P_active,
 
-   input wire  [8:0]               index,                
+   input wire   [MAGNITUDE_N:0]     index,                
    output reg   [15:0]              magnitude,
    output reg                       magnitude_ready
    );
@@ -52,7 +53,7 @@ module FFT_IMPLEMENTATION
 
    wire [2:0] 			         status;
    wire signed [7:0] 		   bfpexp;
-
+   
 
    always @ ( posedge clk ) begin
       status_o <= status;
@@ -109,8 +110,9 @@ module FFT_IMPLEMENTATION
       MAGNITUDES_ASK_RAM = 3'd2,
       MAGNITUDES_WAIT_RAM = 3'd3,
       MAGNITUDES_PROCESS_DATA = 3'd4,
-      MAGNITUDES_STORE_DATA = 3'd5,
-      MAGNITUDES_FINISH = 3'd6
+      MAGNITUDES_LOOP = 3'd5,
+      MAGNITUDES_FINISH = 3'd6,
+      MAGNITUDES_WAIT_1 = 3'd7
    } states;
 
    states current_state = MAGNITUDES_NOT_READY;
@@ -143,7 +145,7 @@ module FFT_IMPLEMENTATION
       .product(P2)
    );
 
-   fixed_point_adder ADD (
+   fixed_point_truncation_adder ADD (
       .clk(clk),
       .enable(product_done),
       .A(P1),
@@ -152,6 +154,7 @@ module FFT_IMPLEMENTATION
       .done(absolute_value_done)
    );
 
+
    always @ (posedge clk) begin 
       if(reset) begin 
          current_state <= MAGNITUDES_NOT_READY;
@@ -159,12 +162,11 @@ module FFT_IMPLEMENTATION
       end 
       case (current_state)
          MAGNITUDES_NOT_READY: begin
+            dmaact <= 0;
             if(!done_FFT_wire) begin
                done_all_processing_reg <= 0;
-               dmaact <= 0;
             end
             magnitude_ready <= 0;
-            dmaact <= 0;
             if(done_FFT_wire && !done_all_processing) current_state <= MAGNITUDES_ASK_RAM;
             else current_state <= MAGNITUDES_NOT_READY;
          end
@@ -172,7 +174,7 @@ module FFT_IMPLEMENTATION
             current_state <= MAGNITUDES_WAIT_RAM;
             dmaact <= 1;
             magnitude_ready <= 0;
-            dmaa <= {1'b0, index};
+            dmaa <= index;
          end
          MAGNITUDES_WAIT_RAM: begin
             dmaact <= 0;
@@ -185,14 +187,21 @@ module FFT_IMPLEMENTATION
             if(!absolute_value_done) begin 
                current_state <= MAGNITUDES_PROCESS_DATA;
             end 
-            else current_state <= MAGNITUDES_STORE_DATA;
+            else begin 
+               current_state <= MAGNITUDES_WAIT_1;
+               magnitude <= absolute_value;
+               magnitude_ready <= 1;
+            end 
          end
-         MAGNITUDES_STORE_DATA: begin
+         MAGNITUDES_WAIT_1: begin
             dmaact <= 0;
-            magnitude_ready <= 1;
-            magnitude <= absolute_value;
-
-            if(index == 511) current_state <= MAGNITUDES_FINISH;
+            magnitude_ready <= 0;
+            current_state <= MAGNITUDES_LOOP;
+         end 
+         MAGNITUDES_LOOP: begin
+            dmaact <= 0;
+            magnitude_ready <= 0;
+            if(index == MAGNITUDES_COUNT) current_state <= MAGNITUDES_FINISH;
             else current_state <= MAGNITUDES_ASK_RAM;
          end
          MAGNITUDES_FINISH: begin

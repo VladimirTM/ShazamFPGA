@@ -161,6 +161,8 @@ reduction #(32) stage5(
     .in(stage_9_input),
     .out(stage_9_output)
   );
+
+  localparam THRESHOLD = 64; // 4 * 2^4
   
   reg output_active_reg;
   always @(posedge clk) begin
@@ -169,8 +171,8 @@ reduction #(32) stage5(
     end else begin 
       stage_9_input <= stage_8_output;
       output_active_reg <= stage_8_output_active;
-      peak <= stage_9_output[0];
-      peak_index <= stage_9_output[0][24:16];
+      peak <= (stage_9_output[0][15:0] > THRESHOLD) ? stage_9_output[0] : 0;
+      peak_index <= (stage_9_output[0][15:0] > THRESHOLD) ? stage_9_output[0][24:16] : 0;
     end  
  end
   

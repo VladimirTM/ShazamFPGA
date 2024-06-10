@@ -4,6 +4,7 @@ module comparator(
   input [24:0] b,
   output reg [24:0] max
 );
+
 // we are using unsigned numbers:
 always_comb begin
   if(reset) max = 0;
