@@ -2,105 +2,127 @@ import serial
 import time
 import aiosqlite
 import asyncio
+import sys
 
-BAUD_RATE = 2_000_000
-F_RANG = 20
-
-fpga_com = serial.Serial('COM5', BAUD_RATE, timeout=0)
-
-database: aiosqlite.Connection = None
-async def write_hashes_to_DB (hash, time, song_id):
-    global database
-    cursor = await database.execute("INSERT INTO song_hashes (hash, time, song_id) VALUES (?, ?, ?);", [hash, time, song_id])
-    await database.commit()
-    await cursor.close()
-
-constellation_map = []
-async def upload_1_hash (idx, time, freq, song_id):
-    if(idx > F_RANG): 
-        return; 
-
-    # Iterate the constellation
-    # Iterate the next 100 pairs to produce the combinatorial hashes
-    # When we produced the constellation before, it was sorted by time already
-    # So this finds the next n points in time (though they might occur at the same time)
-    for other_time, other_freq in constellation_map[idx : idx + F_RANG]: 
-        diff = other_time - time
-        # If the time difference between the pairs is too small or large
-        # ignore this set of pairs
-        if diff < 1 or diff > 100:
-            continue
-
-        # Produce a 32 bit hash
-        # Use bit shifting to move the bits to the correct location
-        hash = int(freq) | (int(other_freq) << 10) | (int(diff) << 20)
-        await write_hashes_to_DB(hash, time, song_id)
+fpga_com: serial.Serial = None
 
 
-async def upload_to_database(song_id):
-    if(not song_id):
-        raise ValueError('No song id was provided!')
-    await asyncio.gather(*[upload_1_hash(idx, time, freq, song_id) for idx, (time, freq) in enumerate(constellation_map)])    
-
-def read_data():
+def read_single_data():
+    global fpga_com
     reading = fpga_com.read(1)
-    if(reading):
+    if (reading != b''):
         return ord(reading) * 2
     else:
         return None
 
-i = 0
-j = 0
-data_from_FPGA = None
-started = 0
 
-async def read_frequencies (song_id):
-    try: 
-        global data_from_FPGA, i, j, started, constellation_map
-        while (data_from_FPGA != None or not started):
-            data_from_FPGA = read_data()
-            if data_from_FPGA: 
-                started = 1;
-                print("FREQUENCY: ", data_from_FPGA)
-                constellation_map.append([time.perf_counter() * 10_000, data_from_FPGA])
-                if(j == 2 * F_RANG):
-                    await upload_to_database(song_id)
-                    constellation_map = []
-                    j = 0
-                else:
-                    if(i == 15):
-                        i = 0
-                        j = j + 1
-                    else: 
-                        i = i + 1
-    except Exception as e: 
-        print("An error occurred in read_frequencies: ", e)
+def read_data():
+    TOL = 20
+    state = 0
+    cnt = 0
+    while state != 2:
+        b = read_single_data()
+        if b is not None:
+            cnt = 0
+            if state == 0:
+                state = 1
+            if b:
+                yield b
+        elif state == 1:
+            cnt = cnt + 1
+            if cnt == TOL:
+                state = 2
+
+
+def generate_hashes(constellation_map, window_size):
+    hashes = {}
+
+    for i, (ts, f) in enumerate(constellation_map):
+        for ots, of in constellation_map[i:i+window_size]:
+            diff = ots - ts
+            if diff <= 1:
+                continue
+            if diff > 4095:
+                print("Difference greater than saveable")
+                continue
+
+            h = f | (of << 10) | (diff << 20)
+            hashes[h] = ts
+
+    return hashes.items()
+
+
+def read_frequencies():
+    PEAK_SIZE = 10
+    BATCH_SIZE = 100
+    ts = None
+    constellation_map = []
+    for i, f in enumerate(read_data()):
+        if i % BATCH_SIZE == 0 and ts is not None:
+            yield from generate_hashes(constellation_map, PEAK_SIZE * 2)
+            constellation_map = []
+        if i % PEAK_SIZE == 0:
+            ts = int(time.perf_counter() * 1_000)
+        print(f"{str(i).rjust(9, ' ')}: {int(f * 24.41)}hz @ {ts}ms")
+        constellation_map.append([ts, f])
+
+
+async def load_hashes_to_db(db: aiosqlite.Connection, song_id, hashes):
+    for h, ts in hashes:
+        await db.execute_insert("INSERT INTO song_hashes (hash, time, song_id) VALUES (?, ?, ?)", [h, ts, song_id])
+
+
+def parse_int(s):
+    try:
+        return int(s)
+    except:
+        return None
+
+
+BAUD_RATE = 2_000_000
+
 
 async def main():
-    global database
+    global fpga_com
     database = await aiosqlite.connect("shazam.db")
-    
-    song_name = input("Please select the name of the song you want to train: ")
+    fpga_com = serial.Serial('COM4', BAUD_RATE, timeout=0.1)
 
-    cursor = await database.execute("SELECT id FROM songs WHERE songs.name = ?", [song_name])
-    id = await cursor.fetchone()
-    await cursor.close()
-    print("THE ID IS:", id)
-    if(id):
-        id = id[0]
-        print(f"\n {song_name}: has already been recorded! Will delete the current training data!")
-        await database.execute("DELETE FROM songs WHERE songs.id = ?", [id])
+    name_or_id = input("Input new song name or existing song ID: ")
+    in_id = parse_int(name_or_id)
+    id = None
+
+    if in_id is not None:
+        cursor = await database.execute("SELECT id FROM songs WHERE songs.id = ?", [in_id])
+        res = await cursor.fetchone()
+        if res:
+            id = res[0]
+    else:
+        song_name = name_or_id
+        cursor = await database.execute("SELECT id FROM songs WHERE songs.name = ?", [song_name])
+        res = await cursor.fetchone()
+        await cursor.close()
+        if res:
+            id = res[0]
+            print(f"\nDeleting data for \"{song_name}\"...", file=sys.stderr)
+            await database.execute("DELETE FROM songs WHERE songs.id = ?", [id])
+            await database.commit()
+        else:
+            print("New song!", file=sys.stderr)
+        cursor = await database.execute("INSERT INTO songs (name) VALUES (?) RETURNING id", [song_name])
+        res = await cursor.fetchone()
+        id = res[0]
         await database.commit()
-    
-    cursor = await database.execute("INSERT INTO songs (name) VALUES (?) RETURNING id", [song_name])
-    id = await cursor.fetchone()
-    await database.commit()
 
-    id = id[0]
-    print("THE NEW ID IS:", id)
-    await read_frequencies(id)
+    if id is None:
+        print("The song was not found", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"Song ID: {id}", file=sys.stderr)
+
+    await load_hashes_to_db(database, id, read_frequencies())
+    await database.commit()
     await database.close()
 
 
-if(__name__ == "__main__"):
+if (__name__ == "__main__"):
     asyncio.run(main())
