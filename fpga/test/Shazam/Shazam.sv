@@ -16,7 +16,7 @@ module testbench;
 
     wire mosi, cs, sclk;
     shazam #(.MAXIMAS_COUNT(MAXIMAS_COUNT)) SHAZAM (
-        .MAX10_CLK1_50(clk),
+        .clk(clk),
         .reset(reset),
         .start(start),
         .adc_data(adc_data),
@@ -56,7 +56,7 @@ module testbench;
     integer maximas_index;
     always @(posedge SHAZAM.maximas_found_active) begin
         for(maximas_index = 0; maximas_index < MAXIMAS_COUNT; maximas_index = maximas_index + 1) begin
-            $fwrite(maximas_file, "%d: %f\n", SHAZAM.maximas[maximas_index][24:16], SHAZAM.maximas[maximas_index][15:0]);
+            $fwrite(maximas_file, "position: %d\n", SHAZAM.maximas[maximas_index]);
         end 
     end
 
@@ -64,17 +64,19 @@ module testbench;
     reg [3:0] fft_count = 0;
     
     always @(posedge SHAZAM.SHAZAM_ANALYZE_SOUNDS.magnitude_ready) begin
-            if(magnitude_index == 511) fft_count = fft_count + 1;
+            if(magnitude_index == 512) begin 
+                fft_count = fft_count + 1;
+                magnitude_index <= 0;
+            end 
+            else magnitude_index <= magnitude_index + 1;
 
             if(magnitude_index == 0) $fwrite(magnitudes_file, "\n=============MAGNITUDES FROM FFT %d:============\n", fft_count);
             else $fwrite(magnitudes_file, "%d: %f\n", magnitude_index, SHAZAM.SHAZAM_ANALYZE_SOUNDS.magnitude[15:0]);
-            
-            magnitude_index <= magnitude_index + 1;
     end
 
     reg [2:0] index = 0;
     reg [3:0] samples = 0;
-    reg [9:0] number = 0;
+    reg [8:0] number = 0;
 
     always @ (negedge sclk) begin
         if(!cs) begin
@@ -84,11 +86,11 @@ module testbench;
             end 
             if(index == 7) begin
                 samples <= samples + 1;
-                $fwrite(most_signifcant_frequencies_file, "%d, ", number * 2);
+                $fwrite(most_signifcant_frequencies_file, "%d, ", number);
                 number <= 0;
                 index <= 0;
             end 
-            number[7 - index] <= mosi;
+            number[8 - index] <= mosi;
             index <= index + 1;
         end
     end

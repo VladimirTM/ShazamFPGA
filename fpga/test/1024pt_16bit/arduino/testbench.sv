@@ -8,26 +8,22 @@ module testbench;
     `include "../../include/wait_clk.sv"
     
     parameter FFT_LENGTH = 1024;
-    localparam EXP = 0.0625;
+    localparam EXP = 0.0625; // 2^-4
+    localparam EXP_INIT = 0.000030517578125; // 2^-15
 
-    integer inputReal;
-    integer inputImag;
-    integer input_file;
+    integer inputReal, inputImag;
     integer i = 0, j = 0, k = 0;
-    integer output_file;
-    integer magnitudes_raw, magnitudes_fixed, verify_products, verify_input;
+    integer output_file, magnitudes_raw, input_file, magnitudes_raw_decimal;
 
     wire signed [15:0] fft_real_output, fft_imag_output;
     wire [15:0] real_x_real, imag_x_imag;
     wire done_FFT, dmadr_ready, can_read_products, magnitude_ready;
     reg [9:0] index = 0;
-    reg [9:0] index_1 = 0;
     wire [15:0] magnitude;
     
-    FFT_IMPLEMENTATION fft_0 (
+    FFT_IMPLEMENTATION #(.MAGNITUDES_COUNT(1024)) fft_0 (
         .clk(clk),
         .input_stream_active_i(adc_data_valid),
-        // change test here (make unsigned default)
         .input_real_i({adc_data, 1'b0, 1'b0, 1'b0, 1'b0}),
         .input_imaginary_i({16{1'b0}}),
         .reset(reset || !start),
@@ -51,17 +47,21 @@ module testbench;
 
         start = 1;
         
-        output_file = $fopen("../../../test/1024pt_16bit/data/arduino/output.txt", "w");
-        magnitudes_fixed = $fopen("../../../test/1024pt_16bit/data/arduino/magnitudes.txt", "w");
-        verify_products = $fopen("../../../test/1024pt_16bit/data/arduino/magnitudes_verify.txt", "w");
+        // inputs
         input_file = $fopen("../../../test/data/inputs/arduino.txt", "r");
+
+        // outputs
+        output_file = $fopen("../../../test/1024pt_16bit/data/arduino/output.txt", "w");
+        magnitudes_raw = $fopen("../../../test/1024pt_16bit/data/arduino/magnitudes.txt", "w");
+        magnitudes_raw_decimal = $fopen("../../../test/1024pt_16bit/data/arduino/magnitudes_decimal.txt", "w");
+        
         for ( i = 0; i < FFT_LENGTH; i = i + 1 ) begin
                 $fscanf(input_file, "%d,", inputReal);
 
                 adc_data = inputReal << 2;
                 adc_data_valid = 1;
 
-                $fwrite(output_file, "REAL DATA: %d, IMAGINARY DATA: %d\n", inputReal, 0);
+                $fwrite(output_file, "REAL DATA: %f (%d), IMAGINARY DATA: %d\n", adc_data * EXP_INIT, inputReal, 0);
                 wait_clk (1);
                 
                 adc_data_valid <= 0;
@@ -75,13 +75,10 @@ module testbench;
 
     always @ (posedge clk) begin
         if(magnitude_ready) begin
-            $fwrite(magnitudes_fixed, "%f,", magnitude * EXP);
-            index_1 <= index_1 + 1;
-        end 
-        
-        if(dmadr_ready) begin
             // checking that the result should be mirrored
-            $fwrite(output_file, "%d. OUTPUT REAL: %f, OUTPUT IMAG: %f, MAGNITUDE: %f\n", index, fft_real_output *  EXP, fft_imag_output *  EXP, ((fft_real_output *  EXP * fft_real_output *  EXP) + (fft_imag_output * EXP * fft_imag_output *  EXP)));
+            $fwrite(output_file, "%d. OUTPUT REAL: %f, OUTPUT IMAG: %f, MAGNITUDE: %f\n", index, fft_real_output *  EXP, fft_imag_output *  EXP, magnitude * EXP);
+            $fwrite(magnitudes_raw, "%f,", magnitude * EXP);
+            $fwrite(magnitudes_raw_decimal, "%d,", magnitude);
             index <= index + 1;
         end 
     end 

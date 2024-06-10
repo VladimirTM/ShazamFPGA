@@ -14,7 +14,7 @@ module testbench;
 
     wire mosi, cs, sclk;
     shazam SHAZAM (
-        .MAX10_CLK1_50(clk),
+        .clk(clk),
         .reset(reset),
         .start(start),
         .adc_data(adc_data),
