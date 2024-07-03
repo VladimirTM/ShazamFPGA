@@ -40,7 +40,7 @@ module find_maximas #(parameter MAXIMAS_COUNT = 11) (
     end
     else if (load) begin
       output_active <= 0;
-      data[load_index] = data_in;
+      data[load_index] <= data_in;
       load_index <= load_index + 1;
     end 
     else if(start && !started) begin 
